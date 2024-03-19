@@ -1,0 +1,7 @@
+:root {
+    --maroon: #500000;
+}
+
+h1{
+    color: var(--maroon);
+}
