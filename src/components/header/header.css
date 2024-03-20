@@ -140,3 +140,8 @@ ul.header-ul li.header-li:hover, ul.desktop-header-ul li.desktop-header-li:hover
         max-width: 100px;
     }
 }
+
+.link {
+    color: inherit;
+    text-decoration: none;
+}
