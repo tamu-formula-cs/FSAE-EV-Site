@@ -1,7 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
 :root {
     --maroon: #500000;
 }
 
-h1{
+.landing-container{
+    background-color: black;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.landing-container h1{
+    font-family: 'Bebas Neue', sans-serif;
+    color: white;
+    margin: 0;
+    font-size: 5rem;
+    text-align: center;
+}
+
+/* Countdown styles */
+
+.countdown-container{
+    height: 25vh;
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.countdown-container h1{
+    font-size: 2rem;
+    font-weight: normal;
+}
+
+.countdown{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.countdown-item{
+    margin: 0 1rem;
+}
+
+.countdown-item span.countdown-number{
+    font-size: 3rem;
+    font-weight: bold;
     color: var(--maroon);
+}
+
+.countdown-item h1{
+    font-size: 2rem;
+}
+
+/* Car showcase styles */
+
+.car-showcase{
+    font-family: 'Inter', sans-serif;
+    height: 100vh;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.car-showcase h1.showcase-title{
+    color: white;
+    font-size: 3rem;
+}
+
+.car-image{
+    align-self: center;
+}
+
+.stats-container{
+    width: 100%; 
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    color: white;
+    text-align: center;
+}
+
+.stat h1{
+    font-size: 1.5rem;
+    font-weight: normal;
+}
+
+.stat h2{
+    font-weight: bold;
+    font-size: 2.5rem;
+}
+
+
+
+
+/* Mobile styling */
+
+@media screen and (max-width: 768px){
+    .landing-container h1{
+        font-size: 3rem;
+        margin: 0 1rem;
+    }
+
+    .countdown{
+        padding: 0 1rem;
+    }
+
+    .countdown-item span.countdown-number{
+        font-size: 2rem;
+    }
+    
+    .countdown-item h1{
+        font-size: 1rem;
+    }
+
+    .car-image{
+        max-width: 300px;
+    }
+
+    .stat h1{
+        font-size: 1rem;
+    }
+    
+    .stat h2{
+        font-size: 2rem;
+    }
 }
