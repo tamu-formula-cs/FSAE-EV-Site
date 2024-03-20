@@ -5,7 +5,7 @@ import Car from '../../assets/car.png';
 import './home.css';
 
 export default function Home(){
-    const targetDate = new Date('2024-05-29T15:30').getTime();
+    const targetDate = new Date('2024-06-12T19:00').getTime();
 
     const [countdown, setCountdown] = useState({
         days: 0,
