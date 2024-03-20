@@ -98,8 +98,9 @@
     font-size: 2.5rem;
 }
 
-
-
+h2.pixelated-blur{
+    filter: blur(10px);
+}
 
 /* Mobile styling */
 
