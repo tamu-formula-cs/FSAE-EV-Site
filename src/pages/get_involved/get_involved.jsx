@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import './GetInvolved.css';
-import GetInvolvedVideo from '../../assets/IntroVid.mp4';
+import './get_involved.css';
+import GetInvolvedVideo from '../../assets/intro_vid.mp4';
 import Header from '../../components/header/header';
 import Footer from '../../components/footer/footer';
 
