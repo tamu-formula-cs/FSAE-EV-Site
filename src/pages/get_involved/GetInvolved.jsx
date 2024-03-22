@@ -26,7 +26,7 @@ const GetInvolved = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setContactFormSubmitted(true);
-    console.log(contactFormData); n
+    console.log(contactFormData);
   };
 
   return (
@@ -44,8 +44,30 @@ const GetInvolved = () => {
 
       <div className="recruitment">
         <h1 className="recruitment-title">Our Recruitment Process</h1>
-        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reiciendis voluptatem sunt quia, molestias repudiandae unde saepe distinctio illum voluptate id, delectus architecto laboriosam maxime. Quis alias atque quae nulla dolores.</p>
+        <p>We're glad you have an interest in joining Formula E! We have both a business team and an engineering team, which include the following subteams:</p>
+        <div className="subteams">
+          <div className="subteam">
+            <h2>Business:</h2>
+            <ul>
+              <li>Sales</li>
+              <li>Marketing</li>
+              <li>Finance</li>
+            </ul>
+          </div>
+          <div className="subteam">
+            <h2>Engineering:</h2>
+            <ul>
+              <li>Aero</li>
+              <li>Battery</li>
+              <li>Chassis</li>
+              <li>Electronics</li>
+              <li>Powertrain</li>
+              <li>Suspension</li>
+            </ul>
+          </div>
+        </div>
       </div>
+
 
       <div className="join">
         <h1 className="join-title">How to Join</h1>
@@ -62,7 +84,9 @@ const GetInvolved = () => {
           <input type="text" name="name" placeholder="Your Name" value={contactFormData.name} onChange={handleChange} />
           <input type="email" name="email" placeholder="Your Email" value={contactFormData.email} onChange={handleChange} />
           <textarea name="message" placeholder="Your Message" value={contactFormData.message} onChange={handleChange}></textarea>
-          <button type="submit">Send</button>
+          <div className="send-button-container">
+            <button type="submit">Send</button>
+          </div>
         </form>
       </div>
       <Footer />
