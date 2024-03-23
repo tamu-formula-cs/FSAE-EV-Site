@@ -93,7 +93,7 @@ section.join-section button.donate-button{
     font-size: 1.5rem;
     background-color: var(--maroon);
     color: white;
-    padding: 2rem 4rem;
+    padding: 1.5rem 3rem;
     border: none;
 }
 
