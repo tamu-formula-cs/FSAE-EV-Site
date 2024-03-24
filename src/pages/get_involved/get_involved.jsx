@@ -44,7 +44,7 @@ const GetInvolved = () => {
 
       <div className="recruitment">
         <h1 className="recruitment-title">Our Recruitment Process</h1>
-        <p>We're glad you have an interest in joining Formula E! We have business, operations, and engineering teams, which categorize the following subteams:</p>
+        <p>Interested in joining Formula E? We have business, operations, and engineering teams, which categorize the following subteams:</p>
         <div className="subteams">
           <div className="subteam">
             <h2>Business:</h2>
