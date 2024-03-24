@@ -31,6 +31,14 @@ html {
     text-align: center;
 }
 
+.landing-text{
+    display: flex;
+}
+
+.landing-text-spacer{
+    width: 10px;
+}
+
 .scroll-down {
     position: absolute;
     bottom: 80px;
@@ -87,12 +95,18 @@ html {
 }
 
 .countdown-container h1{
-    font-size: 3rem;
-    font-weight: normal;
+    font-size: 5rem;
+    font-weight: bold;
+    color: var(--maroon);
+    text-shadow: 
+    -1px -1px 0 #fff,  
+     1px -1px 0 #fff,
+    -1px  1px 0 #fff,
+     1px  1px 0 #fff;
 }
 
 .countdown{
-    margin-top: 2rem;
+    margin-top: 3rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -116,7 +130,11 @@ html {
 }
 
 .countdown-item h1{
-    font-size: 2rem;
+    text-shadow: none;
+    color: white;
+    font-weight: normal;
+    margin-top: 0;
+    font-size: 3rem;
 }
 
 /* Car showcase styles */
@@ -174,11 +192,26 @@ video.car-video{
 
 /* Mobile styling */
 
-@media screen and (max-width: 768px){
+@media screen and (max-width: 1000px){
+    .landing-text{
+        flex-direction: column;
+    }
+
+    .landing-text-spacer{
+        display: none;
+    }
+
+    h1.landing-we-are{
+        font-size: 4rem;
+    }
+
     .landing-container{
         font-size: 4rem;
         padding: 0 2rem;
     }
+}
+
+@media screen and (max-width: 768px){
 
     .countdown{
         padding: 0 1rem;
@@ -195,10 +228,6 @@ video.car-video{
     .countdown-item h1{
         font-size: 1rem;
     }
-
-    /* .car-image{
-        max-width: 300px;
-    } */
 
     .car-showcase{
         height: 100vh;

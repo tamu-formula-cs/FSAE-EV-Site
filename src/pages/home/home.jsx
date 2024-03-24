@@ -52,13 +52,21 @@ export default function Home(){
         <Header/>
 
         <div className="landing-container">
-        <Typewriter
-            options={{
-                strings: ['WE ARE TEXAS A&M FORMULA ELECTRIC', 'WE ARE AGGIE ENGINEERS'],
-                autoStart: true,
-                loop: true,
-            }}
-            />
+            <div className="landing-text">
+                <h1 className="landing-we-are">WE ARE </h1>
+                <div className="landing-text-spacer"></div>
+                <Typewriter
+                    options={{
+                    strings: [
+                        ' TEXAS A&M FORMULA ELECTRIC',
+                        ' AGGIE ENGINEERS',
+                    ],
+                    autoStart: true,
+                    loop: true,
+                    deleteSpeed: 50,
+                    }}
+                />
+            </div>
             <div className="scroll-down"></div>
         </div>
 

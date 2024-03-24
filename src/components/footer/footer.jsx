@@ -1,6 +1,6 @@
 import Logo from '../../assets/logo.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faInstagram, faYoutube, faFacebook, faLinkedin, faTiktok } from '@fortawesome/free-brands-svg-icons';
+import { faInstagram, faYoutube, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import Linktree from '../../assets/linktree.png';
 import './footer.css';
 
@@ -16,17 +16,11 @@ export default function Footer() {
                     <a rel="noopener noreferrer" href='https://www.instagram.com/tamuformulaelectric/' target='_blank'>
                         <FontAwesomeIcon icon={faInstagram} className='icon'/>
                     </a>
-                    <a rel="noopener noreferrer" href='https://www.tiktok.com/@tamuformulae' target='_blank'>
-                        <FontAwesomeIcon icon={faTiktok} />
-                    </a>
                     <a rel="noopener noreferrer" href='https://linktr.ee/tamuformulaelectric' target="_blank">
                         <img src={Linktree} alt="Linktree" className="linktree-icon"/>
                     </a>
                     <a rel="noopener noreferrer" href='https://www.youtube.com/@tamuformulaelectric/videos' target='_blank'>
                         <FontAwesomeIcon icon={faYoutube} />
-                    </a>
-                    <a rel="noopener noreferrer" href='https://www.facebook.com/tamu.formula.sae/' target='_blank'>
-                        <FontAwesomeIcon icon={faFacebook} />
                     </a>
                     <a rel="noopener noreferrer" className='no-margin' href='https://www.linkedin.com/company/texas-a-m-fsae-electric-racing/' target='_blank'>
                         <FontAwesomeIcon icon={faLinkedin} />
