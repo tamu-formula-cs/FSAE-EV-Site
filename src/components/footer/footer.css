@@ -28,6 +28,14 @@ footer.footer-container{
     align-items: flex-end;
 }
 
+.socials-container{
+    margin-left: auto;
+}
+
+.icon {
+    margin-left: 1.5rem;
+}
+
 .footer-logo-image{
     align-self: flex-start;
     max-width: 150px;
@@ -47,7 +55,7 @@ h1.contact{
     font-size: 1rem;
 }
 
-footer a {
+.socials-container a {
     font-size: 1.75rem;
     color: white;
 }
@@ -57,8 +65,9 @@ footer a:hover, h1.contact:hover{
     color: rgb(210, 210, 210);
 }
 
-a.youtube{
-    margin: 0 2rem;
+a {
+    text-decoration: underline;
+    color: inherit;
 }
 
 @media screen and (max-width: 768px){
@@ -70,3 +79,4 @@ a.youtube{
         padding: 0 2rem;
     }
 }
+
