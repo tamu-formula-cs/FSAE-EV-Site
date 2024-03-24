@@ -98,7 +98,8 @@ const GetInvolved = () => {
       </div> */}
 
       <div className="contact-email">
-        <h1>Have any questions? Contact us at <a href="mailto:tamuformulaelectric@gmail.com">tamuformulaelectric@gmail.com</a></h1>
+        <h1>Have any questions?</h1>
+        <h1>Contact us at <a href="mailto:tamuformulaelectric@gmail.com">tamuformulaelectric@gmail.com</a></h1>
 
       </div>
 
