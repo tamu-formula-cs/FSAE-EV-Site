@@ -62,4 +62,8 @@ h1.team-lead span.team-lead-bold{
     img.team-image{
         max-width: 350px;
     }
+
+    section.team-inner-container{
+        padding: 0 2rem;
+    }
 }
