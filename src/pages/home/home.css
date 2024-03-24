@@ -97,12 +97,7 @@ html {
 .countdown-container h1{
     font-size: 5rem;
     font-weight: bold;
-    color: var(--maroon);
-    text-shadow: 
-    -1px -1px 0 #fff,  
-     1px -1px 0 #fff,
-    -1px  1px 0 #fff,
-     1px  1px 0 #fff;
+    color: white;
 }
 
 .countdown{
@@ -119,7 +114,7 @@ html {
 }
 
 .countdown-item span.countdown-number{
-    font-size: 5rem;
+    font-size: 6rem;
     font-weight: bold;
     color: var(--maroon);
     text-shadow: 
@@ -151,9 +146,10 @@ html {
 }
 
 .car-showcase h1.showcase-title{
+    font-family: 'Bebas Neue', sans-serif;
     font-weight: bold;
     color: white;
-    font-size: 3rem;
+    font-size: 4rem;
 }
 
 /* .car-image{
@@ -213,12 +209,8 @@ video.car-video{
 
 @media screen and (max-width: 768px){
 
-    .countdown{
-        padding: 0 1rem;
-    }
-
     .countdown-item span.countdown-number{
-        font-size: 2rem;
+        font-size: 2.9rem;
     }
 
     .countdown-container h1{
@@ -226,7 +218,7 @@ video.car-video{
     }
     
     .countdown-item h1{
-        font-size: 1rem;
+        font-size: 1.25rem;
     }
 
     .car-showcase{
