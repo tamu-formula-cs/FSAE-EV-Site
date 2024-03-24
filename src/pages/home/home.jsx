@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
+import Typewriter from 'typewriter-effect';
 import Header from '../../components/header/header';
 import Footer from '../../components/footer/footer';
 // import Car from '../../assets/car.png';
@@ -51,8 +52,17 @@ export default function Home(){
         <Header/>
 
         <div className="landing-container">
-            <h1>WE ARE TEXAS A&M FORMULA ELECTRIC</h1>
+        <Typewriter
+            options={{
+                strings: ['WE ARE TEXAS A&M FORMULA ELECTRIC', 'WE ARE AGGIE ENGINEERS'],
+                autoStart: true,
+                loop: true,
+            }}
+            />
+            <div className="scroll-down"></div>
         </div>
+
+        
 
         <div className="countdown-container">
             <h1>COMPETITION IN</h1>
