@@ -4,6 +4,16 @@
     --maroon: #500000;
 }
 
+html {
+    overflow: scroll;
+    overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+    width: 0;
+    background: transparent;
+}
+
 .landing-container{
     background-color: black;
     height: 100vh;
@@ -23,7 +33,9 @@
 /* Countdown styles */
 
 .countdown-container{
-    height: 25vh;
+    background-color: black;
+    color: white;;
+    height: 100vh;
     font-family: 'Inter', sans-serif;
     margin: 0;
     display: flex;
@@ -34,24 +46,32 @@
 }
 
 .countdown-container h1{
-    font-size: 2rem;
+    font-size: 3rem;
     font-weight: normal;
 }
 
 .countdown{
+    margin-top: 2rem;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
 .countdown-item{
+    display: flex;
+    flex-direction: column;
     margin: 0 1rem;
 }
 
 .countdown-item span.countdown-number{
-    font-size: 3rem;
+    font-size: 5rem;
     font-weight: bold;
     color: var(--maroon);
+    text-shadow: 
+    -1px -1px 0 #fff,  
+     1px -1px 0 #fff,
+    -1px  1px 0 #fff,
+     1px  1px 0 #fff;
 }
 
 .countdown-item h1{
@@ -62,22 +82,25 @@
 
 .car-showcase{
     font-family: 'Inter', sans-serif;
-    height: 100vh;
+    height: 125vh;
     background-color: black;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
+    padding-bottom: 20rem;
 }
 
 .car-showcase h1.showcase-title{
+    font-weight: bold;
     color: white;
     font-size: 3rem;
 }
 
-.car-image{
+/* .car-image{
+    max-width: 800px;
     align-self: center;
-}
+} */
 
 .stats-container{
     width: 100%; 
@@ -102,6 +125,12 @@ h2.pixelated-blur{
     filter: blur(10px);
 }
 
+video.car-video{
+    width: 40vw;
+    border-radius: 25px;
+    height: auto;
+}
+
 /* Mobile styling */
 
 @media screen and (max-width: 768px){
@@ -117,13 +146,25 @@ h2.pixelated-blur{
     .countdown-item span.countdown-number{
         font-size: 2rem;
     }
+
+    .countdown-container h1{
+        font-size: 2.5rem;
+    }
     
     .countdown-item h1{
         font-size: 1rem;
     }
 
-    .car-image{
+    /* .car-image{
         max-width: 300px;
+    } */
+
+    .car-showcase{
+        height: 100vh;
+    }
+
+    video.car-video{
+        width: 80vw;
     }
 
     .stat h1{

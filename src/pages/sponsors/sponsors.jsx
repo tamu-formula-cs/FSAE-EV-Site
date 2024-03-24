@@ -1,5 +1,5 @@
 import React from 'react';
-import SponsorImages from './sponsorImages';
+import SponsorImages from './sponsor_images';
 import Header from '../../components/header/header';
 import Footer from '../../components/footer/footer';
 import './sponsors.css';
