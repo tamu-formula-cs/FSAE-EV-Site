@@ -175,9 +175,9 @@ video.car-video{
 /* Mobile styling */
 
 @media screen and (max-width: 768px){
-    .landing-container h1{
-        font-size: 3rem;
-        margin: 0 1rem;
+    .landing-container{
+        font-size: 4rem;
+        padding: 0 2rem;
     }
 
     .countdown{
@@ -214,5 +214,9 @@ video.car-video{
     
     .stat h2{
         font-size: 2rem;
+    }
+
+    .scroll-down{
+        bottom: 100px;
     }
 }
