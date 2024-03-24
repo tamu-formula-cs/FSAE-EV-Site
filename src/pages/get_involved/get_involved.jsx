@@ -44,41 +44,48 @@ const GetInvolved = () => {
 
       <div className="recruitment">
         <h1 className="recruitment-title">Our Recruitment Process</h1>
-        <p>We're glad you have an interest in joining Formula E! We have both a business team and an engineering team, which include the following subteams:</p>
+        <p>We're glad you have an interest in joining Formula E! We have business, operations, and engineering teams, which categorize the following subteams:</p>
         <div className="subteams">
           <div className="subteam">
             <h2>Business:</h2>
-            <ul>
-              <li>Sales</li>
-              <li>Marketing</li>
-              <li>Finance</li>
-            </ul>
+            <p>Sales</p>
+            <p>Marketing</p>
+            <p>Finance</p>
+          </div>
+          <div className="subteam">
+            <h2>Operations:</h2>
+            <p>Facilities Management</p>
+            <p>Transportation Logistics</p> 
+            <p>Computer Science</p>
           </div>
           <div className="subteam">
             <h2>Engineering:</h2>
-            <ul>
-              <li>Aero</li>
-              <li>Battery</li>
-              <li>Chassis</li>
-              <li>Electronics</li>
-              <li>Powertrain</li>
-              <li>Suspension</li>
-            </ul>
+            <p>Aerodynamics</p>
+            <p>High-Voltage Battery</p>
+            <p>Chassis</p>
+            <p>Low-Voltage Electronics</p> 
+            <p>Powertrain</p>
+            <p>Suspension</p>
           </div>
         </div>
       </div>
 
-
       <div className="join">
         <h1 className="join-title">How to Join</h1>
-        <div className="buttons-container">
-          <button className="info-button join-button">More Info</button>
-          <button className="engineering-button join-button">Engineering Application</button>
-          <button className="business-button join-button">Business Application</button>
+        <div className="join-buttons-container">
+          <a href="https://forms.office.com/pages/responsepage.aspx?id=44HzaNpGuUe6V28yK48NoSrqd-GpUQxLog_m04LE3ExUNUZUQVY4OVA2V0pVUDFCWE9aNU84NFpEUy4u">
+            <button className="business-button join-button">Business Application</button>
+          </a>
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLSc5lz2CDG8bV8xVcwv9XsgCUsVMwg8ehZ37KLrOcfLQU92W7A/viewform">
+            <button className="operations-button join-button">Operations Application</button>
+          </a>
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLSfqrb4vc-XoosoE9pfsxD8bJV0U_gP9SCxY0DHdfq97Fp4jHw/viewform?pli=1">
+            <button className="engineering-button join-button">Engineering Application</button>
+          </a>
         </div>
       </div>
 
-      <div className="contact">
+      {/* <div className="contact">
         <h1 className="contact-title">Contact Us</h1>
         <form className="contact-form" onSubmit={handleSubmit}>
           <input type="text" name="name" placeholder="Your Name" value={contactFormData.name} onChange={handleChange} />
@@ -88,7 +95,14 @@ const GetInvolved = () => {
             <button type="submit">Send</button>
           </div>
         </form>
+      </div> */}
+
+      <div className="contact-email">
+        <h1>Have any questions? Contact us at <a href="mailto:tamuformulaelectric@gmail.com">tamuformulaelectric@gmail.com</a></h1>
+
       </div>
+
+
       <Footer />
     </>
   );
