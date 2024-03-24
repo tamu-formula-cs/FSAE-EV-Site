@@ -70,6 +70,10 @@
     .join-button {
         margin: 0px 0;
     }
+
+    .videoStyle {
+        width: 80vw;
+    }
 }
 
 .operations-button,

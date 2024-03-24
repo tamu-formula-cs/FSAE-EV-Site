@@ -1,7 +1,8 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import Header from '../../components/header/header';
 import Footer from '../../components/footer/footer';
-import Car from '../../assets/car.png';
+// import Car from '../../assets/car.png';
+import CarVideo from '../../assets/ev-transition.mp4';
 import './home.css';
 
 export default function Home(){
@@ -35,9 +36,16 @@ export default function Home(){
             }
         }, 1000);
 
-        // Cleanup interval on component unmount
         return () => clearInterval(interval);
     }, [targetDate]);
+
+    const videoRef = useRef(null);
+
+    useEffect(() => {
+        if (videoRef.current) {
+        videoRef.current.playbackRate = 0.75;
+        }
+    }, []);
 
     return <div className="main-containter">
         <Header/>
@@ -50,27 +58,35 @@ export default function Home(){
             <h1>COMPETITION IN</h1>
             <div className="countdown">
                 <div className="countdown-item">
-                    <h1><span className="countdown-number">{countdown.days}</span> days</h1>
+                    <span className="countdown-number">{countdown.days}</span>
+                    <h1>days</h1>
                 </div>
                 <div className="countdown-item">
-                    <h1><span className="countdown-number">{countdown.hours}</span> hours</h1>
+                    <span className="countdown-number">{countdown.hours}</span>
+                    <h1>hours</h1>
                 </div>
                 <div className="countdown-item">
-                    <h1><span className="countdown-number">{countdown.minutes}</span> minutes</h1>
+                    <span className="countdown-number">{countdown.minutes}</span>
+                    <h1>minutes</h1>
                 </div>
                 <div className="countdown-item">
-                    <h1><span className="countdown-number">{countdown.seconds}</span> seconds</h1>
+                    <span className="countdown-number">{countdown.seconds}</span>
+                    <h1>seconds</h1>
                 </div>
             </div>
         </div>
 
         <div className="car-showcase">
             <h1 className='showcase-title'>AME24</h1>
-            <img src={Car} alt="AME24" className='car-image'/>
+            {/* <img src={Car} alt="AME24" className='car-image'/> */}
+            <video autoPlay muted loop className='car-video' ref={videoRef}>
+                <source src={CarVideo} type="video/mp4"/>
+                Your browser does not support the video tag.
+            </video>
             <div className="stats-container">
                 <div className="stat">
-                    <h1>0-60</h1>
-                    <h2 className="pixelated-blur">x.xs</h2>
+                    <h1>Voltage</h1>
+                    <h2 className="pixelated-blur">xx.xs</h2>
                 </div>
                 <div className="stat">
                     <h1>Top Speed</h1>

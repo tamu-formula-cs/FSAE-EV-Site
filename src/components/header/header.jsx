@@ -18,24 +18,24 @@ export default function Header() {
 
     const menu = (
         <ul className="header-ul">
-            <Link to="/"><li className="header-li">HOME</li></Link>
+            <Link to="/" className='link'><li className="header-li">HOME</li></Link>
             <div className="line"></div>
-            <Link to="/meet_the_team"><li className="header-li">MEET THE TEAM</li></Link>
+            <Link to="/meet-the-team" className='link'><li className="header-li">MEET THE TEAM</li></Link>
             <div className="line"></div>
             {/* <Link to="/history"><li className="header-li">ABOUT US</li></Link> */}
             {/* <div className="line"></div> */}
-            <Link to="/sponsors"><li className="header-li">SPONSORS</li></Link>
+            <Link to="/sponsors" className='link'><li className="header-li">SPONSORS</li></Link>
             <div className="line"></div>
-            <Link to="/get_involved"><li className="header-li">GET INVOLVED</li></Link>
+            <Link to="/get-involved" className='link'><li className="header-li">GET INVOLVED</li></Link>
         </ul>
     );
 
     const desktopMenu = (
         <ul className="desktop-header-ul">
-            <Link to="/meet_the_team" className="link"><li className="desktop-header-li">MEET THE TEAM</li></Link>
+            <Link to="/meet-the-team" className="link"><li className="desktop-header-li">MEET THE TEAM</li></Link>
             {/* <Link to="/history" className="link"><li className="desktop-header-li">ABOUT US</li></Link> */}
             <Link to="/sponsors" className="link"><li className="desktop-header-li">SPONSORS</li></Link>
-            <Link to="/get_involved" className="link"><li className="desktop-header-li">GET INVOLVED</li></Link>
+            <Link to="/get-involved" className="link"><li className="desktop-header-li">GET INVOLVED</li></Link>
         </ul>
     );
 
