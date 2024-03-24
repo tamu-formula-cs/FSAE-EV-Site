@@ -52,7 +52,7 @@ export default function Team() {
                     Battery
                 </h1>
                 <h1 className="team-lead"><span className="team-lead-bold">Team Lead: </span>Alan Yan</h1>
-                <h1 className="name">Jenna Draude, Andrew Lafferty, Raaj Patel, <br/>Jesus Ramos, Julian Tan</h1>
+                <h1 className="name">Jeremy Hinton, Andrew Lafferty, Raaj Patel, <br/>Jesus Ramos, Julian Tan</h1>
             </div>
 
             <div className="subteam-section">
@@ -60,7 +60,7 @@ export default function Team() {
                     CHASSIS
                 </h1>
                 <h1 className="team-lead"><span className="team-lead-bold">Team Lead: </span>Caleb Miller</h1>
-                <h1 className="name">Jose Cruz, Jonathan Lozano</h1>
+                <h1 className="name">Jose Cruz, Jonathan Lozano, Jireh Lagman, Joshua Kraly</h1>
             </div>
 
             <div className="subteam-section">
@@ -68,7 +68,7 @@ export default function Team() {
                     Electronics
                 </h1>
                 <h1 className="team-lead"><span className="team-lead-bold">Team Lead: </span>Jacinto Rodriguez Shahin</h1>
-                <h1 className="name">Praneeth Boddu, Giosef Hernandez, Blake Kruse, <br/>Erica Mathew, Thomas Moreland, Adrian Rojas, Joshua Wu</h1>
+                <h1 className="name">Praneeth Boddu, Giosef Hernandez, Blake Kruse, <br/> Adrian Rojas, Joshua Wu</h1>
             </div>
 
             <div className="subteam-section">
@@ -76,7 +76,7 @@ export default function Team() {
                     Powertrain
                 </h1>
                 <h1 className="team-lead"><span className="team-lead-bold">Team Lead: </span>Adan Corral</h1>
-                <h1 className="name">Robert Haefner, Nick Martin, Luis Diaz-Santini</h1>
+                <h1 className="name">Robert Haefner, Nick Martin, Luis Diaz-Santini, <br/>Brody Smith, Purav Datta, Benjamin Smith</h1>
             </div>
 
             <div className="subteam-section">
