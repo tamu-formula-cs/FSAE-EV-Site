@@ -34,15 +34,6 @@
     font-family: "Bebas Neue", sans-serif;
 }
 
-.join {
-    text-align: center;
-}
-
-.join-title {
-    font-family: "Bebas Neue", sans-serif;
-    font-size: 2rem;
-}
-
 .join-buttons-container {
     display: flex;
     flex-wrap: wrap;
@@ -79,7 +70,46 @@
     color: white;
 }
 
-/* .contact {
+.subteams {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+@media (max-width: 900px) {
+    .subteams {
+        flex-direction: column;
+        align-items: center;
+        margin-left: 0;
+    }
+
+    .subteam {
+        margin-bottom: 20px;
+    }
+}
+
+.subteam {
+    width: 40vh;
+    margin-right: 4%; 
+    padding: 30px; 
+    border: 1px solid #500000; 
+    border-radius: 10px; 
+    box-sizing: border-box;
+    position: relative;
+}
+
+.subteam h2 {
+    font-size: 1.4em; 
+    margin-bottom: 15px; 
+}
+
+.subteam p {
+    margin: 0;
+}
+
+.contact {
     text-align: center;
     margin-top: 50px;
     position: relative;
@@ -91,8 +121,8 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-left: 10rem;
-    margin-right: 10rem;
+    margin-left: 18rem;
+    margin-right: 20rem;
     position: relative;
 }
 
@@ -119,9 +149,9 @@
     position: absolute;
     bottom: 0;
     right: 0;
-} */
+}
 
-/* .contact-form button {
+.contact-form button {
     border: none;
     padding: 10px 20px;
     cursor: pointer;
@@ -129,7 +159,7 @@
     border-radius: 0.5rem;
     background-color: #500000;
     color: white;
-} */
+}
 
 .contact-email {
     margin-top: 20px;
@@ -144,41 +174,4 @@
 .contact-email a {
     text-decoration: underline;
     color: #500000;
-}
-
-.subteams {
-    display: flex;
-    justify-content: space-between;
-    margin-left: 0px;
-    margin-right: 0px;
-}
-
-@media (max-width: 900px) {
-    .subteams {
-        flex-direction: column;
-        align-items: center;
-        margin-left: 0;
-    }
-
-    .subteam {
-        margin-bottom: 20px;
-    }
-}
-
-.subteam {
-    width: 40vh;
-    margin-right: 4%; 
-    padding: 30px; 
-    border: 1px solid #500000; 
-    border-radius: 10px; 
-    box-sizing: border-box;
-}
-
-.subteam h2 {
-    font-size: 1.4em; 
-    margin-bottom: 15px; 
-}
-
-.subteam p {
-    margin: 0;
 }
