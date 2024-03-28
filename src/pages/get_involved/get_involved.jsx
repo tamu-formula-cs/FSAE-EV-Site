@@ -40,7 +40,7 @@ const GetInvolved = () => {
         <h1>Get Involved</h1>
       </div>
       <div className="videoContainer">
-        <video controls className="videoStyle">
+        <video autoPlay muted controls className="videoStyle">
           <source src={GetInvolvedVideo} type="video/mp4" />
           Your browser does not support the video tag.
         </video>
@@ -96,6 +96,7 @@ const GetInvolved = () => {
         {thankYouMessageVisible && (
           <div id="thankYouMessage">Thanks for contacting us! We'll reach out soon.</div>
         )}
+      
       </div>
 
       <Footer />

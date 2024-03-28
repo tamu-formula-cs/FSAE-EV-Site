@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+:root {
+    --maroon: #500000;
+}
+
+section.team-inner-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 10rem;
+}
+
+img.team-image{
+    margin: 5rem 0;
+}
+
+h1.team-title{
+    font-family: 'Bebas Neue', sans-serif;
+    color: var(--maroon);
+    font-size: 4rem;
+    margin-bottom: 0;
+}
+
+h1.team-div-title{
+    font-family: 'Bebas Neue', sans-serif;
+    color: var(--maroon);
+    font-size: 2rem;
+}
+
+.subteam-section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+h1.name{
+    font-family: 'Inter', sans-serif;
+    font-weight: normal;
+    font-size: 1.25rem;
+}
+
+h1.team-lead{
+    font-weight: normal;
+    font-size: 1.25rem;
+}
+
+h1.team-lead span.team-lead-bold{
+    font-weight: bold;
+    font-size: 1.25rem;
+}
+
+@media screen and (max-width: 768px){
+
+    h1.team-title{
+        font-size: 3rem;
+    }
+
+    img.team-image{
+        max-width: 350px;
+    }
+
+    section.team-inner-container{
+        padding: 0 2rem;
+    }
+}
