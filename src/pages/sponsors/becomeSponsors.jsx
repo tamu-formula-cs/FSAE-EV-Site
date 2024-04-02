@@ -49,6 +49,11 @@ export default class BecomeSponsors extends React.Component {
         BECOME A SPONSOR
         </a>
         </button>
+        <button className="sponsor-button">
+        <a href="https://tamucs-my.sharepoint.com/:b:/g/personal/bari_vadaria_tamu_edu/EcL9hM9c0H5HosN04a_RX3sBGZmRFivAsT4I4LzQbuX60w?e=oLStqO" target="_blank" rel="noopener noreferrer">
+        MORE INFORMATION
+        </a>
+        </button>
         <Footer />
       </div>
     );
