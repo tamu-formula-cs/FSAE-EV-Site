@@ -45,6 +45,7 @@ section.sponsors-section .sponsor-imgs .sponsor-image-pair img{
     margin-bottom: 2rem;
 }
 
+
 .sponsor-spacer{
     width: 35vw;
     background-color: var(--maroon);
@@ -63,6 +64,8 @@ section.sponsors-section .sponsor-imgs .sponsor-image-pair img{
     font-size: 1.25rem;
     font-family: 'Inter', sans-serif;
 }
+
+
 
 /* JOIN SECTION */
 
@@ -88,24 +91,46 @@ section.join-section h2{
     font-weight: normal;
 }
 
-section.join-section button.donate-button{
+section.join-section button.become-a-sponsor-button{
     font-family: 'Bebas Neue', sans-serif;
     font-size: 1.5rem;
     background-color: var(--maroon);
     color: white;
-    padding: 1.5rem 3rem;
+    padding: 2rem 4rem;
     border: none;
 }
 
-section.join-section button.donate-button a{
+
+section.join-section button.become-a-sponsor-button a{
     color: white;
     text-decoration: none;
 }
 
-section.join-section button.donate-button:hover{
+section.join-section button.become-a-sponsor-button:hover{
     background-color: #8B0000;
     cursor: pointer;
 }
+section.sponsors-section img{
+    max-width: 200px;
+    max-height: 100px;
+}
+
+
+section.sponsors-section .sponsor-imgs .sponsor-image-pair{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+
+.sun-moon-stars-container {
+    padding-left: 50px; 
+    padding-right: 50px;
+    display: inline-flex;
+}
+
+
 
 @media screen and (max-width: 768px){
 
