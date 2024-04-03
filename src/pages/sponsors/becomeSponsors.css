@@ -1,66 +1,6 @@
-.sponsorship-tiers {
-    display: block;
-    width: 100%;
-}
-  
-.title {
-    text-align: center;
-    margin-bottom: 20px;
-}
-  
-.tiers-grid {
-    display: grid;
-    grid-template-columns: auto repeat(6, 1fr);
-    gap: 10px;
-    text-align: center;
-}
-  
-.grid-header, .benefit-label {
-    background-color: #f0f0f0; 
-    padding: 10px;
-}
-  
-.grid-header {
-    font-weight: bold;
-}
-  
-.benefit-checkmark {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-  
-.benefit-checkmark.included {
-    font-weight: bold;
-}
-  
-.checkmark {
-    color: green;
-}
-  
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 
-
-button.sponsor-button {
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: 1.5rem;
-    background-color: var(--maroon);
-    color: white;
-    padding: 2rem 4rem; 
-    border: none;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+:root {
+    --maroon: #500000;
 }
-
-button.sponsor-button a {
-    color: white;
-    text-decoration: none;
-}
-
-button.sponsor-button:hover {
-    background-color: #8B0000;
-    cursor: pointer;
-}
-
-
 

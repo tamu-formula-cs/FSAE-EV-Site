@@ -3,59 +3,147 @@ import Header from '../../components/header/header';
 import Footer from '../../components/footer/footer';
 import './becomeSponsors.css';
 
-export default class BecomeSponsors extends React.Component {
-  tiers = [
-        { name: 'AFFILIATE', price: 'Up to $1,500', benefits: ['501(C)(3) TAX BENEFITS', 'INVITATION TO UNVEILING EVENT', 'HONORED ON OUR WEBSITE', 'LOGO ON TEAM APPAREL'] },
-        { name: 'BRONZE', price: '$1,500+', benefits: ['501(C)(3) TAX BENEFITS', 'INVITATION TO UNVEILING EVENT', 'HONORED ON OUR WEBSITE', 'LOGO ON TEAM APPAREL'] },
-        { name: 'SILVER', price: '$3,500+', benefits: ['501(C)(3) TAX BENEFITS', 'INVITATION TO UNVEILING EVENT', 'HONORED ON OUR WEBSITE', 'LOGO ON TEAM APPAREL', 'SOCIAL MEDIA EXPOSURE', 'LOGO ON RACECAR'] },
-        { name: 'GOLD', price: '$5,000+', benefits: ['501(C)(3) TAX BENEFITS', 'INVITATION TO UNVEILING EVENT', 'HONORED ON OUR WEBSITE', 'LOGO ON TEAM APPAREL', 'SOCIAL MEDIA EXPOSURE', 'LOGO ON RACECAR'] },
-        { name: 'PLATINUM', price: '$8,000+', benefits: ['501(C)(3) TAX BENEFITS', 'INVITATION TO UNVEILING EVENT', 'HONORED ON OUR WEBSITE', 'LOGO ON TEAM APPAREL', 'SOCIAL MEDIA EXPOSURE', 'LOGO ON RACECAR', 'HOST RECRUITING EVENTS', 'ACCESS TO TEAM RESUME BOOK'] },
-        { name: 'TITLE', price: '$17,500', benefits: ['501(C)(3) TAX BENEFITS', 'INVITATION TO UNVEILING EVENT', 'HONORED ON OUR WEBSITE', 'LOGO ON TEAM APPAREL', 'SOCIAL MEDIA EXPOSURE', 'LOGO ON RACECAR', 'HOST RECRUITING EVENTS', 'ACCESS TO TEAM RESUME BOOK', 'BRANDED BANNER', 'SAE DINNER EVENT'] },
-  ];
 
-  getAllBenefits = () => {
-    return Array.from(new Set(this.tiers.flatMap(tier => tier.benefits)));
+function SponsorshipTiers() {
+  const handleSponsorClick = () => {
+    window.open('https://docs.google.com/forms/d/e/1FAIpQLSdtQi7fqd_5vuXDb-bkmgnH5zBVry04Mak3ltg6Tkz3lAN12w/viewform', '_blank');
   };
 
-  render() {
-    const allBenefits = this.getAllBenefits();
+  const handleMoreInfoClick = () => {
+    window.open('https://tamucs-my.sharepoint.com/:b:/r/personal/bari_vadaria_tamu_edu/Documents/Sponsor%20Packet/Texas%20A%26M%20Formula%20E%20Sponsor%20Packet%202023-2024.pdf?csf=1&web=1&e=N9tURB', '_blank');
+  };
 
-    return (
-      <div className="sponsorship-tiers">
-        <Header />
-        <h1 className="title">SPONSORSHIP TIERS</h1>
-        <h2 className="title">OUR COMMITMENT TO YOU</h2>
-        <div className="tiers-grid">
-          <div className="grid-header commitment">TIERS</div>
-          {this.tiers.map((tier, index) => (
-            <div key={index} className="grid-header">
-              <h2>{tier.name}</h2>
-              <p>{tier.price}</p>
-            </div>
-          ))}
-          {allBenefits.map((benefit, index) => (
-            <React.Fragment key={index}>
-              <div className="benefit-label">{benefit}</div>
-              {this.tiers.map((tier, tierIndex) => (
-                <div key={`${index}-${tierIndex}`} className={`benefit-checkmark ${tier.benefits.includes(benefit) ? 'included' : ''}`}>
-                  {tier.benefits.includes(benefit) && <span className="checkmark">&#10003;</span>}
-                </div>
-              ))}
-            </React.Fragment>
-          ))}
-        </div>
-        <button className="sponsor-button">
-        <a href="https://docs.google.com/forms/d/e/1FAIpQLSdtQi7fqd_5vuXDb-bkmgnH5zBVry04Mak3ltg6Tkz3lAN12w/viewform" target="_blank" rel="noopener noreferrer">
-        BECOME A SPONSOR
-        </a>
-        </button>
-        <button className="sponsor-button">
-        <a href="https://tamucs-my.sharepoint.com/:b:/g/personal/bari_vadaria_tamu_edu/EcL9hM9c0H5HosN04a_RX3sBGZmRFivAsT4I4LzQbuX60w?e=oLStqO" target="_blank" rel="noopener noreferrer">
-        MORE INFORMATION
-        </a>
-        </button>
-        <Footer />
-      </div>
-    );
-  }
+
+  return (
+    <div className="sponsorship-tiers">
+      <Header />
+      <h1>SPONSORSHIP TIERS</h1>
+      <table>
+        <thead>
+
+          <tr>
+            <th>OUR COMMITMENT TO YOU</th>
+            <th>AFFILIATE<br/>Up to $1,500</th>
+            <th>BRONZE<br/>$1,500+</th>
+            <th>SILVER<br/>$3,500+</th>
+            <th>GOLD<br/>$5,000+</th>
+            <th>PLATINUM<br/>$8,000+</th>
+            <th>TITLE<br/>$17,500</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <td>501(3)(c) TAX BENEFITS</td>
+            <td>✔</td>
+            <td>✔</td>
+            <td>✔</td>
+            <td>✔</td>
+            <td>✔</td>
+            <td>✔</td>
+          </tr>
+
+          <tr>
+            <td>INVITATION TO UNVEILING EVENT</td>
+            <td>✔</td>
+            <td>✔</td>
+            <td>✔</td>
+            <td>✔</td>
+            <td>✔</td>
+            <td>✔</td>
+          </tr>
+
+          <tr>
+            <td>HONORED ON OUR WEBSITE</td>
+            <td>✔</td>
+            <td>✔</td>
+            <td>✔</td>
+            <td>✔</td>
+            <td>✔</td>
+            <td>✔</td>
+          </tr>
+
+          <tr>
+            <td>LOGO ON TEAM APPAREL</td>
+            <td>SMALL</td>
+            <td>SMALL</td>
+            <td>SMALL</td>
+            <td>MEDIUM</td>
+            <td>LARGE</td>
+            <td>X-LARGE</td>
+          </tr>
+
+          <tr>
+            <td>SOCIAL MEDIA EXPOSURE</td>
+            <td></td>
+            <td></td>
+            <td>x1</td>
+            <td>x2</td>
+            <td>x2</td>
+            <td>x3</td>
+          </tr>
+
+          <tr>
+            <td>LOGO ON RACECAR</td>
+            <td></td>
+            <td></td>
+            <td>SMALL</td>
+            <td>MEDIUM</td>
+            <td>LARGE</td>
+            <td>X-LARGE</td>
+          </tr>
+
+          <tr>
+            <td>HOST RECRUITING EVENTS</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>✔</td>
+            <td>✔</td>
+          </tr>
+
+          <tr>
+            <td>ACCESS TO TEAM RESUME BOOK</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>✔</td>
+            <td>✔</td>
+          </tr>
+
+          <tr>
+            <td>BRANDED BANNER</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>✔</td>
+          </tr>
+
+          <tr>
+            <td>SAE DINNER EVENT</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>✔</td>
+          </tr>
+
+        </tbody>
+      </table>
+      
+      <button className="become-sponsor-button" onClick={handleSponsorClick}>BECOME A SPONSOR</button>
+      <button className="become-sponsor-button" onClick={handleMoreInfoClick}>MORE INFORMATION</button>
+
+
+      <Footer />
+    </div>
+  );
 }
+
+export default SponsorshipTiers;
+
