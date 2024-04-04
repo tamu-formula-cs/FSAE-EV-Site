@@ -5,6 +5,9 @@ import Footer from '../../components/footer/footer';
 import './sponsors.css';
 import {useNavigate} from 'react-router-dom';
 
+{/* <img src={SponsorImages.caterpillar} alt="Caterpillar" />
+ */}
+
 
 
 const Sponsors = () => {
@@ -30,71 +33,59 @@ const Sponsors = () => {
                     <img src={SponsorImages.additiveAtScale} alt="Additive at Scale" />
                 </div>
                 <div className="sponsor-spacer"></div>
-
                 <h2>Gold Sponsors</h2>
                <div className="sponsor-imgs">
                     <div className="sponsor-image-pair">
-                        <img src={SponsorImages.brembo} alt="Brembo" />
-                        <img src={SponsorImages.mastercam} alt="Mastercam" />
+                        <img src={SponsorImages.boeing} alt="Boeing" />
+                        <div className="sun-moon-stars-container">
+                            <img src={SponsorImages.sunMoonAndStars} alt="Sun Moon and Stars Learning Center" />
+                        </div>
                     </div>
-                    <img src={SponsorImages.burnsMcDonnell} alt="Burns & McDonnell" />
                </div>
                <div className="sponsor-spacer"></div>
-              
-
                 <h2>Silver Sponsors</h2>
                 <div className="sponsor-imgs">
                     <div className="sponsor-image-pair">
-                        <img src={SponsorImages.boeing} alt="Boeing" />
                         <img src={SponsorImages.econtrols} alt="E-Controls" />
+                        <img src={SponsorImages.tesla} alt="Tesla" />
                     </div>
                     <div className="sponsor-image-pair">
-                        <img src={SponsorImages.caterpillar} alt="Caterpillar" />
-                        <img src={SponsorImages.perficient} alt="Perficient" />
+                        <img src={SponsorImages.haas} alt="Haas" />
                     </div>
-                    <img src={SponsorImages.tesla} alt="Tesla" />
                 </div>
                 <div className="sponsor-spacer"></div>
 
                 <h2>Bronze Sponsors</h2>
                 <div className="sponsor-imgs">
                     <div className="sponsor-image-pair">
-                        <img src={SponsorImages.eurotech} alt="Eurotech" />
+                        <img src={SponsorImages.gulfCoastInternationalProperties} alt="Gulf Coast International Properties" />
                         <img src={SponsorImages.farmersElectricCooperative} alt="Farmers Electric Cooperative" />
                     </div>
                     <div className="sponsor-image-pair">
                         <img src={SponsorImages.rapidHarness} alt="Rapid Harness" />
-                        <img src={SponsorImages.skf} alt="SKF" />
-                    </div>
-                    <div className="sponsor-image-pair">
-                        <img src={SponsorImages.nsk1} alt="NSK" />
                         <img src={SponsorImages.altium} alt="Altium" />
                     </div>
+                    <div className="sponsor-image-pair">
+                        <img src={SponsorImages.perficient} alt="Perficient" />
+                        <img src={SponsorImages.gillCorporation} alt="Gill Corporation" />
+                    </div>
                 </div>
+                <div className="bronze-text-sponsors">
+                        <h3>Tim Harding</h3>
+                        <h3>Chassis Sponsorship</h3>
+                    </div>
                 <div className="sponsor-spacer"></div>
 
                 <h2>Affiliate Sponsors</h2>
                 <div className="sponsor-imgs">
                     <div className="sponsor-image-pair">
-                        <img src={SponsorImages.harding1} alt="Harding Drilling" />
-                        <img src={SponsorImages.coroflex} alt="Coroflex" />
-                    </div>
-                    <div className="sponsor-image-pair">
                         <img src={SponsorImages.airtech} alt="AirTech" />
-                        <img src={SponsorImages.gulfCoastInternationalProperties} alt="Gulf Coast International Properties" />
+                        <img src={SponsorImages.coroflex} alt="Coroflex" />
                     </div>
                     <div className="sponsor-image-pair">
                         <div className="precision-piping-container">
                             <img src={SponsorImages.precisionPipingProducts} alt="Precision Piping Products" />
                         </div>
-                        <div className="sun-moon-stars-container">
-                            <img src={SponsorImages.sunMoonAndStars} alt="Sun Moon and Stars Learning Center" />
-                        </div>
-                    </div>
-                    <div className="affiliate-text-sponsors">
-                        <h3>Mr. McClanahan</h3>
-                        <h3>Carl Luckenbach</h3>
-                        <h3>Tim Harding</h3>
                     </div>
                 </div>
             </section>

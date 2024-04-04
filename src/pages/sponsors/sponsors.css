@@ -53,7 +53,7 @@ section.sponsors-section .sponsor-imgs .sponsor-image-pair img{
     margin: 3rem 0 2rem 0;
 }
 
-.affiliate-text-sponsors{
+.bronze-text-sponsors{
     display: flex;
     width: 50%;
     justify-content: space-around;
@@ -149,7 +149,7 @@ section.sponsors-section .sponsor-imgs .sponsor-image-pair{
         font-size: 4rem;
     }
 
-    .affiliate-text-sponsors{
+    .bronze-text-sponsors{
         flex-direction: column;
     }
     
