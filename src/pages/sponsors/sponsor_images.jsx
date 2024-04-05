@@ -12,7 +12,9 @@ import Farmers_Electric_Cooperative from '../../assets/sponsors/farmers_electric
 import General_Motors1 from '../../assets/sponsors/general_motors1_logo.svg.png';
 import General_Motors2 from '../../assets/sponsors/general_motors2_logo.png';
 import General_Motors3 from '../../assets/sponsors/general_motors3_logo.png';
+import Gill_Corporation from '../../assets/sponsors/gill_corporation_logo.svg';
 import Gulf_Coast_International_Properties from '../../assets/sponsors/gulf_coast_international_properties_logo.png';
+import Haas from '../../assets/sponsors/haas_logo.png';
 import Harding1 from '../../assets/sponsors/harding_logo.png';
 import Harding2 from '../../assets/sponsors/harding2_logo.png';
 import Mastercam from '../../assets/sponsors/mastercam_logo.png';
@@ -41,7 +43,9 @@ const SponsorImages = {
     generalMotors1: General_Motors1,
     generalMotors2: General_Motors2,
     generalMotors3: General_Motors3,
+    gillCorporation: Gill_Corporation,
     gulfCoastInternationalProperties: Gulf_Coast_International_Properties,
+    haas: Haas,
     harding1: Harding1,
     harding2: Harding2,
     mastercam: Mastercam,
