@@ -17,7 +17,6 @@ function SponsorshipTiers() {
       <Header />
       <div className="sponsorship-tiers">
         <h1 className="sponsors-title">SPONSORSHIP TIERS</h1>
-        <div className="sponsorship-tiers-table-container">
           <table className="sponsorship-tiers-table">
             <thead>
               <tr>
@@ -146,8 +145,6 @@ function SponsorshipTiers() {
           <button className="become-sponsor-button" onClick={handleSponsorClick}>BECOME A SPONSOR</button>
           <button className="become-sponsor-button" onClick={handleMoreInfoClick}>MORE INFORMATION</button>
         </div>
-
-      </div>
       <Footer />
     </div>
   );

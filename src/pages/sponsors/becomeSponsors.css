@@ -8,27 +8,21 @@ body {
 :root {
     --maroon: #500000;
 }
-.sponsorship-tiers-table-container {
-    overflow-x: auto; 
+
+.sponsorship-tiers-table {
+    border-collapse: collapse; 
     margin-top: 5rem;
     margin-bottom: 5rem;
-    -webkit-overflow-scrolling: touch; 
-}
-.sponsorship-tiers-table {
-    border-collapse: collapse;
-    margin-top: 5rem; 
-    margin-bottom: 5rem; 
     width: 100%;
     overflow-x: auto; 
 }
 
 .sponsorship-tiers-table td {
     border: 3px solid var(--maroon); 
-    text-align: center;
+    text-align: center; 
     vertical-align: middle;
     padding: .2rem; 
 }
-
 
 .sponsorship-tiers-table {
     border: none;
@@ -190,13 +184,14 @@ button.become-sponsor-button:hover{
 /* end of button css */
 
 @media screen and (max-width: 768px){
-
+    
     .sponsorship-tiers-table {
         width: 100%; 
         overflow-x: auto; 
-        display: block; 
+        display: block;
         -webkit-overflow-scrolling: touch; 
     }
+
 
     .button-container {
         gap: 2rem; 
