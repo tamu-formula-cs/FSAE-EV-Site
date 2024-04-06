@@ -1,9 +1,18 @@
 /* Import the fonts from Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;700&display=swap');
 
+body {
+    -webkit-font-smoothing: antialiased; 
+}
 
 :root {
     --maroon: #500000;
+}
+.sponsorship-tiers-table-container {
+    overflow-x: auto; 
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+    -webkit-overflow-scrolling: touch; 
 }
 .sponsorship-tiers-table {
     border-collapse: collapse;
@@ -20,14 +29,7 @@
     padding: .2rem; 
 }
 
-.sponsorship-tiers-table td {
-    border: 3px solid var(--maroon); 
-    text-align: center; 
-    vertical-align: middle; 
-    padding: .2rem; 
-}
 
-/* Remove the outer borders for the table */
 .sponsorship-tiers-table {
     border: none;
 }
@@ -188,6 +190,7 @@ button.become-sponsor-button:hover{
 /* end of button css */
 
 @media screen and (max-width: 768px){
+
     .sponsorship-tiers-table {
         width: 100%; 
         overflow-x: auto; 
