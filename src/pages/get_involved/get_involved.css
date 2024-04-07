@@ -30,8 +30,11 @@
     margin-bottom: 50px;
 }
 
-.recruitment-title {
+.recruitment-title,
+.contact-title {
     font-family: "Bebas Neue", sans-serif;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
 }
 
 .subteams {
@@ -43,7 +46,7 @@
 
 .subteam {
     width: 40vh;
-    height: 40vh;
+    height: 45vh;
     margin-right: 5px;
     margin-left: 5px;
     padding: 10px;
@@ -102,16 +105,10 @@
     display: flex;
     flex-direction: column;
     align-items: center; /**/
-    width: 60%;
+    width: 70%;
     /* max-width: 65%;  */
     position: relative;
     margin: 0 auto;
-}
-
-.contact-title {
-    font-family: "Bebas Neue", sans-serif;
-    font-size: 2rem;
-    margin-bottom: 20px;
 }
 
 .contact-form input,
@@ -171,8 +168,8 @@
     }
 
     .subteam {
-        width: 30vh;
-        height: 35vh;
+        width: 40vh;
+        height: 45vh;
         margin-bottom: 20px;
     }
 
@@ -202,8 +199,8 @@
     }
 
     .subteam {
-        width: 30vh;
-        height: 35vh;
+        width: 40vh;
+        height: 45vh;
         margin-bottom: 20px;
     }
 
@@ -238,7 +235,7 @@
         margin-top: 1rem;
         display: flex;
         flex-direction: column;
-        width: 60%;
+        width: 80%;
         position: relative;
         margin: 0 auto;
     }
