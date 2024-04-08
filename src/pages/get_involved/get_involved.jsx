@@ -71,9 +71,9 @@ const GetInvolved = () => {
             <Link to="/get-involved/operations-more-info">
               <button className="operations-button more-info-button">More Info</button>
             </Link>
-            <a href="https://docs.google.com/forms/d/e/1FAIpQLSc5lz2CDG8bV8xVcwv9XsgCUsVMwg8ehZ37KLrOcfLQU92W7A/viewform">
+            {/* <a href="https://docs.google.com/forms/d/e/1FAIpQLSc5lz2CDG8bV8xVcwv9XsgCUsVMwg8ehZ37KLrOcfLQU92W7A/viewform"> */}
               <button className="operations-button join-button">Closed</button>
-            </a>
+            {/* </a> */}
           </div>
           <div className="subteam">
             <h2>Engineering:</h2>
