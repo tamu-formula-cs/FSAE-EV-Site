@@ -33,7 +33,7 @@ export default function Home(){
             title: <ToastTitle>Support Our Journey</ToastTitle>,
             description: <ToastDescription>Help us innovate in electric vehicle technology. Consider donating today!</ToastDescription>,
             action: <ToastAction altText="Donate Now" onClick={handleDonateClick}>Donate Now</ToastAction>,
-            duration: 8000,
+            duration: 5000,
         });
     }, []);
 
