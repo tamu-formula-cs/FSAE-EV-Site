@@ -87,6 +87,27 @@ h1.contact a:hover{
     color: rgb(210, 210, 210);
 }
 
+.sitemap-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0;
+    background-color: #370000;
+    color: white;
+    padding: 3rem;
+    font-size: 1rem;
+    flex-wrap: wrap;
+}
+
+.sitemap-container a{
+    text-decoration: none;
+    color: white;
+}
+
+.sitemap-container a:hover{
+    text-decoration: underline;
+}
+
 @media screen and (max-width: 768px) {
     .footer-logo-image {
         max-width: 150px;
@@ -115,5 +136,9 @@ h1.contact a:hover{
 
     h1.contact a{
         font-size: 1.25rem;
+    }
+
+    .sitemap-container a{
+        margin: 0.5rem;
     }
 }

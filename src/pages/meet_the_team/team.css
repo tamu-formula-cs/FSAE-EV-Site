@@ -4,7 +4,7 @@
     --maroon: #500000;
 }
 
-section.team-inner-container{
+section.team-inner-container {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -12,58 +12,79 @@ section.team-inner-container{
     margin-bottom: 10rem;
 }
 
-img.team-image{
+img.team-image {
+    max-width: 1000px;
     margin: 5rem 0;
 }
 
-h1.team-title{
+h1.team-title {
     font-family: 'Bebas Neue', sans-serif;
     color: var(--maroon);
     font-size: 4rem;
     margin-bottom: 0;
 }
 
-h1.team-div-title{
-    font-family: 'Bebas Neue', sans-serif;
-    color: var(--maroon);
-    font-size: 2rem;
+h1.team-desc{
+    font-weight: normal;
+    font-size: 1rem;
 }
 
-.subteam-section{
+.subteam-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    width: 75vw;
+    justify-items: center;
+    align-items: start;
+}
+
+.subteam-section {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: center;
+    max-width: 400px;
 }
 
-h1.name{
+h1.team-div-title {
+    font-family: 'Bebas Neue', sans-serif;
+    color: var(--maroon);
+    font-size: 2rem;
+}
+
+h1.name {
     font-family: 'Inter', sans-serif;
     font-weight: normal;
     font-size: 1.25rem;
+    margin-top: 0.5rem;
 }
 
-h1.team-lead{
+h1.team-lead {
     font-weight: normal;
     font-size: 1.25rem;
+    margin-top: 0.5rem;
 }
 
-h1.team-lead span.team-lead-bold{
+h1.team-lead span.team-lead-bold {
     font-weight: bold;
     font-size: 1.25rem;
 }
 
-@media screen and (max-width: 768px){
-
-    h1.team-title{
+@media screen and (max-width: 768px) {
+    h1.team-title {
         font-size: 3rem;
     }
 
-    img.team-image{
+    img.team-image {
         max-width: 350px;
     }
 
-    section.team-inner-container{
+    section.team-inner-container {
         padding: 0 2rem;
+    }
+
+    .subteam-container {
+        grid-template-columns: 1fr;
     }
 }

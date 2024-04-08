@@ -2,11 +2,21 @@ import React, { useState, useEffect, useRef } from 'react';
 import Typewriter from 'typewriter-effect';
 import Header from '../../components/header/header';
 import Footer from '../../components/footer/footer';
-// import Car from '../../assets/car.png';
 import CarVideo from '../../assets/ev-transition.mp4';
+import General_Motors from '../../assets/sponsors/general_motors3_logo.png';
+import CarOne from '../../assets/home-one.jpg'
+import CarTwo from '../../assets/home-two.jpg'
+import Vistra from '../../assets/sponsors/vistra_logo.png';
+import {useNavigate} from 'react-router-dom';
+import { Toast, ToastClose, ToastDescription, ToastProvider, ToastTitle, ToastViewport, ToastAction } from "@/components/ui/toast"
+import { Toaster } from "@/components/ui/toaster"
+import { useToast } from "@/components/ui/use-toast"
 import './home.css';
 
 export default function Home(){
+
+    const navigate = useNavigate();
+
     const targetDate = new Date('2024-06-12T19:00').getTime();
 
     const [countdown, setCountdown] = useState({
@@ -15,6 +25,21 @@ export default function Home(){
         minutes: 0,
         seconds: 0,
     });
+
+    const { toast } = useToast();
+
+    useEffect(() => {
+        toast({
+            title: <ToastTitle>Support Our Journey</ToastTitle>,
+            description: <ToastDescription>Help us innovate in electric vehicle technology. Consider donating today!</ToastDescription>,
+            action: <ToastAction altText="Donate Now" onClick={handleDonateClick}>Donate Now</ToastAction>,
+            duration: 8000,
+        });
+    }, []);
+
+    const handleDonateClick = () => {
+        window.open('https://www.gofundme.com/f/texas-am-formula-sae-electric-racing', '_blank');
+    }
 
     useEffect(() => {
         const interval = setInterval(() => {
@@ -52,7 +77,9 @@ export default function Home(){
         <Header/>
 
         <div className="landing-container">
+            <img src={CarTwo} alt="Car" className='landing-car-image'/>
             <div className="landing-text">
+                
                 <h1 className="landing-we-are">WE ARE </h1>
                 <div className="landing-text-spacer"></div>
                 <Typewriter
@@ -70,7 +97,31 @@ export default function Home(){
             <div className="scroll-down"></div>
         </div>
 
-        
+        <div className="car-showcase">
+            <h1 className='showcase-title'>AME24</h1>
+            <img src={CarOne} alt="AME24" className='car-image'/>
+            {/* <video autoPlay muted loop playsInline className='car-video' ref={videoRef}>
+                <source src={CarVideo} type="video/mp4"/>
+                Your browser does not support the video tag.
+            </video> */}
+            <div className="stats-container">
+                <div className="stat">
+                    <h1>Voltage</h1>
+                    <h1 className='stat-val'>500 V</h1>
+                    {/* <h2 className="pixelated-blur">xx.xs</h2> */}
+                </div>
+                <div className="stat">
+                    <h1>Top Speed</h1>
+                    <h1 className='stat-val'>80 MPH</h1>
+                    {/* <h2 className="pixelated-blur">xyzmph</h2> */}
+                </div>
+                <div className="stat">
+                    <h1>Power</h1>
+                    <h1 className='stat-val'>103.7 HP</h1>
+                    {/* <h2 className="pixelated-blur">xyzlbs</h2> */}
+                </div>
+            </div>
+        </div>
 
         <div className="countdown-container">
             <h1>COMPETITION IN</h1>
@@ -94,29 +145,26 @@ export default function Home(){
             </div>
         </div>
 
-        <div className="car-showcase">
-            <h1 className='showcase-title'>AME24</h1>
-            {/* <img src={Car} alt="AME24" className='car-image'/> */}
-            <video autoPlay muted loop className='car-video' ref={videoRef}>
-                <source src={CarVideo} type="video/mp4"/>
-                Your browser does not support the video tag.
-            </video>
-            <div className="stats-container">
-                <div className="stat">
-                    <h1>Voltage</h1>
-                    <h2 className="pixelated-blur">xx.xs</h2>
-                </div>
-                <div className="stat">
-                    <h1>Top Speed</h1>
-                    <h2 className="pixelated-blur">xyzmph</h2>
-                </div>
-                <div className="stat">
-                    <h1>Weight</h1>
-                    <h2 className="pixelated-blur">xyzlbs</h2>
-                </div>
+        <section className="home-join-section">
+                <h1>JOIN OUR JOURNEY</h1>
+                <h2>Help us support innovation in electric vehicle technology.</h2>
+                <button className="become-a-sponsor-button">
+                    <a target='_blank' href='https://www.gofundme.com/f/texas-am-formula-sae-electric-racing'>DONATE</a>
+                </button>
+        </section>
+
+        <div className="home-sponsors">
+            <h1>OUR TITLE SPONSORS</h1>
+            <h2>In partnership with our distinguished title sponsors.</h2>
+            <div className="sponsor-home-images">
+                <img src={General_Motors} alt="" /><img src={Vistra} alt="" />
             </div>
+            <button className="home-sponsor-button">
+                <a href="/sponsors">View Our Sponsors</a>
+            </button>
         </div>
 
+        <Toaster />
         <Footer/>
     </div>
 }
