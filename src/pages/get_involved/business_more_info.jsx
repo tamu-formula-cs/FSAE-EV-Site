@@ -41,7 +41,7 @@ const BusinessMoreInfo = () => {
                     </ul>
                 </div>
 
-                <div>
+                <div className="mb-8">
                     <h2 className="text-xl font-bold mb-2">Finance Subteam Overview:</h2>
                     <p className="mb-4">
                         The Finance subteam is responsible for maintaining Texas A&M Formula Electric’s fiscal responsibility and financial processes, as well as helping the engineering and business teams make informed purchasing decisions.
@@ -56,7 +56,23 @@ const BusinessMoreInfo = () => {
                         <li>Act as a liaison between the engineering team, business team, and Mechanical Engineering Accounting Department</li>
                     </ul>
                 </div>
+
+                <div>
+                    <h2 className="text-xl font-bold mb-2">Marketing Subteam Overview:</h2>
+                    <p className="mb-4">
+                        The marketing subteam is responsible for shaping and promoting the brand image of Texas A&M Formula Electric across various platforms. Marketing focuses on creating and managing a consistent brand presence on our social media platforms and on campus that appeals to professional and industry sponsors as well as a younger student audience.
+                    </p>
+                    <h3 className="text-lg font-bold mb-2">Key Responsibilities:</h3>
+                    <ul className="list-disc pl-4">
+                        <li>Create and manage a consistent brand image and Social Media presence among a variety of platforms like: Our website, Instagram, Linkedin, Facebook, Youtube, and TikTok.</li>
+                        <li>Help the sales subteam foster their relationships with sponsors by providing photo and video content</li>
+                        <li>Lead community outreach events that help foster our relationship with the student body through events like: collaborations with sponsors, collaborations with student orgs.</li>
+                        <li>Maintain relationships with alumni vis emails and social media</li>
+                    </ul>
+                </div>
             </div>
+
+
             <Footer />
         </>
     );
