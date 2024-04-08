@@ -54,6 +54,7 @@ const GetInvolved = () => {
           <div className="subteam">
             <h2>Business:</h2>
             <p>Sales</p>
+            <p>Human Resources</p>
             <p>Marketing</p>
             <p>Finance</p>
             <Link to="/get-involved/business-more-info">
