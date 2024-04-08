@@ -1,10 +1,221 @@
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+/* Import the fonts from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;700&display=swap');
+
+body {
+    -webkit-font-smoothing: antialiased; 
+}
 
 :root {
     --maroon: #500000;
 }
 
-@media screen and (max-width: 768px){
-
-    
+.sponsorship-tiers-table {
+    border-collapse: collapse; 
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+    width: 100%;
+    overflow-x: auto; 
 }
+
+.sponsorship-tiers-table td {
+    border: 3px solid var(--maroon); 
+    text-align: center; 
+    vertical-align: middle;
+    padding: .2rem; 
+}
+
+.sponsorship-tiers-table {
+    border: none;
+}
+
+.sponsorship-tiers-table tr:first-child td,
+.sponsorship-tiers-table tr:last-child td,
+.sponsorship-tiers-table tr:first-child th,
+.sponsorship-tiers-table tr:last-child th {
+    border-top: none;
+    border-bottom: none;
+}
+
+
+.sponsorship-tiers-table td:first-child,
+.sponsorship-tiers-table th:first-child {
+    border-left: none;
+}
+
+.sponsorship-tiers-table td:last-child,
+.sponsorship-tiers-table th:last-child {
+    border-right: none;
+}
+
+
+
+
+.sponsors-title{
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 5rem;
+    color: var(--black);
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+    text-align: center;
+}
+
+.sponsorship-tiers {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+}
+.affiliate {
+    font-family: 'Bebas Neue';
+    font-size: 2rem;
+    font-style: italic;
+    color: var(--black);
+    margin-left: 2rem;
+    margin-right: 2rem;
+}
+.bronze {
+    font-family: 'Bebas Neue';
+    font-size: 2rem;
+    font-style: italic;
+    color: var(--black);
+    margin-left: 2rem;
+    margin-right: 2rem;
+}
+.silver {
+    font-family: 'Bebas Neue';
+    font-size: 2rem;
+    font-style: italic;
+    color: var(--black);
+    margin-left: 2rem;
+    margin-right: 2rem;
+}
+.gold {
+    font-family: 'Bebas Neue';
+    font-size: 2rem;
+    font-style: italic;
+    color: var(--black);
+    margin-left: 2rem;
+    margin-right: 2rem;
+}
+.platinum {
+    font-family: 'Bebas Neue';
+    font-size: 2rem;
+    font-style: italic;
+    color: var(--black);
+    margin-left: 2rem;
+    margin-right: 2rem;
+}
+.title-text {
+    font-family: 'Bebas Neue';
+    font-size: 2rem;
+    font-style: italic;
+    color: var(--black);
+    margin-left: 2rem;
+    margin-right: 2rem;
+}
+.amount-text {
+    font-family: 'Bebas Neue';
+    font-size: 1.2rem;
+    color: var(--black);
+}
+  
+.normal-text {
+    font-family: 'Bebas Neue';
+    font-size: 2rem;
+    color: var(--maroon);
+    margin-bottom: 5rem;
+    margin-right: 2rem;
+}
+.title-table-text{
+    font-family: 'Bebas Neue';
+    font-size: 2rem;
+    color: var(--maroon);
+    font-style: italic;
+    margin-bottom: 4rem;
+}
+.sponsorship-tiers-table {
+    margin-top: 5rem; 
+    margin-bottom: 5rem; 
+    width: auto; 
+}
+  
+
+.checkmark {
+    color: green;
+    font-size: 2rem;
+    align-items: center;
+}
+.logo-text {
+    font-family: 'Bebas Neue';
+    color: var(--maroon);
+    font-size: 2rem;
+    font-style: italic;
+    align-items: center;
+}
+
+
+/* button css */
+.button-container {
+    display: flex;
+    justify-content: center; 
+    gap: 10rem; 
+    margin-top: 5rem; 
+    margin-bottom: 5rem; 
+}
+
+button.become-sponsor-button{
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.5rem;
+    background-color: var(--maroon);
+    color: white;
+    padding: 2rem 4rem;
+    border: none;
+}
+
+
+button.become-sponsor-button a{
+    color: white;
+    text-decoration: none;
+}
+
+button.become-sponsor-button:hover{
+    background-color: #8B0000;
+    cursor: pointer;
+}
+/* end of button css */
+
+@media screen and (max-width: 768px){
+    
+    .sponsorship-tiers-table {
+        width: 100%; 
+        overflow-x: auto; 
+        display: block;
+        -webkit-overflow-scrolling: touch; 
+    }
+
+
+    .button-container {
+        gap: 2rem; 
+        flex-direction: column; 
+        align-items: center; 
+    }
+
+    .sponsorship-tiers {
+        padding: 0 1rem; 
+    }
+    .sponsors-title {
+        font-size: 4rem; 
+    }
+
+    .affiliate, .bronze, .silver, .gold, .platinum, .title-text, .normal-text, .title-table-text, .logo-text {
+        font-size: 2rem;
+    }
+
+    .amount-text {
+        font-size: 1rem; 
+    }
+
+    button.become-sponsor-button {
+        padding: 2rem 4rem;
+    }
+}
+
