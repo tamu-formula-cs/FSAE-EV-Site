@@ -51,7 +51,7 @@ html {
     left: 50%;
     text-align: center;
     font-size: 20px;
-    z-index: 1;
+    /* z-index: 1; */
     text-decoration: none;
     text-shadow: 0;
     width: 13px;
@@ -176,11 +176,13 @@ html {
 }
 
 .stat h1{
+    color: white;
     font-size: 1.5rem;
     font-weight: normal;
 }
 
 .stat h2{
+    color: white;
     font-weight: bold;
     font-size: 2.5rem;
 }
@@ -217,6 +219,7 @@ section.home-join-section h1{
     font-family: 'Bebas Neue', sans-serif;
     font-size: 4rem;
     margin: 0;
+    color: white;
 }
 
 section.home-join-section h2{
@@ -224,6 +227,7 @@ section.home-join-section h2{
     font-size: 2rem;
     margin: 5rem 0;
     font-weight: normal;
+    color: white;
 }
 
 section.home-join-section button.become-a-sponsor-button{
@@ -259,12 +263,14 @@ section.home-join-section button.become-a-sponsor-button:hover{
 }
 
 .home-sponsors h1{
+    color: white;
     font-family: 'Bebas Neue', sans-serif;
     font-size: 4rem;
     margin: 0;
 }
 
 .home-sponsors h2{
+    color: white;
     font-family: 'Inter', sans-serif;
     font-size: 2rem;
     margin: 5rem 0;
