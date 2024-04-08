@@ -77,8 +77,7 @@ export default function Home(){
     return <div className="main-containter">
         <Header/>
 
-        <div className="landing-container">
-            <img src={CarTwo} alt="Car" className='landing-car-image'/>
+        <div className="landing-container" style={{backgroundImage: `url(${CarTwo})`}}>
             <div className="landing-text">
                 
                 <h1 className="landing-we-are">WE ARE </h1>
