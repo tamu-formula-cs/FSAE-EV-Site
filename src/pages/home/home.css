@@ -105,7 +105,7 @@ html {
 .countdown-container{
     background-color: black;
     color: white;;
-    height: 200vh;
+    height: 100vh;
     font-family: 'Inter', sans-serif;
     margin: 0;
     display: flex;
@@ -268,13 +268,14 @@ section.home-join-section button.become-a-sponsor-button:hover{
 /* Sponsors */
 
 .home-sponsors{
-    height: 200vh;
+    height: 100vh;
     background-color: black;
     color: white;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding-bottom: 20rem;
 }
 
 .home-sponsors h1{

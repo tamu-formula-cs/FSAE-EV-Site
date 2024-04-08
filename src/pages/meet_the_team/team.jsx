@@ -23,15 +23,6 @@ export default function Team() {
 
                 <div className="subteam-section">
                     <h1 className="team-div-title">
-                        Mechanical Chief
-                    </h1>
-                    <h1 className="name">
-                        Ethan Reich
-                    </h1>
-                </div>
-
-                <div className="subteam-section">
-                    <h1 className="team-div-title">
                         Electrical Chief
                     </h1>
                     <h1 className="name">
@@ -44,6 +35,15 @@ export default function Team() {
                         Business
                     </h1>
                     <h1 className="team-lead"><span className="team-lead-bold">Business Chief: </span>Ryan Lucas</h1>
+                </div>
+
+                <div className="subteam-section">
+                    <h1 className="team-div-title">
+                        Mechanical Chief
+                    </h1>
+                    <h1 className="name">
+                        Ethan Reich
+                    </h1>
                 </div>
 
                 <div className="subteam-section">
@@ -102,17 +102,6 @@ export default function Team() {
 
                 <div className="subteam-section">
                     <h1 className="team-div-title">
-                        Sales
-                    </h1>
-                    <h1 className="team-lead"><span className="team-lead-bold">Team Lead: </span>Holden Sparr</h1>
-                    <h1 className="name">Edison An, Mason Cuff, Vishnu Nataraja, Ian Schandlbauer</h1>
-                    <h1 className="team-desc">
-                    The Sales subteam is responsible for securing financial support, establishing partnerships, and fostering relationships with sponsors, alumni, and recruiters for the engineering team. The funds acquired from sponsors will directly contribute to the budget for the competition team for the respective year.
-                    </h1>
-                </div>
-
-                <div className="subteam-section">
-                    <h1 className="team-div-title">
                         Finance
                     </h1>
                     <h1 className="team-lead"><span className="team-lead-bold">Team Lead: </span>Aidan Arnett</h1>
@@ -126,6 +115,18 @@ export default function Team() {
                     </h1>
                     <h1 className="team-lead"><span className="team-lead-bold">Team Lead: </span>Marcela Gonzalez</h1>
                     <h1 className="name">Gerardo Hernandez, Zoe Fang, Zoe May, Megan Williams</h1>
+                    <h1 className="team-desc">The marketing subteam is responsible for shaping and promoting the brand image of Texas A&M Formula Electric across various platforms. Marketing focuses on creating and managing a consistent brand presence on our social media platforms and on campus that appeals to professional and industry sponsors as well as a younger student audience.</h1>
+                </div>
+
+                <div className="subteam-section">
+                    <h1 className="team-div-title">
+                        Sales
+                    </h1>
+                    <h1 className="team-lead"><span className="team-lead-bold">Team Lead: </span>Holden Sparr</h1>
+                    <h1 className="name">Edison An, Mason Cuff, Vishnu Nataraja, Ian Schandlbauer</h1>
+                    <h1 className="team-desc">
+                    The Sales subteam is responsible for securing financial support, establishing partnerships, and fostering relationships with sponsors, alumni, and recruiters for the engineering team. The funds acquired from sponsors will directly contribute to the budget for the competition team for the respective year.
+                    </h1>
                 </div>
             </div>
 
