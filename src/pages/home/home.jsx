@@ -5,6 +5,7 @@ import Footer from '../../components/footer/footer';
 import CarVideo from '../../assets/ev-transition.mp4';
 import General_Motors from '../../assets/sponsors/general_motors3_logo.png';
 import CarOne from '../../assets/home-one.jpg'
+import Addative from '../../assets/sponsors/additive_cropped.png';
 import CarTwo from '../../assets/home-two.jpg'
 import Vistra from '../../assets/sponsors/vistra_logo.png';
 import {useNavigate} from 'react-router-dom';
@@ -154,10 +155,10 @@ export default function Home(){
         </section>
 
         <div className="home-sponsors">
-            <h1>OUR TITLE SPONSORS</h1>
-            <h2>In partnership with our distinguished title sponsors.</h2>
+            <h1>OUR SPONSORS</h1>
+            <h2>In partnership with our distinguished sponsors.</h2>
             <div className="sponsor-home-images">
-                <img src={General_Motors} alt="" /><img src={Vistra} alt="" />
+                <img src={General_Motors} alt="" /><img src={Vistra} alt="" /><img src={Addative} alt="" />
             </div>
             <button className="home-sponsor-button">
                 <a href="/sponsors">View Our Sponsors</a>
