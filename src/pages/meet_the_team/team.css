@@ -25,6 +25,7 @@ h1.team-title {
 }
 
 h1.team-desc{
+    margin-top: 1rem;
     font-weight: normal;
     font-size: 1rem;
 }
