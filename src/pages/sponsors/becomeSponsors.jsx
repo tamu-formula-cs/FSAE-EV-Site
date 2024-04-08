@@ -145,6 +145,7 @@ function SponsorshipTiers() {
           <button className="become-sponsor-button" onClick={handleSponsorClick}>BECOME A SPONSOR</button>
           <button className="become-sponsor-button" onClick={handleMoreInfoClick}>MORE INFORMATION</button>
         </div>
+
       <Footer />
     </div>
   );
