@@ -6,6 +6,7 @@ import './footer.css';
 
 export default function Footer() {
     return (
+        <>
         <footer className="footer-container">
             <div className="footer-left-container">
                 <img src={Logo} alt="Logo" className="footer-logo-image" />
@@ -29,5 +30,13 @@ export default function Footer() {
                 <h1 className="contact"><a href="mailto:tamuformulaelectric@gmail.com" target='_blank'>Contact</a></h1>
             </div>
         </footer>
+        <div className="sitemap-container">
+            <a href="/">Home</a>
+            <a href="/meet-the-team">Meet the Team</a>
+            <a href="/sponsors">Sponsors</a>
+            <a href="/get-involved">Get Involved</a>
+            <a href="/become-sponsors">Become a Sponsor</a>
+        </div>
+        </>
     );
 }
