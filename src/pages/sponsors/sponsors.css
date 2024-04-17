@@ -76,7 +76,7 @@ section.join-section{
     justify-content: space-between;
     align-items: center;
     margin: 10rem 0;
-    height: 30vh;
+    height: 40vh;
 }
 
 section.join-section h1{
@@ -89,6 +89,7 @@ section.join-section h2{
     font-family: 'Inter', sans-serif;
     font-size: 1.5rem;
     font-weight: normal;
+    margin-bottom: 1.5rem;
 }
 
 section.join-section button.become-a-sponsor-button{
