@@ -32,9 +32,9 @@ export default function Team() {
 
                 <div className="subteam-section">
                     <h1 className="team-div-title">
-                        Business
+                        Business Chief
                     </h1>
-                    <h1 className="team-lead"><span className="team-lead-bold">Business Chief: </span>Ryan Lucas</h1>
+                    <h1 className="team-lead">Ryan Lucas</h1>
                 </div>
 
                 <div className="subteam-section">

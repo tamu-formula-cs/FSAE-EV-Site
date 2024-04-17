@@ -154,7 +154,6 @@ export default function Home(){
         </section>
 
         <div className="home-sponsors">
-            <h1>OUR SPONSORS</h1>
             <h2>In partnership with our distinguished sponsors.</h2>
             <div className="sponsor-home-images">
                 <img src={General_Motors} alt="" /><img src={Vistra} alt="" /><img src={Addative} alt="" />
