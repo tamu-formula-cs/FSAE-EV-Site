@@ -6,6 +6,7 @@ import EngineeringMoreInfo from "./pages/get_involved/engineering_more_info"
 import Sponsors from "./pages/sponsors/sponsors"
 import BecomeSponsors from "./pages/sponsors/becomeSponsors";
 import Team from "./pages/meet_the_team/team";
+import ScrollToTop from "./components/scroll_to_top/scroll_to_top";
 
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
@@ -14,6 +15,7 @@ function App() {
 
   return (
     <Router>
+      <ScrollToTop />
         <Routes>
           <Route path="/" element={<Home/>} />
           <Route path="/meet-the-team" element={<Team/>}/>
@@ -25,7 +27,7 @@ function App() {
           <Route path="/get-involved/operations-more-info" element={<OperationsMoreInfo/>} />
           <Route path="/get-involved/engineering-more-info" element={<EngineeringMoreInfo/>} />
         </Routes>
-      </Router>
+    </Router>
   )
 }
 
