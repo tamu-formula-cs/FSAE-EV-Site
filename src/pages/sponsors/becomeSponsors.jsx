@@ -9,7 +9,7 @@ function SponsorshipTiers() {
   };
 
   const handleMoreInfoClick = () => {
-    window.open('https://tamucs-my.sharepoint.com/:b:/r/personal/bari_vadaria_tamu_edu/Documents/Sponsor%20Packet/Texas%20A%26M%20Formula%20E%20Sponsor%20Packet%202023-2024.pdf?csf=1&web=1&e=N9tURB', '_blank');
+    window.open('https://tamucs-my.sharepoint.com/:b:/g/personal/bari_vadaria_tamu_edu/EcL9hM9c0H5HosN04a_RX3sBGZmRFivAsT4I4LzQbuX60w?e=JTwlP2https://tamucs-my.sharepoint.com/:b:/g/personal/bari_vadaria_tamu_edu/EcL9hM9c0H5HosN04a_RX3sBGZmRFivAsT4I4LzQbuX60w?e=6wLFVm', '_blank');
   };
 
   return (
@@ -142,7 +142,7 @@ function SponsorshipTiers() {
           </table>
         </div>
         <div className="button-container">
-          <button className="become-sponsor-button" onClick={handleSponsorClick}>BECOME A SPONSOR</button>
+          <button className="become-sponsor-button" onClick={handleSponsorClick}>SPONSORSHIP FORM</button>
           <button className="become-sponsor-button" onClick={handleMoreInfoClick}>MORE INFORMATION</button>
         </div>
 
