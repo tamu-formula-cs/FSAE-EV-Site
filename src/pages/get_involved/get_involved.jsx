@@ -65,18 +65,6 @@ const GetInvolved = () => {
             {/* </a> */}
           </div>
           <div className="subteam">
-            <h2>Operations:</h2>
-            <p>Facilities Management</p>
-            <p>Transportation Logistics</p>
-            <p>Computer Science</p>
-            <Link to="/get-involved/operations-more-info">
-              <button className="operations-button more-info-button">More Info</button>
-            </Link>
-            {/* <a href="https://docs.google.com/forms/d/e/1FAIpQLSc5lz2CDG8bV8xVcwv9XsgCUsVMwg8ehZ37KLrOcfLQU92W7A/viewform"> */}
-              <button className="operations-button join-button">Closed</button>
-            {/* </a> */}
-          </div>
-          <div className="subteam">
             <h2>Engineering:</h2>
             <p>Aerodynamics</p>
             <p>High-Voltage Battery</p>
@@ -87,9 +75,21 @@ const GetInvolved = () => {
             <Link to="/get-involved/engineering-more-info">
               <button className="engineering-button more-info-button">More Info</button>
             </Link>
-            <a href="https://docs.google.com/forms/d/e/1FAIpQLSfqrb4vc-XoosoE9pfsxD8bJV0U_gP9SCxY0DHdfq97Fp4jHw/viewform?pli=1">
-              <button className="engineering-button join-button">Apply here</button>
-            </a>
+            {/* <a href="https://docs.google.com/forms/d/e/1FAIpQLSfqrb4vc-XoosoE9pfsxD8bJV0U_gP9SCxY0DHdfq97Fp4jHw/viewform?pli=1"> */}
+              <button className="engineering-button join-button">Closed</button>
+            {/* </a> */}
+          </div>
+          <div className="subteam">
+            <h2>Operations:</h2>
+            <p>Facilities Management</p>
+            <p>Transportation Logistics</p>
+            <p>Computer Science</p>
+            <Link to="/get-involved/operations-more-info">
+              <button className="operations-button more-info-button">More Info</button>
+            </Link>
+            {/* <a href="https://docs.google.com/forms/d/e/1FAIpQLSc5lz2CDG8bV8xVcwv9XsgCUsVMwg8ehZ37KLrOcfLQU92W7A/viewform"> */}
+            <button className="operations-button join-button">Closed</button>
+            {/* </a> */}
           </div>
         </div>
       </div>
