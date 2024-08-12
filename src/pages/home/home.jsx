@@ -18,7 +18,7 @@ export default function Home(){
 
     const navigate = useNavigate();
 
-    const targetDate = new Date('2024-06-12T19:00').getTime();
+    const targetDate = new Date('2025-06-12T19:00').getTime();
 
     const [countdown, setCountdown] = useState({
         days: 0,
@@ -124,7 +124,7 @@ export default function Home(){
         </div>
 
         <div className="countdown-container">
-            <h1>COMPETITION IN</h1>
+            <h1>FSAE ELECTRIC COMPETITION</h1>
             <div className="countdown">
                 <div className="countdown-item">
                     <span className="countdown-number">{countdown.days}</span>
