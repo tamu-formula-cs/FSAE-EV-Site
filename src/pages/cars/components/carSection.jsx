@@ -13,7 +13,7 @@ const CarSection = ({ year }) => {
                 <img src={car} alt="AME24"/>
                 <div className="main-car-section-content">
                     <h2>2023 - 2024</h2>
-                    <h1>AME24</h1>
+                    <h1>{year}</h1>
 
                     <div className="stats-grid">
                         <div className="stat-item output">
