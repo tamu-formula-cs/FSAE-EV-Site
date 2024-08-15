@@ -3,6 +3,7 @@ import GetInvolved from "./pages/get_involved/get_involved"
 import BusinessMoreInfo from "./pages/get_involved/business_more_info"
 import OperationsMoreInfo from "./pages/get_involved/operations_more_info"
 import EngineeringMoreInfo from "./pages/get_involved/engineering_more_info"
+import Cars from "./pages/cars/cars"
 import Sponsors from "./pages/sponsors/sponsors"
 import BecomeSponsors from "./pages/sponsors/becomeSponsors";
 import Team from "./pages/meet_the_team/team";
@@ -26,6 +27,7 @@ function App() {
           <Route path="/get-involved/business-more-info" element={<BusinessMoreInfo/>} />
           <Route path="/get-involved/operations-more-info" element={<OperationsMoreInfo/>} />
           <Route path="/get-involved/engineering-more-info" element={<EngineeringMoreInfo/>} />
+          <Route path="/cars" element={<Cars/>}/>
         </Routes>
     </Router>
   )
