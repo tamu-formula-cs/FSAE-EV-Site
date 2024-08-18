@@ -27,7 +27,7 @@ export default function Footer() {
                         <FontAwesomeIcon icon={faLinkedin} />
                     </a>
                 </div>
-                <h1 className="contact"><a href="mailto:tamuformulaelectric@gmail.com" target='_blank'>Contact</a></h1>
+                <h1 className="contact"><a href="/contact" target='_blank'>Contact</a></h1>
             </div>
         </footer>
         <div className="sitemap-container">
