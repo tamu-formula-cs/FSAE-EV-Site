@@ -35,6 +35,8 @@ export default function Home(){
             description: <ToastDescription>Help us innovate in electric vehicle technology. Consider donating today!</ToastDescription>,
             action: <ToastAction altText="Donate Now" onClick={handleDonateClick}>Donate Now</ToastAction>,
             duration: 5000,
+            position: "bottom-right",
+            
         });
     }, []);
 
