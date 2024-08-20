@@ -182,17 +182,6 @@ export default function Recruiting() {
                         />
 
                         <TeamCard
-                            title="Software"
-                            description="The Software subteam is dedicated to developing and maintaining the software systems that control and monitor the vehicle’s performance, safety, and reliability."
-                            responsibilities={[
-                                "Development of embedded software for vehicle control systems",
-                                "Integration of sensors and actuators with vehicle control systems",
-                                "Development of data acquisition and telemetry systems",
-                                "Development of simulation tools for vehicle performance analysis"
-                            ]}
-                        />
-
-                        <TeamCard
                             title="Electronics"
                             description="The Electronics subteam is dedicated to designing and manufacturing a high-quality low voltage electrical system that prioritizes safety and reliability."
                             responsibilities={[
@@ -213,7 +202,16 @@ export default function Recruiting() {
                                 "Electrical integration of conductors and connectors"
                             ]}
                         />
-
+                        <TeamCard
+                            title="Software"
+                            description="The Software subteam is dedicated to developing and maintaining the software systems that control and monitor the vehicle’s performance, safety, and reliability."
+                            responsibilities={[
+                                "Development of embedded software for vehicle control systems",
+                                "Integration of sensors and actuators with vehicle control systems",
+                                "Development of data acquisition and telemetry systems",
+                                "Development of simulation tools for vehicle performance analysis"
+                            ]}
+                        />
                         <TeamCard
                             title="Suspension"
                             description="The Suspension subteam provides a reliable and predictable interaction between the car and the ground."
