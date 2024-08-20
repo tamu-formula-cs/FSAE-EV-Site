@@ -25,6 +25,7 @@ section.cars-inner-container h1.cars-title{
     width: 100%;
     height: 80px;
     margin: 40px 0;
+    margin-bottom: 5rem;
 }
 
 .timeline-line {
@@ -91,8 +92,7 @@ section.cars-inner-container h1.cars-title{
     display: flex;
     width: 100%;
     height: 100%;
-    justify-content: space-between;
-    padding: 0 7rem;
+    justify-content: space-around;
 }
 
 .main-car-section-content{
@@ -119,21 +119,21 @@ section.cars-inner-container h1.cars-title{
 }
 
 p.car-content{
-    padding: 0 7rem;
     margin: 5rem 0;
     font-size: 1.5rem;
+    padding: 0 6rem;
 }
 
 .car-section-two{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
-    padding: 0 7rem;
 }
 
 .car-section-two p.car-content{
     padding: 0;
-    width: 50%;
+    width: 35%;
+    margin: 0;
 }
 
 .stats-grid {
@@ -234,4 +234,133 @@ p.car-content{
 .call-to-action button.get-involved-button:hover{
     background-color: #f0f0f0;
     color: #333333;
+}
+
+@media (max-width: 768px) {
+    section.cars-inner-container {
+        margin-top: 3rem;
+    }
+
+    section.cars-inner-container h1.cars-title {
+        font-size: 3rem;
+        margin-bottom: 3rem;
+    }
+
+    .timeline {
+        height: 60px;
+        margin: 20px 0 40px 0;
+    }
+
+    .timeline-dot {
+        width: 16px;
+        height: 16px;
+    }
+
+    .timeline-dot.active {
+        width: 20px;
+        height: 20px;
+    }
+
+    .timeline-dot:nth-child(2) { left: 20%; }
+    .timeline-dot:nth-child(3) { left: 50%; }
+    .timeline-dot:nth-child(4) { left: 80%; }
+
+    .year-label {
+        font-size: 1.25rem;
+        bottom: 30px;
+    }
+
+    .car-section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .main-car-section,
+    .car-section-two {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .main-car-section-content {
+        width: 100%;
+        align-items: center;
+        text-align: center;
+    }
+
+    .main-car-section-content h1 {
+        font-size: 2.5rem;
+        margin-bottom: 2rem;
+    }
+
+    .main-car-section-content h2 {
+        font-size: 1.5rem;
+        margin: 1rem 0;
+    }
+
+    p.car-content,
+    .car-section-two p.car-content {
+        margin: 2rem 0;
+        padding: 0;
+        font-size: 1.1rem;
+        text-align: center;
+        width: 100%;
+    }
+
+    .car-section-two p.car-content{
+        margin-bottom: 4rem;
+    }
+
+    .main-car-section img,
+    .car-section-two img {
+        max-width: 100%;
+        height: auto;
+        margin-bottom: 1rem;
+    }
+
+    .main-car-section img.light {
+        height: 50px;
+    }
+
+    .stats-grid {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        max-width: 500px;
+        margin-bottom: 3rem;
+        height: auto;
+    }
+
+    .stat-item {
+        padding-top: 1.75rem;
+        width: 100%;
+    }
+
+    .stat-row {
+        justify-content: flex-start;
+    }
+
+    .stat-value {
+        text-align: left;
+    }
+
+    .call-to-action {
+        flex-direction: column;
+        padding: 1.5rem;
+        width: 90vw;
+        text-align: center;
+        margin: 5rem 0;
+        padding-bottom: 2rem;
+    }
+
+    .call-to-action h1 {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+    }
+
+    .call-to-action button.get-involved-button {
+        padding: 0.75rem 1.5rem 0.75rem 1.5rem;
+        font-size: 1.5rem;
+    }
 }

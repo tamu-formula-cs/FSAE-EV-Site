@@ -30,7 +30,7 @@ const CarSection = ({ year }) => {
                             <div className="stat-row">
                                 <span className="stat-value">117 km/h</span>
                                 <div className="stat-icon-container">
-                                    <img src={speed} alt="speed" className="stat-icon"/>
+                                    <img src={speed} alt="speed" className="stat-icon light"/>
                                 </div>
                             </div>
                         </div>
