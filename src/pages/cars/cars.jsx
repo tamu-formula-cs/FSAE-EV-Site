@@ -4,6 +4,7 @@ import Footer from "@/components/footer/footer"
 import Timeline from './components/timeline'
 import CarSection from './components/carSection'
 import './cars.css'
+import { Link } from 'react-router-dom';
 
 export default function Cars() {
     const [selectedYear, setSelectedYear] = useState('AME24');
