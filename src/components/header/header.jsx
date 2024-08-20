@@ -27,6 +27,7 @@ export default function Header() {
             <Link to="/sponsors" className='link'><li className="header-li">SPONSORS</li></Link>
             <div className="line"></div>
             <Link to="/recruiting" className='link'><li className="header-li">RECRUITING</li></Link>
+            <div className="line"></div>
             <Link to="/contact" className='link'><li className="header-li">CONTACT</li></Link>
         </ul>
     );
