@@ -182,6 +182,17 @@ export default function Recruiting() {
                         />
 
                         <TeamCard
+                            title="Software"
+                            description="The Software subteam is dedicated to developing and maintaining the software systems that control and monitor the vehicle’s performance, safety, and reliability."
+                            responsibilities={[
+                                "Development of embedded software for vehicle control systems",
+                                "Integration of sensors and actuators with vehicle control systems",
+                                "Development of data acquisition and telemetry systems",
+                                "Development of simulation tools for vehicle performance analysis"
+                            ]}
+                        />
+
+                        <TeamCard
                             title="Electronics"
                             description="The Electronics subteam is dedicated to designing and manufacturing a high-quality low voltage electrical system that prioritizes safety and reliability."
                             responsibilities={[
@@ -313,19 +324,7 @@ export default function Recruiting() {
                             ]}
                         />
 
-                        <TeamCard
-                            title="Computer Science"
-                            description="The Computer Science subteam will be an integral part of interdisciplinary projects, collaborating closely with both engineering and business teams. The subteam’s primary focus will be on developing solutions that leverage automation, machine learning, and data analysis to address various challenges faced by the organization."
-                            responsibilities={[
-                                "Work collaboratively in small groups of 4-5 individuals to conceptualize, design, and implement software solutions that meet the project objectives",
-                                "Develop robust and scalable software solutions, with a particular emphasis on automation, machine learning algorithms, and data analysis techniques",
-                                "Maintain and continue to develop the Electric Vehicle team’s website",
-                                "Take ownership of documenting all aspects of the software development process, including architecture, codebase, APIs, data models, and algorithms",
-                                "Ensure that documentation is clear, comprehensive, and accessible to both technical and non-technical stakeholders",
-                                "Conduct thorough testing and debugging of software to identify and rectify any defects or inconsistencies",
-                                "Actively seek opportunities to enhance existing processes, tools, and methodologies to improve efficiency and effectiveness"
-                            ]}
-                        />
+
                     </div>
                 </section>
 
