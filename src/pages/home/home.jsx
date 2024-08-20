@@ -98,6 +98,14 @@ export default function Home(){
             </div>
             <div className="scroll-down"></div>
         </div>
+        
+        <section className="home-join-team-section">
+                <h1>JOIN OUR TEAM</h1>
+                <h2>Help us build the next winning racecar.</h2>
+                <button className="recruiting-button">
+                    <a target='_blank' href='/recruiting'>JOIN US</a>
+                </button>
+        </section>
 
         <div className="car-showcase">
             <h1 className='showcase-title'>AME24</h1>
