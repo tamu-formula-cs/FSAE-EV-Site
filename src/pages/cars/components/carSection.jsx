@@ -7,14 +7,14 @@ import acceleration from "../../../assets/acceleration.svg"
 import '../cars.css'
 
 const CarSection = ({ year }) => {
+
     return (
         <div className="car-section">
             <div className="main-car-section">
-                <img src={car} alt="AME24"/>
+                <img src={car} alt="AME24" className='car-ame-image'/>
                 <div className="main-car-section-content">
                     <h2>2023 - 2024</h2>
                     <h1>{year}</h1>
-
                     <div className="stats-grid">
                         <div className="stat-item output">
                             <span className="stat-label">Output</span>
@@ -66,7 +66,7 @@ const CarSection = ({ year }) => {
                 instantaneous torque to all four wheels. 
                 The team invested significant time in optimizing the battery management system, successfully extending the car's range without compromising its blistering speed.
                 </p>
-                <img src={car} alt="AME24"/>
+                <img src={car} alt="AME24" className='car-ame-image'/>
             </div>
         </div>
     );

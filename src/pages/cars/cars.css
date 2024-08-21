@@ -120,7 +120,7 @@ section.cars-inner-container h1.cars-title{
 
 p.car-content{
     margin: 5rem 0;
-    font-size: 1.5rem;
+    font-size: 1.35rem;
     padding: 0 6rem;
 }
 
@@ -137,11 +137,10 @@ p.car-content{
 }
 
 .stats-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1px;
-    width: 500px;
-    height: 300px;
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 500px;
+    width: 90%;
     background-color: #fff;
     border: 1px solid #ddd;
 }
@@ -151,21 +150,40 @@ p.car-content{
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    padding: 20px;
+    padding: 1.25rem;
     color: #fff;
-    padding-right: 40px;
+    width: 50%;
+    box-sizing: border-box;
 }
 
 .stat-label {
     font-family: 'Inter', sans-serif;
-    font-size: 1rem;
-    margin-bottom: 5px;
+    font-size: 0.875rem;
+    margin-bottom: 0.3125rem;
 }
 
 .stat-value {
     font-family: 'Inter', sans-serif;
-    font-size: 2rem;
+    font-size: 1.25rem;
     font-weight: bold;
+}
+
+.stat-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.stat-icon-container {
+    width: 2.75rem;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.stat-icon {
+    width: 2.125rem;
+    height: 2.125rem;
 }
 
 .output {
@@ -195,6 +213,7 @@ p.car-content{
     font-size: 18px;
     font-weight: bold;
     flex-grow: 1;
+    align-self: flex-end;
 }
 
 .stat-icon-container {
@@ -218,7 +237,7 @@ p.car-content{
     justify-content: space-evenly;
     align-items: center;
     font-family: 'Bebas Neue', sans-serif;
-    font-size: 3rem;
+    font-size: 2.6rem;
     border-radius: 10px;
     margin: 10rem 0;
 }
@@ -236,7 +255,28 @@ p.car-content{
     color: #333333;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1200px){
+    .main-car-section .car-ame-image,
+    .car-section-two .car-ame-image {
+        width: 46%;
+        height: 36%;
+        align-self: center;
+    }
+
+    .call-to-action{
+        font-size: 2.2rem;
+    }
+
+    .stats-grid{
+        width: 100%;
+    }
+
+    .car-section{
+        padding: 10px;
+    }
+}
+
+@media (max-width: 1000px) {
     section.cars-inner-container {
         margin-top: 3rem;
     }
@@ -302,7 +342,7 @@ p.car-content{
     p.car-content,
     .car-section-two p.car-content {
         margin: 2rem 0;
-        padding: 0;
+        padding: 2rem;
         font-size: 1.1rem;
         text-align: center;
         width: 100%;
@@ -312,11 +352,13 @@ p.car-content{
         margin-bottom: 4rem;
     }
 
-    .main-car-section img,
-    .car-section-two img {
+    .main-car-section .car-ame-image,
+    .car-section-two .car-ame-image {
+        width: auto;
         max-width: 100%;
         height: auto;
         margin-bottom: 1rem;
+        padding: .5rem;
     }
 
     .main-car-section img.light {
@@ -324,25 +366,26 @@ p.car-content{
     }
 
     .stats-grid {
-        display: flex;
+        width: 85%;
         flex-direction: column;
-        width: 100%;
-        max-width: 500px;
-        margin-bottom: 3rem;
-        height: auto;
     }
 
     .stat-item {
-        padding-top: 1.75rem;
         width: 100%;
     }
 
-    .stat-row {
-        justify-content: flex-start;
+    .stat-label{
+        margin-left: 1rem;
     }
 
-    .stat-value {
+    .stat-value{
         text-align: left;
+        margin-left: 1rem;
+    }
+
+    .stat-icon{
+        margin-right: 1rem;
+        /* transform: translateY(-.75rem); */
     }
 
     .call-to-action {
@@ -355,12 +398,27 @@ p.car-content{
     }
 
     .call-to-action h1 {
-        font-size: 2rem;
+        font-size: 1.5rem;
         margin-bottom: 1rem;
     }
 
     .call-to-action button.get-involved-button {
-        padding: 0.75rem 1.5rem 0.75rem 1.5rem;
+        padding: 1rem 1.5rem 0.75rem 1.5rem;
         font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .stat-item {
+        padding: 2rem 1rem;
+    }
+
+    .stat-value {
+        font-size: 1rem;
+    }
+
+    .stat-icon {
+        width: 1.75rem;
+        height: 1.75rem;
     }
 }

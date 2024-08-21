@@ -17,7 +17,7 @@ export default function Cars(){
 
             <div className="call-to-action">
                 <h1>Want to help build cars like these?</h1>
-                <button className='get-involved-button'><a href='https://tamuformulaelectric.com/get-involved'>Get involved</a></button>
+                <button className='get-involved-button'><a href='https://tamuformulaelectric.com/recruiting'>Get involved</a></button>
             </div>
         </section>
         <Footer/>
