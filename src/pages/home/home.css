@@ -274,7 +274,7 @@ section.home-join-team-section{
     justify-content: center;
     align-items: center;
     height: 65vh;
-    background-color: #8B0000;
+    background-color: var(--maroon);
     color: white;
 }
 
