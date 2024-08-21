@@ -23,7 +23,7 @@ export default function Recruiting() {
                         </p>
                         <div className="flex flex-col items-center space-y-5">
                             <a
-                                href="https://docs.google.com/forms/d/e/1FAIpQLSfqrb4vc-XoosoE9pfsxD8bJV0U_gP9SCxY0DHdfq97Fp4jHw/viewform?pli=1"
+                                href="https://docs.google.com/forms/d/e/1FAIpQLSekwsZ7K0MFScxrIgcgv7Iqhqn1iXJTEEKHOSf_kgs8_tdieg/viewform?usp=sf_link"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="bg-maroon text-white px-6 py-3 rounded-lg text-lg hover:bg-tamu-maroon transition-colors text-center"
