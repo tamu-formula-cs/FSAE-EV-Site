@@ -266,6 +266,53 @@ section.home-join-section button.become-a-sponsor-button:hover{
     cursor: pointer;
 }
 
+/* Recruit */
+section.home-join-team-section{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 65vh;
+    background-color: var(--maroon);
+    color: white;
+}
+
+section.home-join-team-section h1{
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 4rem;
+    margin: 0;
+    color: white;
+}
+
+section.home-join-team-section h2{
+    font-family: 'Inter', sans-serif;
+    font-size: 2rem;
+    margin: 5rem 0;
+    font-weight: normal;
+    color: white;
+}
+
+section.home-join-team-section button.recruiting-button{
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 2rem;
+    background-color: var(--maroon);
+    color: white;
+    padding: 2rem 3rem;
+    border: none;
+}
+
+
+section.home-join-team-section button.recruiting-button a{
+    color: white;
+    text-decoration: none;
+}
+
+section.home-join-team-section button.recruiting-button:hover{
+    background-color: #8B0000;
+    cursor: pointer;
+}
+
 /* Sponsors */
 
 .home-sponsors{

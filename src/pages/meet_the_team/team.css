@@ -18,9 +18,10 @@ img.team-image {
 }
 
 h1.team-title {
+    margin-top: 5rem;
     font-family: 'Bebas Neue', sans-serif;
-    color: var(--maroon);
-    font-size: 4rem;
+    color: var(--black);
+    font-size: 5rem;
     margin-bottom: 0;
 }
 
@@ -74,7 +75,7 @@ h1.team-lead span.team-lead-bold {
 
 @media screen and (max-width: 768px) {
     h1.team-title {
-        font-size: 3rem;
+        font-size: 4rem;
     }
 
     img.team-image {
