@@ -296,7 +296,8 @@ section.home-join-team-section h2{
 section.home-join-team-section button.recruiting-button{
     font-family: 'Bebas Neue', sans-serif;
     font-size: 2rem;
-    background-color: var(--maroon);
+    background-color: black;
+
     color: white;
     padding: 2rem 3rem;
     border: none;

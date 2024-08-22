@@ -18,7 +18,7 @@ export default function Home(){
 
     const navigate = useNavigate();
 
-    const targetDate = new Date('2025-06-12T19:00').getTime();
+    const targetDate = new Date('2025-06-10T19:00').getTime();
 
     const [countdown, setCountdown] = useState({
         days: 0,
