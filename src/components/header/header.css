@@ -127,7 +127,7 @@ ul.header-ul li.header-li:hover, ul.desktop-header-ul li.desktop-header-li:hover
     color: rgb(210, 210, 210);
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 860px) {
     nav.header-container{
         height: 10vh;
         padding: 0 2rem;

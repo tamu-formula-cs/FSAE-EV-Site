@@ -5,10 +5,10 @@ import { Link } from 'react-router-dom';
 
 export default function Header() {
     const [isOpen, setIsOpen] = useState(false);
-    const [isDesktop, setIsDesktop] = useState(window.innerWidth > 768);
+    const [isDesktop, setIsDesktop] = useState(window.innerWidth > 860);
 
     const updateScreenSize = () => {
-        setIsDesktop(window.innerWidth > 768);
+        setIsDesktop(window.innerWidth > 860);
     };
 
     useEffect(() => {
