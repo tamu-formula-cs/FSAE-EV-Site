@@ -12,7 +12,7 @@ export default function Recruiting() {
             <Header />
             <div className="p-16 space-y-24 max-w-7xl mx-auto">
                 {/* Header Section */}
-
+            
                 <section className="grid grid-cols-1 lg:grid-cols-2 gap-8">
                     <div className="flex flex-col items-center space-y-8">
                         <h1 className="text-5xl font-bold text-gray-900 text-center">

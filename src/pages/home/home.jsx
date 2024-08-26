@@ -173,7 +173,7 @@ export default function Home(){
             </button>
         </div>
 
-        <Toaster />
+        {/* <Toaster /> */}
         <Footer/>
     </div>
 }

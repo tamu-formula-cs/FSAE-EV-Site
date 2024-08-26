@@ -18,30 +18,30 @@ export default function Header() {
 
     const menu = (
         <ul className="header-ul">
-            <Link to="/" className='link'><li className="header-li">HOME</li></Link>
+            <Link to="/" className='link'><li className="header-li">Home</li></Link>
             <div className="line"></div>
-            <Link to="/meet-the-team" className='link'><li className="header-li">MEET THE TEAM</li></Link>
+            <Link to="/meet-the-team" className='link'><li className="header-li">Team</li></Link>
             <div className="line"></div>
             {/* <Link to="/history"><li className="header-li">ABOUT US</li></Link> */}
             {/* <div className="line"></div> */}
-            <Link to="/sponsors" className='link'><li className="header-li">SPONSORS</li></Link>
+            <Link to="/sponsors" className='link'><li className="header-li">Sponsors</li></Link>
             <div className="line"></div>
-            <Link to="/recruiting" className='link'><li className="header-li">RECRUITING</li></Link>
+            <Link to="/recruiting" className='link'><li className="header-li">Recruiting</li></Link>
             <div className="line"></div>
-            <Link to="/cars" className='link'><li className="header-li">CARS</li></Link>
+            <Link to="/cars" className='link'><li className="header-li">Cars</li></Link>
             <div className="line"></div>
-            <Link to="/contact" className='link'><li className="header-li">CONTACT</li></Link>
+            <Link to="/contact" className='link'><li className="header-li">Contact</li></Link>
         </ul>
     );
 
     const desktopMenu = (
         <ul className="desktop-header-ul">
-            <Link to="/meet-the-team" className="link"><li className="desktop-header-li">MEET THE TEAM</li></Link>
+            <Link to="/meet-the-team" className="link"><li className="desktop-header-li">Team</li></Link>
             {/* <Link to="/history" className="link"><li className="desktop-header-li">ABOUT US</li></Link> */}
-            <Link to="/sponsors" className="link"><li className="desktop-header-li">SPONSORS</li></Link>
-            <Link to="/recruiting" className="link"><li className="desktop-header-li">RECRUITING</li></Link>
-            <Link to="/cars" className="link"><li className="desktop-header-li">CARS</li></Link>
-            <Link to="/contact" className="link"><li className="desktop-header-li">CONTACT</li></Link>
+            <Link to="/sponsors" className="link"><li className="desktop-header-li">Sponsors</li></Link>
+            <Link to="/recruiting" className="link"><li className="desktop-header-li">Recruiting</li></Link>
+            <Link to="/cars" className="link"><li className="desktop-header-li">Cars</li></Link>
+            <Link to="/contact" className="link"><li className="desktop-header-li">Contact</li></Link>
         </ul>
     );
 
