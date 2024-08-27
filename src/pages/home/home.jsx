@@ -102,9 +102,9 @@ export default function Home(){
         <section className="home-join-team-section">
                 <h1>JOIN OUR TEAM</h1>
                 <h2>Help us build the next winning racecar.</h2>
-                <button className="recruiting-button">
-                    <a target='_blank' href='/recruiting'>JOIN US</a>
-                </button>
+                <a target='_blank' href='/recruiting' className="recruiting-button">
+                    JOIN US
+                </a>
         </section>
 
         <div className="car-showcase">
