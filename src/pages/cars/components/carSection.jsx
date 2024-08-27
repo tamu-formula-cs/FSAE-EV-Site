@@ -45,7 +45,7 @@ const carImages = {
     },
     "default" : {
         carImageOne: track_24,
-        carImageTwo: kids_24,
+        carImageTwo: side_24,
         carImageThree: spoiler_24,
         carImageFour: aerial_24
     }
