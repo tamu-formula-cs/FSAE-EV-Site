@@ -380,10 +380,6 @@ p.car-content{
         margin-bottom: 0;
     }
 
-    .main-car-section img.light {
-        height: 50px;
-    }
-
     .stats-grid {
         width: 85%;
         flex-direction: column;

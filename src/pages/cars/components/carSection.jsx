@@ -2,7 +2,8 @@ import React from 'react';
 import car from "../../../assets/ame24.png"
 import powerIcon from "../../../assets/power.svg"
 import weightIcon from "../../../assets/weight.svg"
-import speedIcon from "../../../assets/speed.svg"
+// import speedIcon from "../../../assets/speed.svg"
+import speedIcon from "../../../assets/wheel.svg"
 import accelerationIcon from "../../../assets/acceleration.svg"
 import track_24 from "../../../assets/cars/24-track.jpg"
 import side_24 from "../../../assets/cars/24-side.jpg"
@@ -78,7 +79,7 @@ const CarSection = ({ year }) => {
                             <div className="stat-row">
                                 <span className="stat-value">{speed}</span>
                                 <div className="stat-icon-container">
-                                    <img src={speedIcon} alt="speed" className="stat-icon light"/>
+                                    <img src={speedIcon} alt="speed" className="stat-icon"/>
                                 </div>
                             </div>
                         </div>
