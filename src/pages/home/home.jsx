@@ -77,6 +77,9 @@ export default function Home(){
     }, []);
 
     return <div className="main-containter">
+    <meta property="og:title" content="Texas A&M Formula E" />
+    <meta property="og:image:secure_url" content="https://tamuformulaelectric.com/assets/home-two-compressed-DsQz2CUF.jpg" />
+    <meta property="og:type" content="website" />
         <Header/>
 
         <div className="landing-container" style={{backgroundImage: `url(${CarTwo})`}}>
