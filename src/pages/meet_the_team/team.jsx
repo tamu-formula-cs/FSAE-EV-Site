@@ -91,7 +91,7 @@ export default function Team() {
                         Software
                     </h1>
                     <h1 className="team-lead"><span className="team-lead-bold">Team Lead: </span>Athul Suresh</h1>
-                    <h1 className="name">Bari Vadaria, Vedarth Atreya</h1>
+                    <h1 className="name">Bari Vadaria, Vedarth Atreya, Teymur Hajiyev </h1>
                 </div>
 
                 <div className="subteam-section">
