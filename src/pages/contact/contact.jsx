@@ -34,8 +34,17 @@ export default function Contact() {
     return (
         <>
             <Header />
-            <div className="text-center mt-12 mb-8">
-                <h1 className="font-bebas text-4xl">Contact Us</h1>
+            <style>
+                {`
+                    @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+                    
+                    h1 {
+                        font-family: 'Bebas Neue', sans-serif;
+                    }
+                `}
+            </style>
+            <div className="text-center mt-23 mb-60">
+                <h1 className="text-black mt-20 mb-0" style={{ fontSize: '5rem' }}>Contact Us</h1>
                 <form
                     className="mt-4 flex flex-col items-center w-4/5 mx-auto relative"
                     action="https://docs.google.com/forms/u/0/d/e/1FAIpQLScIDzc4swg6AYECqs3vnjOvldE3cwpr29QLivPrr0SVa5FJNw/formResponse?pli=1"
@@ -61,7 +70,7 @@ export default function Contact() {
                     <div className="absolute bottom-0">
                         <button
                             type="submit"
-                            className="border-none py-2 px-4 cursor-pointer text-lg rounded-md bg-maroon text-white w-full max-w-xs"
+                            className="border-none py-2 px-4 cursor-pointer text-lg rounded-lg bg-tamu-maroon hover:bg-maroon text-white w-full max-w-xs"
                         >
                             Send
                         </button>
@@ -73,6 +82,7 @@ export default function Contact() {
                     <div id="thankYouMessage" className="mt-4 text-green-600">Thanks for contacting us! We'll reach out soon.</div>
                 )}
             </div>
+            <div className="mt-20"></div>
             <Footer />
         </>
     )

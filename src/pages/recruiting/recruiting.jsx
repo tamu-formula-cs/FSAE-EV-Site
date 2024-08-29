@@ -10,12 +10,20 @@ export default function Recruiting() {
     return (
         <>
             <Header />
+            <style>
+                    {`
+                    @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+                    
+                    h1 {
+                        font-family: 'Bebas Neue', sans-serif;
+                    }
+                `}
+                </style>
             <div className="p-16 space-y-24 max-w-7xl mx-auto">
                 {/* Header Section */}
-
                 <section className="grid grid-cols-1 lg:grid-cols-2 gap-8">
                     <div className="flex flex-col items-center space-y-8">
-                        <h1 className="text-5xl font-bold text-gray-900 text-center">
+                        <h1 className="text-7xl text-gray-900 text-center">
                             Join Us!
                         </h1>
                         <p className="text-lg text-gray-700">
@@ -26,7 +34,7 @@ export default function Recruiting() {
                                 href="https://docs.google.com/forms/d/e/1FAIpQLSekwsZ7K0MFScxrIgcgv7Iqhqn1iXJTEEKHOSf_kgs8_tdieg/viewform?usp=sf_link"
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="bg-maroon text-white px-6 py-3 rounded-lg text-lg hover:bg-tamu-maroon transition-colors text-center"
+                                className="bg-tamu-maroon text-white px-6 py-3 rounded-lg text-lg hover:bg-maroon transition-colors text-center"
                             >
                                 Apply Engineering! (Apprentice)
                             </a>
@@ -35,7 +43,7 @@ export default function Recruiting() {
                                     href="https://forms.office.com/pages/responsepage.aspx?id=44HzaNpGuUe6V28yK48NoSrqd-GpUQxLog_m04LE3ExUNUZUQVY4OVA2V0pVUDFCWE9aNU84NFpEUy4u"
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="bg-maroon text-white px-6 py-3 rounded-lg text-lg hover:bg-tamu-maroon transition-colors text-center"
+                                    className="bg-tamu-maroon text-white px-6 py-3 rounded-lg text-lg hover:bg-maroon transition-colors text-center"
                                 >
                                     Apply Business!
                                 </a>
@@ -43,7 +51,7 @@ export default function Recruiting() {
                                     href="https://docs.google.com/forms/d/e/1FAIpQLSc5lz2CDG8bV8xVcwv9XsgCUsVMwg8ehZ37KLrOcfLQU92W7A/viewform"
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="bg-maroon text-white px-6 py-3 rounded-lg text-lg hover:bg-tamu-maroon transition-colors text-center"
+                                    className="bg-tamu-maroon text-white px-6 py-3 rounded-lg text-lg hover:bg-maroon transition-colors text-center"
                                 >
                                     Apply Operations!
                                 </a>
@@ -141,7 +149,7 @@ export default function Recruiting() {
                         Engineering Teams
                         <div className="pb-2"></div>
                         <a
-                            className="bg-maroon text-white px-4 py-2 rounded-lg text-lg hover:bg-tamu-maroon transition-colors"
+                            className="bg-tamu-maroon text-white px-4 py-2 rounded-lg text-lg hover:bg-maroon transition-colors"
                             href="https://docs.google.com/forms/d/e/1FAIpQLSfqrb4vc-XoosoE9pfsxD8bJV0U_gP9SCxY0DHdfq97Fp4jHw/viewform?pli=1">
                             Apply Engineering!
                         </a>
@@ -234,7 +242,7 @@ export default function Recruiting() {
                         Business Teams
                         <div className="pb-2"></div>
                         <a
-                            className="bg-maroon text-white px-4 py-2 rounded-lg text-lg hover:bg-tamu-maroon transition-colors"
+                            className="bg-tamu-maroon text-white px-4 py-2 rounded-lg text-lg hover:bg-maroon transition-colors"
                             href="https://forms.office.com/pages/responsepage.aspx?id=44HzaNpGuUe6V28yK48NoSrqd-GpUQxLog_m04LE3ExUNUZUQVY4OVA2V0pVUDFCWE9aNU84NFpEUy4u">
                             Apply Business!
                         </a>
@@ -298,7 +306,7 @@ export default function Recruiting() {
                         Operations Teams
                         <div className="pb-2"></div>
                         <a
-                            className="bg-maroon text-white px-4 py-2 rounded-lg text-lg hover:bg-tamu-maroon transition-colors"
+                            className="bg-tamu-maroon text-white px-4 py-2 rounded-lg text-lg hover:bg-maroon transition-colors"
                             href="https://docs.google.com/forms/d/e/1FAIpQLSc5lz2CDG8bV8xVcwv9XsgCUsVMwg8ehZ37KLrOcfLQU92W7A/viewform">
                             Apply Operations!
                         </a>

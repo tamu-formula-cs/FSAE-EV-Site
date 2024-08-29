@@ -11,7 +11,7 @@ export default function TeamCard({ title, description, responsibilities }) {
         <div className="bg-gray-100 p-6 rounded-lg shadow-lg">
             <h3 className="text-xl font-bold text-maroon mb-4">{title}</h3>
             <p className="text-gray-700 text-sm">{description}</p>
-            <button onClick={toggleInfo} className="text-maroon hover:underline">
+            <button onClick={toggleInfo} className="text-maroon hover:underline mt-4">
                 {showInfo ? 'Less Info' : 'More Info'}
             </button>
             {showInfo && (
