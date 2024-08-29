@@ -77,6 +77,9 @@ export default function Home(){
     }, []);
 
     return <div className="main-containter">
+    <meta property="og:title" content="Texas A&M Formula E" />
+    <meta property="og:image:secure_url" content="https://tamuformulaelectric.com/assets/home-two-compressed-DsQz2CUF.jpg" />
+    <meta property="og:type" content="website" />
         <Header/>
 
         <div className="landing-container" style={{backgroundImage: `url(${CarTwo})`}}>
@@ -102,9 +105,9 @@ export default function Home(){
         <section className="home-join-team-section">
                 <h1>JOIN OUR TEAM</h1>
                 <h2>Help us build the next winning racecar.</h2>
-                <button className="recruiting-button">
-                    <a target='_blank' href='/recruiting'>JOIN US</a>
-                </button>
+                <a target='_blank' href='/recruiting' className="recruiting-button">
+                    JOIN US
+                </a>
         </section>
 
         <div className="car-showcase">
@@ -173,7 +176,7 @@ export default function Home(){
             </button>
         </div>
 
-        <Toaster />
+        {/* <Toaster /> */}
         <Footer/>
     </div>
 }

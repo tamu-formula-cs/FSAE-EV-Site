@@ -21,6 +21,7 @@ export default function Recruiting() {
                 </style>
             <div className="p-16 space-y-24 max-w-7xl mx-auto">
                 {/* Header Section */}
+            
                 <section className="grid grid-cols-1 lg:grid-cols-2 gap-8">
                     <div className="flex flex-col items-center space-y-8">
                         <h1 className="text-7xl text-gray-900 text-center">
@@ -34,7 +35,7 @@ export default function Recruiting() {
                                 href="https://docs.google.com/forms/d/e/1FAIpQLSekwsZ7K0MFScxrIgcgv7Iqhqn1iXJTEEKHOSf_kgs8_tdieg/viewform?usp=sf_link"
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="bg-tamu-maroon text-white px-6 py-3 rounded-lg text-lg hover:bg-maroon transition-colors text-center"
+                                className="bg-tamu-maroon text-white px-6 py-3 rounded-lg text-lg hover:bg-maroon transition-colors"
                             >
                                 Apply Engineering! (Apprentice)
                             </a>
@@ -43,7 +44,7 @@ export default function Recruiting() {
                                     href="https://forms.office.com/pages/responsepage.aspx?id=44HzaNpGuUe6V28yK48NoSrqd-GpUQxLog_m04LE3ExUNUZUQVY4OVA2V0pVUDFCWE9aNU84NFpEUy4u"
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="bg-tamu-maroon text-white px-6 py-3 rounded-lg text-lg hover:bg-maroon transition-colors text-center"
+                                    className="bg-tamu-maroon text-white px-6 py-3 rounded-lg text-lg hover:bg-maroon transition-colors"
                                 >
                                     Apply Business!
                                 </a>
@@ -51,7 +52,7 @@ export default function Recruiting() {
                                     href="https://docs.google.com/forms/d/e/1FAIpQLSc5lz2CDG8bV8xVcwv9XsgCUsVMwg8ehZ37KLrOcfLQU92W7A/viewform"
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="bg-tamu-maroon text-white px-6 py-3 rounded-lg text-lg hover:bg-maroon transition-colors text-center"
+                                    className="bg-tamu-maroon text-white px-6 py-3 rounded-lg text-lg hover:bg-maroon transition-colors"
                                 >
                                     Apply Operations!
                                 </a>
@@ -69,20 +70,20 @@ export default function Recruiting() {
 
                 {/* Participation Section */}
                 <section className="space-y-8">
-                    <h2 className="text-3xl font-semibold text-gray-900 text-center md:text-left">How do I participate?</h2>
+                    <h2 className="text-3xl font-semibold text-gray-900">How do I participate?</h2>
 
                     <div className="grid md:grid-cols-2 gap-6">
                         <div className="bg-gray-100 p-6 rounded-lg shadow-lg">
                             <h3 className="text-xl font-bold text-maroon mb-4">Engineering Full-Team</h3>
                             <p className="text-gray-700 text-sm">
-                                The engineering team on Texas A&M Formula SAE Electric consists of around 35 full-time members who actively contribute to designing, building, and testing the car throughout the competition year. We accept undergraduate engineering students from Texas A&M through an application process that opens up in the spring semester for the following competition year. Incoming seniors enrolled in Mechanical Engineering and Electrical Engineering may be eligible to receive capstone credit as part of the project.
+                                The engineering team on Texas A&M Formula SAE Electric constists of around 35 full-time members who actively contribute to designing, building, and testing the car throughout the competition year. We accept undergraduate engineering students from Texas A&M through an application process that opens up in the spring semester for the following competition year. Incoming seniors enrolled in Mechanical Engineering, and Electrical Engineering may be eligible to receive capstone credit as part of the project.
                             </p>
                         </div>
                         <div className="bg-gray-100 p-6 rounded-lg shadow-lg relative">
-                            <h3 className="text-xl font-bold text-maroon mb-4">Engineering Apprentice</h3>
-                            <div className="md:absolute md:top-6 md:right-8 mt-4 md:mt-0 mb-4 md:mb-0">
+                            <div className="absolute top-6 right-8">
                                 <a href="#engineering" className="text-maroon text-sm font-semibold">View Subteams</a>
                             </div>
+                            <h3 className="text-xl font-bold text-maroon mb-4">Engineering Apprentice</h3>
                             <p className="text-gray-700 text-sm">
                                 Our apprentice program aims to provide freshmen through juniors the opportunity to get involved with the team. Apprentices are placed onto a subteam aligning with their interests and skills, where they work closely with full-team members on real engineering projects. This program is designed to help students build foundational skills and knowledge that will develop their engineering skillset and prepare them for full-team membership in the future. We accept undergraduate engineering students from Texas A&M through an application process that opens in the fall semester for the current competition year.
                             </p>
@@ -91,19 +92,19 @@ export default function Recruiting() {
 
                     <div className="grid md:grid-cols-2 gap-6">
                         <div className="bg-gray-100 p-6 rounded-lg shadow-lg relative">
-                            <h3 className="text-xl font-bold text-maroon mb-4">Business</h3>
-                            <div className="md:absolute md:top-6 md:right-8 mt-4 md:mt-0 mb-4 md:mb-0">
+                            <div className="absolute top-6 right-8">
                                 <a href="#business" className="text-maroon text-sm font-semibold">View Subteams</a>
                             </div>
+                            <h3 className="text-xl font-bold text-maroon mb-4">Business</h3>
                             <p className="text-gray-700 text-sm">
                                 The business team is responsible for managing various aspects that support the Formula SAE Electric program. This includes securing sponsorships to fund the team, handling marketing efforts to promote the team and attract support, managing financial planning and budgeting, and ensuring effective team organization and communication. The business team plays a vital role in providing the necessary resources and visibility to support the engineering efforts.
                             </p>
                         </div>
                         <div className="bg-gray-100 p-6 rounded-lg shadow-lg relative">
-                            <h3 className="text-xl font-bold text-maroon mb-4">Operations</h3>
-                            <div className="md:absolute md:top-6 md:right-8 mt-4 md:mt-0 mb-4 md:mb-0">
+                            <div className="absolute top-6 right-8">
                                 <a href="#operations" className="text-maroon text-sm font-semibold">View Subteams</a>
                             </div>
+                            <h3 className="text-xl font-bold text-maroon mb-4">Operations</h3>
                             <p className="text-gray-700 text-sm">
                                 The operations team ensures the smooth day-to-day functioning of the Formula SAE Electric program. This team manages logistics, including transportation and supply chain for parts and equipment. They are also responsible for maintaining the team’s facilities, ensuring that the workspace is well-organized and equipped. Additionally, the operations team handles computer science tasks, such as developing software tools and managing IT infrastructure to support team activities and data management.
                             </p>
@@ -111,43 +112,48 @@ export default function Recruiting() {
                     </div>
                 </section>
 
-
                 {/*Events*/}
                 <section className="mb-12">
                     <h2 className="text-3xl font-bold mb-6">Upcoming Events</h2>
                     <div className="grid md:grid-cols-3 gap-6">
                         <div className="bg-gray-100 p-4 rounded-lg shadow">
-                            <h3 className="text-xl font-bold text-maroon mb-2">FSAE EV Bannering</h3>
+                            <h3 className="text-xl font-bold text-maroon mb-2">FSAE EV Coffee Chats</h3>
                             <p className="text-gray-700">
-                                Come out to see last year's competition car, pick up team stickers, and talk to team members to learn more about Texas A&M Formula SAE Electric! <br /><br /><br />
-                                <b>When?</b> August 19th - 23rd 2024, 9:00 AM - 4:00 PM<br />
-                                <b>Where?</b> Between Zachry Engineering Building & E-Quad<br />
+                                Come out to meet the team, and ask any questions you have! <br /><br /><br />
+                                <b>When?</b> Wednesday, August 28th 2024, 5:00 PM - 7:00 PM<br />
+                                <b>Where?</b> Zachry Starbucks and Quadbucks<br />
                             </p>
                         </div>
                         <div className="bg-gray-100 p-4 rounded-lg shadow">
-                            <h3 className="text-xl font-bold text-maroon mb-2">TAMU SAE x Red Bull</h3>
+                            <h3 className="text-xl font-bold text-maroon mb-2">SAE General Informational</h3>
                             <p className="text-gray-700">
-                                Check out Red Bull's iconic Formula 1 show car and enjoy some free red bull! We'll be posting up with AME '24, offering team stickers, and team members will be available to chat!<br /><br />
-                                <b>When?</b> Friday, August 23rd 2024, 9:00 AM - 4:00 PM<br />
-                                <b>Where?</b> E-Quad<br />
-                            </p>
-                        </div>
-                        <div className="bg-gray-100 p-4 rounded-lg shadow">
-                            <h3 className="text-xl font-bold text-maroon mb-2">SAE First General Meeting</h3>
-                            <p className="text-gray-700">
-                                Learn how to get involved with SAE and Texas A&M Formula SAE Electric! <br /><br /> <br /><br /> <br />
+                                Get all the information you need about SAE, learn about our development program, and hear from the project teams. <br /><br />
                                 <b>When?</b> Monday, August 26th 2024, 7:00 PM - 9:00 PM<br />
                                 <b>Where?</b> HECC 108<br />
+                            </p>
+                        </div>
+                        <div className="bg-gray-100 p-4 rounded-lg shadow">
+                            <h3 className="text-xl font-bold text-maroon mb-2">Project Team Informational</h3>
+                            <p className="text-gray-700">
+                                Learn how to get involved with SAE and Texas A&M Formula SAE Electric! <br /><br /> <br />
+                                <b>When?</b> Wednesday, August 28th 2024, 7:00 PM - 9:00 PM<br />
+                                <b>Where?</b> HECC 207<br />
+                            </p>
+                        </div>
+                        <div className="bg-gray-100 p-4 rounded-lg shadow">
+                            <h3 className="text-xl font-bold text-maroon mb-2">Engineering Applications Close</h3>
+                            <p className="text-gray-700">
+                                <br /><br />
+                                <b>When?</b> Friday, August 30th 2024, 11:59 PM<br />
+                                <b>Where?</b> Online<br />
                             </p>
                         </div>
                     </div>
                 </section>
 
                 <section id="engineering" className="space-y-8">
-
-                    <h2 className="text-3xl font-semibold text-gray-900 flex flex-col md:flex-row justify-between items-start md:items-center space-y-2 md:space-y-0 md:space-x-4">
+                    <h2 className="text-3xl font-semibold text-gray-900 flex justify-between items-center">
                         Engineering Teams
-                        <div className="pb-2"></div>
                         <a
                             className="bg-tamu-maroon text-white px-4 py-2 rounded-lg text-lg hover:bg-maroon transition-colors"
                             href="https://docs.google.com/forms/d/e/1FAIpQLSfqrb4vc-XoosoE9pfsxD8bJV0U_gP9SCxY0DHdfq97Fp4jHw/viewform?pli=1">
@@ -237,10 +243,8 @@ export default function Recruiting() {
                 </section>
 
                 <section id="business" className="space-y-8">
-
-                    <h2 className="text-3xl font-semibold text-gray-900 flex flex-col md:flex-row justify-between items-start md:items-center space-y-2 md:space-y-0 md:space-x-4">
+                    <h2 className="text-3xl font-semibold text-gray-900 flex justify-between items-center">
                         Business Teams
-                        <div className="pb-2"></div>
                         <a
                             className="bg-tamu-maroon text-white px-4 py-2 rounded-lg text-lg hover:bg-maroon transition-colors"
                             href="https://forms.office.com/pages/responsepage.aspx?id=44HzaNpGuUe6V28yK48NoSrqd-GpUQxLog_m04LE3ExUNUZUQVY4OVA2V0pVUDFCWE9aNU84NFpEUy4u">
@@ -301,10 +305,8 @@ export default function Recruiting() {
                 </section>
 
                 <section id="operations" className="space-y-8">
-
-                    <h2 className="text-3xl font-semibold text-gray-900 flex flex-col md:flex-row justify-between items-start md:items-center space-y-2 md:space-y-0 md:space-x-4">
+                    <h2 className="text-3xl font-semibold text-gray-900 flex justify-between items-center">
                         Operations Teams
-                        <div className="pb-2"></div>
                         <a
                             className="bg-tamu-maroon text-white px-4 py-2 rounded-lg text-lg hover:bg-maroon transition-colors"
                             href="https://docs.google.com/forms/d/e/1FAIpQLSc5lz2CDG8bV8xVcwv9XsgCUsVMwg8ehZ37KLrOcfLQU92W7A/viewform">
