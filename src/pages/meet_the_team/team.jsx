@@ -107,15 +107,15 @@ export default function Team() {
                         Finance
                     </h1>
                     <h1 className="team-lead"><span className="team-lead-bold">Team Lead: </span>Aidan Arnett</h1>
-                    <h1 className="name">James Dorsey, Dario Emad, Jeremy Macias</h1>
+                    <h1 className="name">Jeremy Macias</h1>
                 </div>
 
                 <div className="subteam-section">
                     <h1 className="team-div-title">
                         Marketing
                     </h1>
-                    <h1 className="team-lead"><span className="team-lead-bold">Team Lead: </span>Marcela Gonzalez</h1>
-                    <h1 className="name">Gerardo Hernandez, Zoe Fang, Zoe May, Megan Williams</h1>
+                    <h1 className="team-lead"><span className="team-lead-bold">Team Lead: </span>Megan Williams</h1>
+                    <h1 className="name">Zoe May, Ana Krayer, Nat Chumpirom, John Estes, Gaurav Nimmagadda, Ellie Vaughan, Gerardo Hernandez Espinoza</h1>
                 </div>
 
                 <div className="subteam-section">
@@ -123,7 +123,7 @@ export default function Team() {
                         Sales
                     </h1>
                     <h1 className="team-lead"><span className="team-lead-bold">Team Lead: </span>Holden Sparr</h1>
-                    <h1 className="name">Edison An, Mason Cuff, Vishnu Nataraja, Ian Schandlbauer</h1>
+                    <h1 className="name">Mason Cuff, Yashas Varma</h1>
                 </div>
             </div>
 
