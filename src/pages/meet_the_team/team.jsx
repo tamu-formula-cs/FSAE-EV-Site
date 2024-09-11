@@ -114,8 +114,8 @@ export default function Team() {
                     <h1 className="team-div-title">
                         Marketing
                     </h1>
-                    <h1 className="team-lead"><span className="team-lead-bold">Team Lead: </span>Megan Williams</h1>
-                    <h1 className="name">Zoe May, Ana Krayer, Nat Chumpirom, John Estes, Gaurav Nimmagadda, Ellie Vaughan, Gerardo Hernandez Espinoza</h1>
+                    <h1 className="team-lead"><span className="team-lead-bold">Team Lead: </span>Ana Krayer</h1>
+                    <h1 className="name">Zoe May, Megan Williams, Nat Chumpirom, John Estes, Gaurav Nimmagadda, Ellie Vaughan, Gerardo Hernandez Espinoza</h1>
                 </div>
 
                 <div className="subteam-section">
