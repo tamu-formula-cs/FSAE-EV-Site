@@ -18,7 +18,7 @@ export default function Home(){
 
     const navigate = useNavigate();
 
-    const targetDate = new Date('2024-06-12T19:00').getTime();
+    const targetDate = new Date('2025-06-10T19:00').getTime();
 
     const [countdown, setCountdown] = useState({
         days: 0,
@@ -35,6 +35,8 @@ export default function Home(){
             description: <ToastDescription>Help us innovate in electric vehicle technology. Consider donating today!</ToastDescription>,
             action: <ToastAction altText="Donate Now" onClick={handleDonateClick}>Donate Now</ToastAction>,
             duration: 5000,
+            position: "bottom-right",
+            
         });
     }, []);
 
@@ -75,6 +77,9 @@ export default function Home(){
     }, []);
 
     return <div className="main-containter">
+    <meta property="og:title" content="Texas A&M Formula E" />
+    <meta property="og:image:secure_url" content="https://tamuformulaelectric.com/assets/home-two-compressed-DsQz2CUF.jpg" />
+    <meta property="og:type" content="website" />
         <Header/>
 
         <div className="landing-container" style={{backgroundImage: `url(${CarTwo})`}}>
@@ -96,6 +101,14 @@ export default function Home(){
             </div>
             <div className="scroll-down"></div>
         </div>
+        
+        <section className="home-join-team-section">
+                <h1>JOIN OUR TEAM</h1>
+                <h2>Help us build the next winning racecar.</h2>
+                <a target='_blank' href='/recruiting' className="recruiting-button">
+                    JOIN US
+                </a>
+        </section>
 
         <div className="car-showcase">
             <h1 className='showcase-title'>AME24</h1>
@@ -124,7 +137,7 @@ export default function Home(){
         </div>
 
         <div className="countdown-container">
-            <h1>COMPETITION IN</h1>
+            <h1>FSAE ELECTRIC COMPETITION</h1>
             <div className="countdown">
                 <div className="countdown-item">
                     <span className="countdown-number">{countdown.days}</span>
@@ -163,7 +176,7 @@ export default function Home(){
             </button>
         </div>
 
-        <Toaster />
+        {/* <Toaster /> */}
         <Footer/>
     </div>
 }

@@ -17,5 +17,8 @@ module.exports = {
       'warn',
       { allowConstantExport: true },
     ],
+    "rules": {
+      "react/react-in-jsx-scope": "off"
+    }
   },
 }
