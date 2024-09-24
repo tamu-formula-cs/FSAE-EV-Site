@@ -11,8 +11,7 @@ export default function Team() {
             <h1 className="team-title">MEET THE TEAM</h1>
             <img src={TeamImage} alt="Team Image" className='team-image'/>
             
-            <div className="subteam-container">
-                <div className="subteam-section">
+            <div className="subteam-section pm">
                     <h1 className="team-div-title">
                         PROJECT MANAGER
                     </h1>
@@ -21,30 +20,7 @@ export default function Team() {
                     </h1>
                 </div>
 
-                <div className="subteam-section">
-                    <h1 className="team-div-title">
-                        Electrical Chief
-                    </h1>
-                    <h1 className="name">
-                        Jeff Cunningham
-                    </h1>
-                </div>
-
-                <div className="subteam-section">
-                    <h1 className="team-div-title">
-                        Business Chief
-                    </h1>
-                    <h1 className="team-lead">Ryan Lucas</h1>
-                </div>
-
-                <div className="subteam-section">
-                    <h1 className="team-div-title">
-                        Mechanical Chief
-                    </h1>
-                    <h1 className="name">
-                        Ethan Reich
-                    </h1>
-                </div>
+            <div className="subteam-container">
 
                 <div className="subteam-section">
                     <h1 className="team-div-title">
