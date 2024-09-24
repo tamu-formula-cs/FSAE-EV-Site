@@ -49,6 +49,10 @@ h1.team-desc{
     max-width: 400px;
 }
 
+.pm{
+    margin-bottom: 3rem;
+}
+
 h1.team-div-title {
     font-family: 'Bebas Neue', sans-serif;
     color: var(--maroon);

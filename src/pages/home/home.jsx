@@ -158,6 +158,35 @@ export default function Home(){
             </div>
         </div>
 
+
+        <div className="vision-purpose-section">
+            <div className="vision-purpose-item">
+                <h1>Purpose</h1>
+                <p>
+                    The purpose of Texas A&M Formula Electric is to cultivate students into high-quality engineers
+                    through the full-scale development of a high-performing electric formula-style vehicle and
+                    through year-over-year improvement of the program.
+                </p>
+            </div>
+
+            <div className="vision-purpose-item">
+                <h1>Vision</h1>
+                <p>
+                    Our vision this year is to develop a reliable platform for our drivers capable of placing in
+                    the top 5% of all events at FSAE Michigan, through early testing and validation.
+                </p>
+            </div>
+
+        <div className="vision-purpose-item">
+            <h1>Design Philosophy</h1>
+            <p>
+                In order to achieve our vision, we need to design for testing time, reliability, and
+                points-based performance.
+            </p>
+        </div>
+    </div>
+
+
         <section className="home-join-section">
                 <h1>JOIN OUR JOURNEY</h1>
                 <h2>Help us support innovation in electric vehicle technology.</h2>
