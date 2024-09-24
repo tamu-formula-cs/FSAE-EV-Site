@@ -114,6 +114,8 @@ html {
     align-items: center;
     justify-content: center;
     text-align: center;
+    padding-bottom: 9rem;
+    overflow: hidden;
 }
 
 .countdown-container h1{
@@ -154,6 +156,47 @@ html {
     margin-top: 0;
     font-size: 3rem;
 }
+
+/* vision-purpose style */
+.vision-purpose-section {
+    background-color: black;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    padding-top: 9rem;
+    overflow: hidden;
+    width: 100%; 
+    box-sizing: border-box; 
+}
+  
+.vision-purpose-item {
+    background-color: var(--maroon);
+    margin: 1rem 0;
+    padding: 2rem;
+    width: 67%;
+    text-align: center;
+    max-width: 100%; 
+    box-sizing: border-box; 
+}
+  
+.vision-purpose-item h1 {
+    font-family: 'Bebas Neue', sans-serif;
+    color: white;
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+  
+.vision-purpose-item p {
+    font-family: 'Inter', sans-serif;
+    font-size: 1.5rem;
+    color: white;
+}
+
+
+
 
 /* Car showcase styles */
 
@@ -396,6 +439,20 @@ section.home-join-team-section a.recruiting-button:hover{
 }
 
 @media screen and (max-width: 768px){
+
+    .vision-purpose-item {
+        width: 100%; 
+        max-width: 100%; 
+    }
+
+    
+    .vision-purpose-item h1 {
+        font-size: 2rem; 
+    }
+
+    .vision-purpose-item p {
+        font-size: 1rem; 
+    }
 
     .landing-car-image{
         display: none;
