@@ -96,6 +96,14 @@ export default function Team() {
 
                 <div className="subteam-section">
                     <h1 className="team-div-title">
+                        Operations
+                    </h1>
+                    <h1 className="team-lead"><span className="team-lead-bold">Team Lead: </span>Sophie Foster</h1>
+                    <h1 className="name">Abby Wang, Andrew Duncan, Morgan Daffron</h1>
+                </div>
+
+                <div className="subteam-section">
+                    <h1 className="team-div-title">
                         Sales
                     </h1>
                     <h1 className="team-lead"><span className="team-lead-bold">Team Lead: </span>Holden Sparr</h1>
