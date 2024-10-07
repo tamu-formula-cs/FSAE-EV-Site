@@ -41,7 +41,7 @@ export default function Recruiting() {
                             </a>
                             <div className="flex space-x-5">
                                 <a
-                                    href="https://forms.office.com/pages/responsepage.aspx?id=44HzaNpGuUe6V28yK48NoSrqd-GpUQxLog_m04LE3ExUNUZUQVY4OVA2V0pVUDFCWE9aNU84NFpEUy4u"
+                                    href="https://forms.office.com/r/WcGsPj8xDG"
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     className="bg-tamu-maroon text-white px-6 py-3 rounded-lg text-lg hover:bg-maroon transition-colors"
