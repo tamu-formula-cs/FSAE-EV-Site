@@ -43,3 +43,16 @@ main.getInvolvedContainer{
 .spacer{
     height: 14rem;
 }
+
+@media (max-width: 768px){
+    .getInvolvedContent{
+        margin-top: 8rem;
+        width: 100%;
+        padding: 2rem;
+        margin-bottom: 5rem;
+    }
+
+    .spacer{
+        height: 7.2rem;
+    }
+}

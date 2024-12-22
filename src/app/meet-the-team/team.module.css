@@ -111,3 +111,39 @@
     font-weight: normal;
     line-height: 1.5;
 }
+
+@media (max-width: 768px){
+    .fullscreenImage {
+        margin-top: 3.75rem;
+        height: auto;
+        aspect-ratio: 16 / 9;
+    }
+
+    .fullscreenImage img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+    }
+
+    .teamIntroContent{
+        flex-direction: column;
+    }
+
+    .teamIntroContent h1, .teamIntroContent h2{
+        width: 100%;
+    }
+
+    .leadsSection{
+        gap: 3rem;
+    }
+
+    .leadSection{
+        flex-direction: column;
+        gap: 3rem;
+        margin-bottom: 0;
+    }
+
+    .lead{
+        width: 100%;
+    }
+}
