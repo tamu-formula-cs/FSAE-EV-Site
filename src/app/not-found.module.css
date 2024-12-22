@@ -156,3 +156,8 @@
     font-size: 0.875rem;
     margin: 0;
 }
+
+.noFade {
+    opacity: 1 !important;
+    animation: none !important;
+}
