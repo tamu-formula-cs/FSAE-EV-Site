@@ -14,16 +14,17 @@ const ScrollToTopButton: React.FC<ScrollToTopButtonProps> = ({ offset }) => {
 
     useEffect(() => {
         const toggleVisibility = () => {
-        if (window.pageYOffset > offset) {
-            setIsVisible(true);
-        } else {
-            setIsVisible(false);
-        }
+            if (window.pageYOffset > offset) {
+                setIsVisible(true);
+            } else {
+                setIsVisible(false);
+            }
         };
-
+    
         window.addEventListener("scroll", toggleVisibility);
         return () => window.removeEventListener("scroll", toggleVisibility);
-    }, []);
+    }, [offset]);
+    
 
     const scrollToTop = () => {
         window.scrollTo({

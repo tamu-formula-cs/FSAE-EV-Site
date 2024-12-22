@@ -1,5 +1,5 @@
 "use client";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
 import Footer from "./components/footer/footer";
 import Header from "./components/header/header";
@@ -17,34 +17,32 @@ interface ParticleProps {
 export default function Custom404(){
     const [typewriterText, setTypewriterText] = useState('');
     const [currentPhraseIndex, setCurrentPhraseIndex] = useState(0);
-    const [carPosition, setCarPosition] = useState(0);
-    const [direction, setDirection] = useState(1);
-    const [particles, setParticles] = useState<ParticleProps[]>([]);
-
-    const phrases = [
+    const phrasesRef = useRef([
         "Asking for directions...",
         "Lost in the codebase...",
         "Taking a pit stop...",
         "Somewhere in the void...",
         "Checking the map...",
-    ];
+    ]);
+    const [carPosition, setCarPosition] = useState(0);
+    const [direction, setDirection] = useState(1);
+    const [particles, setParticles] = useState<ParticleProps[]>([]);
 
     useEffect(() => {
         const updateTypewriter = () => {
-        const phrase = phrases[currentPhraseIndex];
-        if (typewriterText.length < phrase.length) {
-            const timeout = setTimeout(() => {
-            setTypewriterText(phrase.slice(0, typewriterText.length + 1));
-            generateParticles();
-            }, 100);
-            return () => clearTimeout(timeout);
-        } else {
-            const timeout = setTimeout(() => {
-            setCurrentPhraseIndex((prev) => (prev + 1) % phrases.length);
-            setTypewriterText('');
-            }, 2000);
-            return () => clearTimeout(timeout);
-        }
+            const phrase = phrasesRef.current[currentPhraseIndex];
+            if (typewriterText.length < phrase.length) {
+                const timeout = setTimeout(() => {
+                    setTypewriterText(phrase.slice(0, typewriterText.length + 1));
+                }, 100);
+                return () => clearTimeout(timeout);
+            } else {
+                const timeout = setTimeout(() => {
+                    setCurrentPhraseIndex((prev) => (prev + 1) % phrasesRef.current.length);
+                    setTypewriterText('');
+                }, 2000);
+                return () => clearTimeout(timeout);
+            }
         };
 
         updateTypewriter();
@@ -127,7 +125,7 @@ export default function Custom404(){
                     </div>
                     </div>
                 </div>
-                <p className={styles.description}>404: We couldn't find what you were looking for.</p>
+                <p className={styles.description}>404: We couldn&apos;t find what you were looking for.</p>
                 </motion.div>
             </div>
             <ScrollToTopButton offset={200} />

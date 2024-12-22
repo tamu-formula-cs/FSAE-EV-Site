@@ -1,5 +1,5 @@
 "use client";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
 import Footer from "../components/footer/footer";
 import Header from "../components/header/header";
@@ -16,34 +16,32 @@ interface ParticleProps {
 export default function ComingSoon() {
     const [typewriterText, setTypewriterText] = useState('');
     const [currentPhraseIndex, setCurrentPhraseIndex] = useState(0);
-    const [carPosition, setCarPosition] = useState(0);
-    const [direction, setDirection] = useState(1);
-    const [particles, setParticles] = useState<ParticleProps[]>([]);
-
-    const phrases = [
+    const phrasesRef = useRef([
         "Building this page...",
         "Drafting some designs...",
         "Thinking very carefully...",
         "Writing some code...",
         "In the shop..."
-    ];
+    ]);
+    const [carPosition, setCarPosition] = useState(0);
+    const [direction, setDirection] = useState(1);
+    const [particles, setParticles] = useState<ParticleProps[]>([]);
 
     useEffect(() => {
         const updateTypewriter = () => {
-        const phrase = phrases[currentPhraseIndex];
-        if (typewriterText.length < phrase.length) {
-            const timeout = setTimeout(() => {
-            setTypewriterText(phrase.slice(0, typewriterText.length + 1));
-            generateParticles();
-            }, 100);
-            return () => clearTimeout(timeout);
-        } else {
-            const timeout = setTimeout(() => {
-            setCurrentPhraseIndex((prev) => (prev + 1) % phrases.length);
-            setTypewriterText('');
-            }, 2000);
-            return () => clearTimeout(timeout);
-        }
+            const phrase = phrasesRef.current[currentPhraseIndex];
+            if (typewriterText.length < phrase.length) {
+                const timeout = setTimeout(() => {
+                    setTypewriterText(phrase.slice(0, typewriterText.length + 1));
+                }, 100);
+                return () => clearTimeout(timeout);
+            } else {
+                const timeout = setTimeout(() => {
+                    setCurrentPhraseIndex((prev) => (prev + 1) % phrasesRef.current.length);
+                    setTypewriterText('');
+                }, 2000);
+                return () => clearTimeout(timeout);
+            }
         };
 
         updateTypewriter();
@@ -104,7 +102,7 @@ export default function ComingSoon() {
                 animate="visible"
                 variants={fadeIn}
                 >
-                <h2 className={styles.subtitle}>WE'RE STILL</h2>
+                <h2 className={styles.subtitle}>WE&apos;RE STILL</h2>
                 <div className={styles.typewriterContainer}>
                     <h1 className={styles.typewriter}>
                     {typewriterText}
