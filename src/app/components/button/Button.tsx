@@ -1,6 +1,7 @@
 "use client";
 import { motion } from "framer-motion";
 import styles from "./Button.module.css";
+import { useEffect, useState } from "react";
 
 interface ButtonProps {
     text: string;
@@ -10,6 +11,21 @@ interface ButtonProps {
 }
 
 export default function Button({ text, arrowWhite, link, target }: ButtonProps) {
+    const [isMobile, setIsMobile] = useState(false);
+
+    useEffect(() => {
+        const handleResize = () => {
+            setIsMobile(window.innerWidth <= 768);
+        };
+
+        handleResize();
+
+        window.addEventListener("resize", handleResize);
+        return () => window.removeEventListener("resize", handleResize);
+    }, []);
+
+    const arrowSize = isMobile ? 18 : 24;
+
     return (
         <motion.a
             href={link}
@@ -49,8 +65,8 @@ export default function Button({ text, arrowWhite, link, target }: ButtonProps) 
                     <div className={`${styles.circle} ${arrowWhite ? styles.circleBlackBg : styles.circleWhiteBg}`} />
                     <motion.svg 
                         className={`${styles.arrowPrimary} ${arrowWhite ? styles.arrowWhite : styles.arrowBlack}`} 
-                        width="24" 
-                        height="24" 
+                        width={arrowSize} 
+                        height={arrowSize} 
                         viewBox="0 0 16 16" 
                         fill="none" 
                         xmlns="http://www.w3.org/2000/svg"
@@ -64,8 +80,8 @@ export default function Button({ text, arrowWhite, link, target }: ButtonProps) 
 
                     <motion.svg 
                         className={`${styles.arrowSecondary} ${arrowWhite ? styles.arrowWhite : styles.arrowBlack}`} 
-                        width="24" 
-                        height="24" 
+                        width={arrowSize} 
+                        height={arrowSize} 
                         viewBox="0 0 16 16" 
                         fill="none" 
                         xmlns="http://www.w3.org/2000/svg"

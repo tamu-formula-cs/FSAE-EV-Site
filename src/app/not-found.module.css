@@ -161,3 +161,9 @@
     opacity: 1 !important;
     animation: none !important;
 }
+
+@media (max-width: 768px){
+    .typewriter{
+        font-size: 2rem;
+    }
+}

@@ -161,3 +161,9 @@
     font-size: 0.875rem;
     margin: 0;
 }
+
+@media (max-width: 768px){
+    .typewriter{
+        font-size: 2rem;
+    }
+}

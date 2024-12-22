@@ -4,7 +4,7 @@ import WhiteLogo from "../../../../public/FormulaELogoWhite.png";
 import styles from "./footer.module.css";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import SponsorImage from "./SponsorImage";
 import { StaticImageData } from "next/image";
 import Vistra from "../../../../public/assets/images/sponsors/vistra/vistra_white.png";
@@ -105,114 +105,228 @@ function HoverableLi({ text, link }: HoverableLiProps) {
 }
 
 export default function Footer() {
+    const [isMobile, setIsMobile] = useState(false);
+
+    useEffect(() => {
+        const handleResize = () => {
+            setIsMobile(window.innerWidth <= 768);
+        };
+        handleResize(); // Check on initial render
+        window.addEventListener("resize", handleResize);
+        return () => window.removeEventListener("resize", handleResize);
+    }, []);
+
+
     return (
         <footer className={styles.footer}>
             <div className={styles.footerTop}>
-                <div className={styles.footerLeftCol}>
-                    <Image
-                        src={WhiteLogo}
-                        alt="logo"
-                        width={123}
-                        height={40}
-                        className={styles.Logo}
-                    />
-                    <p>Copyright © 2024 Texas A&M Formula Electric</p>
-                </div>
-
-                <div className={styles.footerRightCol}>
-                    <div className={styles.linksSection}>
-                        <ul className={styles.linkSection}>
-                            <li className={styles.linkTitle}>ABOUT US</li>
-                            <HoverableLi text="Meet The Team" link="/meet-the-team"/>
-                            <HoverableLi text="Cars" link="/coming-soon"/>
-                        </ul>
-
-                        <ul className={styles.linkSection}>
-                            <li className={styles.linkTitle}>SPONSORS</li>
-                            <HoverableLi text="Get Involved" link="/get-involved"/>
-                        </ul>
-                    </div>
-
-                    <div className={styles.contactSection}>
-                        <h1>CONTACT US</h1>
-                        <motion.h2
-                            initial="rest"
-                            animate="rest"
-                            whileHover="hover"
-                            style={{
-                                position: "relative",
-                                display: "inline-block",
-                                overflow: "hidden",
-                                whiteSpace: "nowrap"
-                            }}
-                        >
-                            <motion.a
-                                href="mailto:tamuformulaelectric@gmail.com"
-                                style={{
-                                    textDecoration: "none",
-                                    color: "white",
-                                    position: "relative",
-                                    zIndex: 2
-                                }}
-                            >
-                                tamuformulaelectric@gmail.com
-                            </motion.a>
-                            <motion.div
-                                className={styles.underlinePrimary}
-                                variants={emailPrimaryLineVariants}
+                {isMobile ? (
+                    <>
+                        <div className={styles.footerRightCol}>
+                            <Image
+                                src={WhiteLogo}
+                                alt="logo"
+                                width={123}
+                                height={40}
+                                className={styles.Logo}
                             />
-                            <motion.div
-                                className={styles.underlineSecondary}
-                                variants={emailSecondaryLineVariants}
+                            <div className={styles.linksSection}>
+                                <ul className={styles.linkSection}>
+                                    <li className={styles.linkTitle}>ABOUT US</li>
+                                    <HoverableLi text="Meet The Team" link="/meet-the-team" />
+                                    <HoverableLi text="Cars" link="/coming-soon" />
+                                </ul>
+                                <ul className={styles.linkSection}>
+                                    <li className={styles.linkTitle}>SPONSORS</li>
+                                    <HoverableLi text="Get Involved" link="/get-involved" />
+                                </ul>
+                            </div>
+                            <div className={styles.contactSection}>
+                                <h1>CONTACT US</h1>
+                                <motion.h2
+                                    initial="rest"
+                                    animate="rest"
+                                    whileHover="hover"
+                                    style={{
+                                        position: "relative",
+                                        display: "inline-block",
+                                        overflow: "hidden",
+                                        whiteSpace: "nowrap",
+                                    }}
+                                >
+                                    <motion.a
+                                        href="mailto:tamuformulaelectric@gmail.com"
+                                        style={{
+                                            textDecoration: "none",
+                                            color: "white",
+                                            position: "relative",
+                                            zIndex: 2,
+                                        }}
+                                    >
+                                        tamuformulaelectric@gmail.com
+                                    </motion.a>
+                                    <motion.div
+                                        className={styles.underlinePrimary}
+                                        variants={emailPrimaryLineVariants}
+                                    />
+                                    <motion.div
+                                        className={styles.underlineSecondary}
+                                        variants={emailSecondaryLineVariants}
+                                    />
+                                </motion.h2>
+                            </div>
+                            <div className={styles.footerLeftCol}>
+                                <p>Copyright © 2024 Texas A&M Formula Electric</p>
+                            </div>
+                        </div>
+                    </>
+                ) : (
+                    <>
+                        <div className={styles.footerLeftCol}>
+                            <Image
+                                src={WhiteLogo}
+                                alt="logo"
+                                width={123}
+                                height={40}
+                                className={styles.Logo}
                             />
-                        </motion.h2>
-                    </div>
-                </div>
+                            <p>Copyright © 2024 Texas A&M Formula Electric</p>
+                        </div>
+                        <div className={styles.footerRightCol}>
+                            <div className={styles.linksSection}>
+                                <ul className={styles.linkSection}>
+                                    <li className={styles.linkTitle}>ABOUT US</li>
+                                    <HoverableLi text="Meet The Team" link="/meet-the-team" />
+                                    <HoverableLi text="Cars" link="/coming-soon" />
+                                </ul>
+                                <ul className={styles.linkSection}>
+                                    <li className={styles.linkTitle}>SPONSORS</li>
+                                    <HoverableLi text="Get Involved" link="/get-involved" />
+                                </ul>
+                            </div>
+                            <div className={styles.contactSection}>
+                                <h1>CONTACT US</h1>
+                                <motion.h2
+                                    initial="rest"
+                                    animate="rest"
+                                    whileHover="hover"
+                                    style={{
+                                        position: "relative",
+                                        display: "inline-block",
+                                        overflow: "hidden",
+                                        whiteSpace: "nowrap",
+                                    }}
+                                >
+                                    <motion.a
+                                        href="mailto:tamuformulaelectric@gmail.com"
+                                        style={{
+                                            textDecoration: "none",
+                                            color: "white",
+                                            position: "relative",
+                                            zIndex: 2,
+                                        }}
+                                    >
+                                        tamuformulaelectric@gmail.com
+                                    </motion.a>
+                                    <motion.div
+                                        className={styles.underlinePrimary}
+                                        variants={emailPrimaryLineVariants}
+                                    />
+                                    <motion.div
+                                        className={styles.underlineSecondary}
+                                        variants={emailSecondaryLineVariants}
+                                    />
+                                </motion.h2>
+                            </div>
+                        </div>
+                    </>
+                )}
             </div>
             <div className={styles.footerBottom}>
-                 {/* TITLE SPONSOR */}
-                <div className={styles.sponsorSection}>
-                    <h1>TITLE SPONSORS</h1>
-                    <div className={styles.sponsorImages}>
-                        <SponsorImage config={sponsorConfigs.vistra} />
-                        <SponsorImage config={sponsorConfigs.tesla} />
-                        <SponsorImage config={sponsorConfigs.eControls} />
+                {isMobile ? 
+                <>
+                    <div className={styles.sponsorSection}>
+                        <h1>TITLE SPONSORS</h1>
+                        <div className={styles.sponsorImages}>
+                            <SponsorImage config={sponsorConfigs.vistra} />
+                            <SponsorImage config={sponsorConfigs.tesla} />
+                            <SponsorImage config={sponsorConfigs.eControls} />
+                        </div>
                     </div>
-                </div>
 
-                {/* PLATINUM SPONSOR */}
-                <div className={styles.sponsorSection}>
-                    <h1>PLATINUM SPONSORS</h1>
-                    <div className={styles.sponsorImages}>
-                        <SponsorImage config={sponsorConfigs.altium} size="large" />
-                        <SponsorImage config={sponsorConfigs.boeing} size="large" />
-                        <SponsorImage config={sponsorConfigs.airtech} />
-                        <SponsorImage config={sponsorConfigs.precision} size="large" />
+                    <div className={styles.sponsorSection}>
+                        <h1>PLATINUM SPONSORS</h1>
+                        <div className={styles.sponsorImages}>
+                            <SponsorImage config={sponsorConfigs.altium} size="large" />
+                            <SponsorImage config={sponsorConfigs.boeing} size="large" />
+                            <SponsorImage config={sponsorConfigs.airtech} />
+                            <SponsorImage config={sponsorConfigs.precision}/>
+                        </div>
                     </div>
-                </div>
 
-                {/* GOLD SPONSOR */}
-                <div className={styles.sponsorSection}>
-                    <h1>GOLD SPONSORS</h1>
-                    <div className={styles.sponsorImages}>
-                        <SponsorImage config={sponsorConfigs.gill}/>
-                        <SponsorImage config={sponsorConfigs.rapid}/>
-                        <SponsorImage config={sponsorConfigs.haas}/>
-                        <SponsorImage config={sponsorConfigs.perficient}/>
-                        <SponsorImage config={sponsorConfigs.farmers}/>
+                    <div className={styles.sponsorSection}>
+                        <h1>GOLD SPONSORS</h1>
+                        <div className={styles.sponsorImages}>
+                            <SponsorImage config={sponsorConfigs.gill}/>
+                            <SponsorImage config={sponsorConfigs.rapid}/>
+                            <SponsorImage config={sponsorConfigs.haas}/>
+                            <SponsorImage config={sponsorConfigs.perficient}/>
+                            <SponsorImage config={sponsorConfigs.farmers}/>
+                        </div>
                     </div>
-                </div>
 
-                {/* BRONZE SPONSOR */}
-                <div className={styles.sponsorSection}>
-                    <h1>BRONZE SPONSORS</h1>
-                    <div className={styles.sponsorImages}>
-                        <SponsorImage config={sponsorConfigs.coroflex} size="large"/>
-                        <SponsorImage config={sponsorConfigs.gulf}/>
-                        <SponsorImage config={sponsorConfigs.gm} size="large"/>
-                        <SponsorImage config={sponsorConfigs.addative} size="large"/>
+                    <div className={styles.sponsorSection}>
+                        <h1>BRONZE SPONSORS</h1>
+                        <div className={styles.sponsorImages}>
+                            <SponsorImage config={sponsorConfigs.coroflex}/>
+                            <SponsorImage config={sponsorConfigs.gulf}/>
+                            <SponsorImage config={sponsorConfigs.gm}/>
+                            <SponsorImage config={sponsorConfigs.addative}/>
+                        </div>
                     </div>
-                </div>
+                    </> :
+
+                    <>
+                        <div className={styles.sponsorSection}>
+                            <h1>TITLE SPONSORS</h1>
+                            <div className={styles.sponsorImages}>
+                                <SponsorImage config={sponsorConfigs.vistra} />
+                                <SponsorImage config={sponsorConfigs.tesla} />
+                                <SponsorImage config={sponsorConfigs.eControls} />
+                            </div>
+                        </div>
+
+                        <div className={styles.sponsorSection}>
+                            <h1>PLATINUM SPONSORS</h1>
+                            <div className={styles.sponsorImages}>
+                                <SponsorImage config={sponsorConfigs.altium} size="large" />
+                                <SponsorImage config={sponsorConfigs.boeing} size="large" />
+                                <SponsorImage config={sponsorConfigs.airtech} />
+                                <SponsorImage config={sponsorConfigs.precision}/>
+                            </div>
+                        </div>
+
+                        <div className={styles.sponsorSection}>
+                            <h1>GOLD SPONSORS</h1>
+                            <div className={styles.sponsorImages}>
+                                <SponsorImage config={sponsorConfigs.gill}/>
+                                <SponsorImage config={sponsorConfigs.rapid}/>
+                                <SponsorImage config={sponsorConfigs.haas}/>
+                                <SponsorImage config={sponsorConfigs.perficient}/>
+                                <SponsorImage config={sponsorConfigs.farmers}/>
+                            </div>
+                        </div>
+
+                        <div className={styles.sponsorSection}>
+                            <h1>BRONZE SPONSORS</h1>
+                            <div className={styles.sponsorImages}>
+                                <SponsorImage config={sponsorConfigs.coroflex} size="large"/>
+                                <SponsorImage config={sponsorConfigs.gulf}/>
+                                <SponsorImage config={sponsorConfigs.gm} size="large"/>
+                                <SponsorImage config={sponsorConfigs.addative} size="large"/>
+                            </div>
+                        </div>
+                    </>}
             </div>
         </footer>
     );

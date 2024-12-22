@@ -84,3 +84,26 @@
 .arrowBlack {
     color: black;
 }
+
+@media (max-width: 768px){
+    .button{
+        font-size: 1rem;
+        gap: .75rem;
+    }
+
+    .circle{
+        width: 30px;
+        height: 30px;
+    }
+
+    .arrowContainer{
+        width: 30px;
+        height: 30px;
+    }
+
+    .arrowPrimary, .arrowSecondary {
+        top: 20%;
+        left: 25%;
+        transform: translate(-50%, -50%);
+    }
+}

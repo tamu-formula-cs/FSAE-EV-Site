@@ -18,3 +18,17 @@
     display: flex;
     gap: 4rem;
 }
+
+@media (max-width: 768px){
+    .Cta{
+        padding: 4rem 0;
+        width: 100%;
+    }
+    .Cta h1{
+        font-size: 1.8rem;
+    }
+
+    .CtaButtons{
+        gap: 2rem;
+    }
+}

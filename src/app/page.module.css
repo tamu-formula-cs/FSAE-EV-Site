@@ -121,3 +121,49 @@
     background-color: #333;
     transform: scale(1.1);
 }
+
+@media (max-width: 768px){
+    .missionContent{
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 2rem;
+        padding: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    .missionLeftCol{
+        width: 100%;
+        gap: 2rem;
+    }
+
+    .missionRightCol{
+        width: 100%;
+    }
+
+    .sponsorsSection{
+        flex-direction: column;
+        padding: 2rem;
+        gap: 6rem;
+        padding-top: 12rem;
+        padding-bottom: 12rem;
+    }
+
+    .sponsorsLeftCol{
+        width: 100%;
+    }
+
+    .sponsorsRightCol{
+        align-items: center;
+    }
+
+    .sponsorsRightCol img{
+        width: 100%;
+        height: auto;
+    }
+
+    .missionImage {
+        height: auto;
+        margin-bottom: 6rem;
+    }
+}

@@ -156,6 +156,14 @@ ul.linkSection li.linkTitle {
 }
 
 @media (max-width: 768px) {
+    .footerTop{
+        flex-direction: column;
+    }
+
+    .linksSection{
+        flex-direction: column;
+    }
+
     .sponsorImages {
         gap: 1rem;
         justify-content: center;
@@ -167,5 +175,26 @@ ul.linkSection li.linkTitle {
 
     .sponsorImageContainerLarge {
         height: 45px;
+    }
+
+    .sponsorImages{
+        flex-direction: column;
+        gap: 4rem;
+        align-items: flex-start;
+        flex-wrap: nowrap;
+    }
+
+    .footerBottom{
+        gap: 6rem;
+    }
+
+    .sponsorImageContainer img{
+        height: 2rem;
+        width: auto;
+    }
+    
+    .sponsorImageContainerLarge img{
+        height: 3rem;
+        width: auto;
     }
 }
