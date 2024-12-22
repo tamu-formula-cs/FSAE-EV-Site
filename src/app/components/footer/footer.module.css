@@ -1,0 +1,171 @@
+.footer {
+    background-color: black;
+    color: white;
+    padding: 7rem 4rem;
+    width: 100%;
+}
+
+.footerTop {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.footerLeftCol {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 8rem;
+}
+
+.footerLeftCol p {
+    font-weight: normal;
+    font-size: 0.9rem;
+}
+
+.footerRightCol {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    gap: 3.5rem;
+}
+
+.linksSection {
+    display: flex;
+    gap: 4rem;
+}
+
+ul.linkSection {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+ul.linkSection li {
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+    position: relative;
+    width: fit-content;
+}
+
+ul.linkSection li.linkTitle {
+    font-size: 0.8rem;
+    text-decoration: none;
+    margin-bottom: .75rem;
+}
+
+.hoverLink {
+    cursor: pointer;
+}
+
+.linkAnchor {
+    text-decoration: none;
+    color: white;
+    position: relative;
+    padding-bottom: 0em;
+}
+
+.contactSection h1 {
+    font-weight: normal;
+    font-size: 0.8rem;
+    margin-bottom: 0.5rem;
+}
+
+.contactSection h2 {
+    font-size: 1rem;
+    font-weight: normal;
+    margin: 0;
+    position: relative;
+    padding-bottom: 0.2em;
+}
+
+.underlinePrimary,
+.underlineSecondary {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 1px;
+    width: 100%;
+    background: white;
+}
+
+.underlinePrimary {
+    transform: translateX(0%);
+}
+
+.underlineSecondary {
+    transform: translateX(-100%);
+}
+
+.underline {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 1px;
+    width: 100%;
+    background: white;
+    transform: translateX(-100%);
+}
+
+.footerBottom {
+    margin-top: 4rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.sponsorSection {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.sponsorSection h1 {
+    font-weight: normal;
+    font-size: 0.8rem;
+}
+
+.sponsorImages {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4rem;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.sponsorImageContainer {
+    position: relative;
+    height: 40px;
+    flex: 0 0 auto;
+    width: auto;
+}
+
+.sponsorImageContainerLarge {
+    position: relative;
+    height: 60px;
+    flex: 0 0 auto;
+    width: auto;
+}
+
+@media (max-width: 1024px) {
+    .sponsorImages {
+        gap: 1.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .sponsorImages {
+        gap: 1rem;
+        justify-content: center;
+    }
+
+    .sponsorImageContainer {
+        height: 30px;
+    }
+
+    .sponsorImageContainerLarge {
+        height: 45px;
+    }
+}

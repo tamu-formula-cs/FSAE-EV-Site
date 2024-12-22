@@ -1,0 +1,20 @@
+
+.Cta{
+    background-color: black;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 4rem 8rem;
+    gap: 3rem;
+}
+
+.Cta h1{
+    font-size: 2.2rem;
+}
+
+.CtaButtons{
+    display: flex;
+    gap: 4rem;
+}

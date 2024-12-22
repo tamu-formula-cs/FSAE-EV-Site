@@ -1,0 +1,182 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  z-index: 1000;
+  border-bottom: 1px solid white;
+  will-change: background-color, border-color, color;
+  height: 60px;
+  box-sizing: border-box;
+}
+
+.logo {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo:hover img{
+  cursor: pointer;
+}
+
+.nav {
+  flex: 7;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 0;
+  border-left: 1px solid currentColor;
+  border-right: 1px solid currentColor;
+  position: relative;
+}
+
+.navItemWrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 1rem 3rem;
+}
+
+.linkWrapper {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  position: relative;
+}
+
+.navLink {
+  font-size: 1rem;
+  line-height: 1.5;
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+.contact {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contactLink {
+  font-size: 1rem;
+  line-height: 1.5;
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+/* Icon styles */
+.iconContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  position: relative;
+}
+
+.iconWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+}
+
+/* Submenu styles */
+.submenuContainer {
+  position: absolute;
+  top: calc(100% - 1px);
+  left: -1px;
+  transform: translateX(-50%);
+  background: black;
+  color: white;
+  padding: 1rem 2rem;
+  min-width: 300px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  border: 1px solid white;
+  border-top: none;
+  box-sizing: border-box;
+  z-index: 999;
+}
+
+.submenu {
+  display: flex;
+  flex-direction: column;
+}
+
+.submenuSectionTitle {
+  color: gray;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+.submenuList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.submenuListItem {
+  margin-bottom: 0.75rem;
+  position: relative;
+}
+
+.submenuLink {
+  color: white;
+  font-size: 1rem;
+  line-height: 1.5;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.submenuLink:hover {
+  text-decoration: underline;
+}
+
+/* Underline animation */
+.underline {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 1px;
+  width: 100%;
+  background: currentColor;
+  pointer-events: none;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    height: auto;
+    padding: 1rem;
+  }
+
+  .nav {
+    flex: none;
+    width: 100%;
+    justify-content: center;
+    border-left: none;
+    border-right: none;
+  }
+
+  .navItemWrapper {
+    padding: 1rem 2rem;
+  }
+
+  .submenuContainer {
+    padding: 1.5rem 2rem;
+    min-width: 250px;
+  }
+
+  .submenuList {
+    flex-direction: column;
+    gap: 1rem;
+  }
+}
