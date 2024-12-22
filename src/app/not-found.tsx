@@ -65,16 +65,6 @@ export default function Custom404(){
         return () => clearInterval(interval);
     }, [direction]);
 
-    const generateParticles = () => {
-        const newParticles = Array.from({ length: 5 }).map((_, i) => ({
-        key: Date.now() + i,
-        top: `${Math.random() * 100}%`,
-        left: `${Math.random() * 100}%`,
-        delay: `${Math.random() * 500}ms`,
-        }));
-        setParticles(newParticles);
-    };
-
     const fadeIn = {
         hidden: { opacity: 0, y: 20 },
         visible: { opacity: 1, y: 0, transition: { ease: "easeInOut" } },

@@ -158,7 +158,7 @@ export default function MeetTheTeam(){
 
             <motion.div className={styles.team} variants={fadeInUpVariants}>
                 <h1>Battery</h1>
-                <h2>Alan Yan, Aidan Arnett, Sebastian Regener, Jack O'Mahoney, Alexis Rappa, Jeremy Hinton, Eli Ringle</h2>
+                <h2>Alan Yan, Aidan Arnett, Sebastian Regener, Jack O&apos;Mahoney, Alexis Rappa, Jeremy Hinton, Eli Ringle</h2>
             </motion.div>
 
             <motion.div className={styles.team} variants={fadeInUpVariants}>
