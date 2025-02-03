@@ -16,6 +16,7 @@ import PreLoader from "../components/preloader/Preloader";
 import { useState } from "react";
 import Image from "next/image";
 import styles from "./ame22.module.css";
+import { useMemo, useCallback } from "react";
 
 const fadeInUpVariants = {
     hidden: { opacity: 0, y: 20 },
@@ -32,18 +33,19 @@ export default function Page() {
     const [fullTeamRef, fullTeamInView] = useInView({ threshold: 0.2, triggerOnce: true });
     const [isLoading, setIsLoading] = useState(true);
     const [isCarouselReady, setIsCarouselReady] = useState(false);
+    const [isImagesLoaded, setIsImagesLoaded] = useState(false);
 
-    const carouselImages = [
-        { src: LandingCar.src, alt: "AME24 Racing Car Front View" },
+    const carouselImages = useMemo(()=> [
+        { src: LandingCar.src, alt: "AME22 Racing Car Front View" },
         { src: LandingCar2.src, alt: "AME22 Racing Car Side View" },
         { src: LandingCar3.src, alt: "AME22 Racing Car Testing" },
         { src: LandingCar4.src, alt: "AME22 Racing Car Competition" },
-    ];
+    ], []);
 
-    const allImages = [
+    const allImages = useMemo(() => [
         ...carouselImages.map(img => img.src),
         Team.src
-    ];
+    ], [carouselImages]);
 
     const carStats = [
         { label: "Weight", value: "465 lbs" },
@@ -77,12 +79,27 @@ export default function Page() {
         }
       ];
       
+      const handleLoadComplete = useCallback(() => {
+        setIsImagesLoaded(true);
+        // Only set loading to false when both images are loaded and carousel is ready
+        if (isCarouselReady) {
+            setIsLoading(false);
+        }
+    }, [isCarouselReady]);
+
+    const handleCarouselReady = useCallback(() => {
+        setIsCarouselReady(true);
+        // Only set loading to false when both images are loaded and carousel is ready
+        if (isImagesLoaded) {
+            setIsLoading(false);
+        }
+    }, [isImagesLoaded]);
 
     return (
         <>
         <PreLoader 
             images={allImages}
-            onLoadComplete={() => setIsLoading(false)}
+            onLoadComplete={handleLoadComplete}
             carouselReady={isCarouselReady}
         />
 
@@ -97,7 +114,7 @@ export default function Page() {
                     stats={carStats}
                     textContents={carouselContent}
                     car="AME22"
-                    onReady={() => setIsCarouselReady(true)}
+                    onReady={handleCarouselReady}
                 />
             </div>
 
