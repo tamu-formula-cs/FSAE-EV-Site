@@ -31,6 +31,7 @@ export default function Page() {
     const [leadsRef, leadsInView] = useInView({ threshold: 0.2, triggerOnce: true });
     const [fullTeamRef, fullTeamInView] = useInView({ threshold: 0.2, triggerOnce: true });
     const [isLoading, setIsLoading] = useState(true);
+    const [isCarouselReady, setIsCarouselReady] = useState(false);
 
     const carouselImages = [
         { src: LandingCar.src, alt: "AME24 Racing Car Front View" },
@@ -40,10 +41,7 @@ export default function Page() {
     ];
 
     const allImages = [
-        LandingCar.src,
-        LandingCar2.src,
-        LandingCar3.src,
-        LandingCar4.src,
+        ...carouselImages.map(img => img.src),
         Team.src
     ];
 
@@ -85,8 +83,9 @@ export default function Page() {
         <PreLoader 
             images={allImages}
             onLoadComplete={() => setIsLoading(false)}
+            carouselReady={isCarouselReady}
         />
-        
+
         <motion.main className={styles.main}
         initial={{ opacity: 0 }}
         animate={{ opacity: isLoading ? 0 : 1 }}
@@ -98,6 +97,7 @@ export default function Page() {
                     stats={carStats}
                     textContents={carouselContent}
                     car="AME22"
+                    onReady={() => setIsCarouselReady(true)}
                 />
             </div>
 

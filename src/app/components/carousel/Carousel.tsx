@@ -23,11 +23,38 @@ interface CarouselProps {
   stats: Stat[];
   textContents?: TextContent[];
   car: string;
+  onReady?: () => void;
 }
 
-const Carousel: React.FC<CarouselProps> = ({ images, stats, textContents = [], car }) => {
+const Carousel: React.FC<CarouselProps> = ({ images, stats, textContents = [], car, onReady }) => {
   const [currentSlide, setCurrentSlide] = useState<number>(0);
   const timerRef = useRef<NodeJS.Timeout | null>(null);
+  const [imagesLoaded, setImagesLoaded] = useState<boolean>(false);
+
+  useEffect(() => {
+    const loadImages = async () => {
+      try {
+        await Promise.all(
+          images.map(
+            img => new Promise((resolve, reject) => {
+              const image = new window.Image(); // Use window.Image constructor instead
+              image.src = img.src;
+              image.onload = resolve;
+              image.onerror = reject;
+            })
+          )
+        );
+        setImagesLoaded(true);
+        onReady?.();
+      } catch (error) {
+        console.error('Error loading carousel images:', error);
+      }
+    };
+
+    loadImages();
+  }, [images, onReady]);
+
+  if (!imagesLoaded) return null;
 
   // Validation
   if (images.length < 2) {
