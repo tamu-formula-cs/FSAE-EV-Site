@@ -6,11 +6,13 @@ import styles from './preloader.module.css';
 interface PreLoaderProps {
     images: string[];
     onLoadComplete: () => void;
+    carouselReady: boolean;
 }
 
-const PreLoader: React.FC<PreLoaderProps> = ({ images, onLoadComplete }) => {
+const PreLoader: React.FC<PreLoaderProps> = ({ images, onLoadComplete, carouselReady }) => {
     const [progress, setProgress] = useState(0);
     const [isLoading, setIsLoading] = useState(true);
+    const [imagesLoaded, setImagesLoaded] = useState(false);
 
     useEffect(() => {
         let loadedImages = 0;
@@ -31,17 +33,23 @@ const PreLoader: React.FC<PreLoaderProps> = ({ images, onLoadComplete }) => {
 
             try {
                 await Promise.all(imagePromises);
-                setTimeout(() => {
-                    setIsLoading(false);
-                    setTimeout(onLoadComplete, 1000);
-                }, 1000);
+                setImagesLoaded(true);
             } catch (error) {
                 console.error('Error preloading images:', error);
             }
         };
 
         preloadImages();
-    }, [images, onLoadComplete]);
+    }, [images]);
+
+    useEffect(() => {
+        if (imagesLoaded && carouselReady) {
+            setTimeout(() => {
+                setIsLoading(false);
+                setTimeout(onLoadComplete, 1000);
+            }, 1000);
+        }
+    }, [imagesLoaded, carouselReady, onLoadComplete]);
 
     return (
         <AnimatePresence>
