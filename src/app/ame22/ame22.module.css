@@ -1,0 +1,180 @@
+/* ame24.module.css */
+.main {
+    position: relative;
+    width: 100%;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.carouselSection {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+}
+
+.teamSection {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.contentSection {
+    margin-top: 12rem;
+}
+
+.teamImage {
+    position: relative !important;
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover;
+}
+
+.teamIntroContent {
+    width: 60%;
+    max-width: 1200px;
+    display: flex;
+    gap: 4rem;
+    text-align: left;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.teamIntroContent h1 {
+    font-size: 2rem;
+    font-weight: bold;
+    width: 40%;
+}
+
+.teamIntroContent h2 {
+    font-size: 1.2rem;
+    font-weight: normal;
+    width: 60%;
+    line-height: 1.5;
+}
+
+.leadsSection {
+    width: 60%;
+    max-width: 1200px;
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+}
+
+.leadsSection > h1 {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.leadSection {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 2rem;
+}
+
+.lead {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    text-align: left;
+    width: 22%;
+}
+
+.lead h1 {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.lead h2 {
+    font-size: 1.2rem;
+    font-weight: normal;
+}
+
+.fullTeam {
+    width: 60%;
+    max-width: 1200px;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.fullTeam > h1 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.team {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    margin-bottom: 1rem;
+}
+
+.team h1 {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.team h2 {
+    font-size: 1.2rem;
+    font-weight: normal;
+    line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+
+    .teamSection {
+        margin-top: 0;
+        height: 60vh;
+    }
+
+    .teamIntroContent {
+        flex-direction: column;
+        width: 90%;
+        padding: 0 2rem;
+    }
+
+    .teamIntroContent h1,
+    .teamIntroContent h2 {
+        width: 100%;
+    }
+
+    .leadsSection {
+        width: 90%;
+        gap: 3rem;
+        padding: 0 2rem;
+    }
+
+    .leadSection {
+        flex-direction: column;
+        gap: 3rem;
+        margin-bottom: 0;
+    }
+
+    .lead {
+        width: 100%;
+    }
+
+    .fullTeam {
+        width: 90%;
+        padding: 0 2rem;
+    }
+
+    .team h2 {
+        font-size: 1.1rem;
+    }
+
+    .contentSection {
+        margin-top: 6rem;
+        margin-bottom: 6rem;
+    }
+
+    .scrollDown{
+        display: none;
+    }
+}

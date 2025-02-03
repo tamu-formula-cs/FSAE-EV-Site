@@ -95,7 +95,7 @@ export default function MeetTheTeam(){
 
                 <div className={styles.lead}>
                     <h1>Finance Lead</h1>
-                    <h2>Aiden Arnett</h2>
+                    <h2>Aidan Arnett</h2>
                 </div>
 
                 <div className={styles.lead}>

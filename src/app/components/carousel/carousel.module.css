@@ -1,0 +1,192 @@
+.carouselContainer {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    background-color: black;
+    touch-action: pan-y pinch-zoom;
+  }
+  
+  .imageContainer {
+    position: absolute;
+    inset: 0;
+  }
+  
+  .imageContainer::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      to bottom,
+      transparent 60%,
+      rgba(0, 0, 0, 0.5) 100%
+    );
+    pointer-events: none;
+  }
+  
+  .title {
+    position: absolute;
+    bottom: 4rem;
+    left: 4rem;
+    z-index: 10;
+  }
+  
+  .title h1 {
+    font-size: 4rem;
+    font-weight: 700;
+    color: white;
+    margin: 0;
+    line-height: 1;
+    letter-spacing: -1px;
+  }
+  
+  .contentBox {
+    position: absolute;
+    top: 65%;
+    right: 4rem;
+    transform: translateY(-50%);
+    width: 450px;
+    background-color: rgba(0, 0, 0, 0.95);
+    padding: 3rem;
+    color: white;
+  }
+  
+  .contentBox h2 {
+    font-size: 2rem;
+    margin: 0 0 2rem 0;
+    letter-spacing: 1px;
+    font-weight: normal;
+  }
+  
+  .textContent {
+    font-size: 1.125rem;
+    line-height: 1.7;
+    margin: 0;
+    opacity: 0.9;
+  }
+  
+  .statsGrid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2.5rem;
+    margin-top: 1rem;
+  }
+  
+  .leftAligned .statItem {
+    align-items: flex-start;
+    text-align: left;
+  }
+  
+  .statItem {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .statValue {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+    background: linear-gradient(45deg, #fff 30%, #e0e0e0);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .statLabel {
+    font-size: 1rem;
+    opacity: 0.8;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  
+  .navigation {
+    position: absolute;
+    bottom: 4rem;
+    right: 4rem;
+    display: flex;
+    gap: 0.75rem;
+    z-index: 20;
+  }
+  
+  .dot {
+    width: 3rem;
+    height: 0.25rem;
+    background-color: rgba(255, 255, 255, 0.2);
+    border: none;
+    cursor: pointer;
+    transition: all 0.4s cubic-bezier(0.25, 0.1, 0.25, 1);
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .dot::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-color: white;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.4s cubic-bezier(0.25, 0.1, 0.25, 1);
+  }
+  
+  .activeDot::after {
+    transform: scaleX(1);
+  }
+  
+  @media (max-width: 768px) {
+    .title {
+      bottom: 3rem;
+      right: auto;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  
+    .title h1 {
+      font-size: 3.5rem;
+    }
+  
+    .contentBox {
+        top: auto;
+        bottom: 8rem;
+        right: 1rem;
+        left: 1rem;
+        width: auto;
+        transform: none;
+        padding: 1.5rem;
+        background-color: rgba(0, 0, 0, 0.75);
+      }
+  
+    .contentBox h2 {
+      font-size: 1.5rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .textContent {
+        font-size: 1rem; /* Reduced from 1.125rem */
+        line-height: 1.5; /* Reduced from 1.7 */
+      }
+  
+    .statsGrid {
+      gap: 1rem;
+    }
+  
+    .statValue {
+        font-size: 1.5rem; /* Reduced from 2rem */
+        margin-bottom: 0.5rem; /* Reduced from 0.75rem */
+    }
+
+    .statLabel {
+        font-size: 0.875rem; /* Reduced from 1rem */
+    }
+    
+    .navigation {
+      bottom: 2rem;
+      right: auto;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  
+    .dot {
+      width: 2.5rem;
+    }
+  }
