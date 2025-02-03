@@ -72,9 +72,9 @@ const menuItems: MenuItem[] = [
     name: "Cars",
     links: [
       { text: "AME25", href: "/coming-soon" },
-      { text: "AME24", href: "/coming-soon" },
-      { text: "AME23", href: "/coming-soon" },
-      { text: "AME22", href: "/coming-soon" },
+      { text: "AME24", href: "/ame24" },
+      { text: "AME23", href: "/ame23" },
+      { text: "AME22", href: "/ame22" },
     ],
   },
 ];
