@@ -28,12 +28,11 @@ interface CarouselProps {
 
 const Carousel: React.FC<CarouselProps> = ({ images, stats, textContents = [], car, onReady }) => {
   const [currentSlide, setCurrentSlide] = useState<number>(0);
-  const [imagesLoaded, setImagesLoaded] = useState<boolean>(false);
   const timerRef = useRef<NodeJS.Timeout | null>(null);
   const touchStartX = useRef<number>(0);
   const touchEndX = useRef<number>(0);
 
-  // Validation first
+  // Validation
   if (images.length < 2) {
     throw new Error('At least two images are required');
   }
@@ -41,6 +40,7 @@ const Carousel: React.FC<CarouselProps> = ({ images, stats, textContents = [], c
     throw new Error('At least one text content for the second image is required');
   }
 
+  // Timer management
   const startTimer = useCallback(() => {
     if (timerRef.current) {
       clearInterval(timerRef.current);
@@ -50,38 +50,17 @@ const Carousel: React.FC<CarouselProps> = ({ images, stats, textContents = [], c
     }, 10000);
   }, [images.length]);
 
+  // Initialize carousel
   useEffect(() => {
-    const loadImages = async () => {
-      try {
-        await Promise.all(
-          images.map(
-            img => new Promise((resolve, reject) => {
-              const image = new window.Image();
-              image.src = img.src;
-              image.onload = resolve;
-              image.onerror = reject;
-            })
-          )
-        );
-        setImagesLoaded(true);
-        onReady?.();
-      } catch (error) {
-        console.error('Error loading carousel images:', error);
-      }
+    startTimer();
+    onReady?.();
+    
+    return () => {
+      if (timerRef.current) clearInterval(timerRef.current);
     };
+  }, [startTimer, onReady]);
 
-    loadImages();
-  }, [images, onReady]);
-
-  useEffect(() => {
-    if (imagesLoaded) {
-      startTimer();
-      return () => {
-        if (timerRef.current) clearInterval(timerRef.current);
-      };
-    }
-  }, [imagesLoaded, startTimer]);
-
+  // Touch handlers
   const handleDotClick = (index: number): void => {
     setCurrentSlide(index);
     startTimer();
@@ -109,15 +88,16 @@ const Carousel: React.FC<CarouselProps> = ({ images, stats, textContents = [], c
     }
   };
 
+  // Content rendering
   const renderContent = () => {
     if (currentSlide === 0) {
       return (
         <motion.div
           key="stats"
           className={styles.contentBox}
-          initial={{ opacity: 0}}
-          animate={{ opacity: 1}}
-          exit={{ opacity: 0}}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
           transition={{ duration: 0.5 }}
         >
           <h2>STATS</h2>
@@ -136,15 +116,13 @@ const Carousel: React.FC<CarouselProps> = ({ images, stats, textContents = [], c
     const textContent = textContents.find(content => content.imageIndex === currentSlide);
     if (!textContent) return null;
 
-    if (!imagesLoaded) return null;
-
     return (
       <motion.div
         key={currentSlide}
         className={styles.contentBox}
-        initial={{ opacity: 0}}
-        animate={{ opacity: 1}}
-        exit={{ opacity: 0}}
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
         transition={{ duration: 0.5 }}
       >
         <h2>{textContent.title}</h2>
@@ -177,6 +155,8 @@ const Carousel: React.FC<CarouselProps> = ({ images, stats, textContents = [], c
             priority
             quality={95}
             sizes="100vw"
+            loading="eager"
+            fetchPriority="high"
           />
         </motion.div>
       </AnimatePresence>

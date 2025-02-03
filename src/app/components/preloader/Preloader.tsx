@@ -1,5 +1,5 @@
 "use client"
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import styles from './preloader.module.css';
 
@@ -13,41 +13,71 @@ const PreLoader: React.FC<PreLoaderProps> = ({ images, onLoadComplete, carouselR
     const [progress, setProgress] = useState(0);
     const [isLoading, setIsLoading] = useState(true);
     const [imagesLoaded, setImagesLoaded] = useState(false);
+    const loadedImagesRef = useRef<Set<string>>(new Set());
 
     useEffect(() => {
-        let loadedImages = 0;
+        let mounted = true;
         
         const preloadImages = async () => {
-            const imagePromises = images.map(src => {
-                return new Promise((resolve, reject) => {
+            const imagePromises = images.map((src) => {
+                return new Promise<void>((resolve, reject) => {
+                    // Skip if already loaded
+                    if (loadedImagesRef.current.has(src)) {
+                        resolve();
+                        return;
+                    }
+
                     const img = new Image();
-                    img.src = src;
+                    
                     img.onload = () => {
-                        loadedImages++;
-                        setProgress((loadedImages / images.length) * 100);
-                        resolve(img);
+                        if (mounted) {
+                            loadedImagesRef.current.add(src);
+                            const progress = (loadedImagesRef.current.size / images.length) * 100;
+                            setProgress(progress);
+                            resolve();
+                        }
                     };
-                    img.onerror = reject;
+                    
+                    img.onerror = () => {
+                        console.error(`Failed to load image: ${src}`);
+                        reject();
+                    };
+
+                    // Set loading priority
+                    img.setAttribute('fetchpriority', 'high');
+                    img.src = src;
                 });
             });
 
             try {
                 await Promise.all(imagePromises);
-                setImagesLoaded(true);
+                if (mounted) {
+                    setImagesLoaded(true);
+                }
             } catch (error) {
                 console.error('Error preloading images:', error);
+                // Still mark as loaded to prevent blocking
+                if (mounted) {
+                    setImagesLoaded(true);
+                }
             }
         };
 
         preloadImages();
+
+        return () => {
+            mounted = false;
+        };
     }, [images]);
 
     useEffect(() => {
         if (imagesLoaded && carouselReady) {
-            setTimeout(() => {
+            const timer = setTimeout(() => {
                 setIsLoading(false);
-                setTimeout(onLoadComplete, 1000);
-            }, 1000);
+                onLoadComplete();
+            }, 500);
+
+            return () => clearTimeout(timer);
         }
     }, [imagesLoaded, carouselReady, onLoadComplete]);
 
@@ -59,7 +89,6 @@ const PreLoader: React.FC<PreLoaderProps> = ({ images, onLoadComplete, carouselR
                     exit={{ opacity: 0 }}
                     transition={{ duration: 0.5 }}
                 >
-
                     <div className={styles.progressContainer}>
                         <motion.div 
                             className={styles.progressBar}
