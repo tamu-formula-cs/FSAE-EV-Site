@@ -5,7 +5,7 @@ import Carousel from "../components/carousel/Carousel";
 import ScrollDownArrow from "../components/scroll-down-arrow/ScrollDownArrow";
 import ScrollToTopButton from "../components/scroll-button/ScrollToTopButton";
 import Cta from "../components/cta/cta";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import LandingCar from "../../../public/assets/images/showcase/24-blurry.jpg";
@@ -20,6 +20,7 @@ import { useToast } from "../components/toast/use-toast";
 import { ExternalLink } from "lucide-react";
 import Image from "next/image";
 import styles from "./ame24.module.css";
+import PreLoader from "../components/preloader/Preloader";
 
 const fadeInUpVariants = {
     hidden: { opacity: 0, y: 20 },
@@ -34,6 +35,7 @@ export default function Page() {
     const [teamContentRef, teamContentInView] = useInView({ threshold: 0.2, triggerOnce: true });
     const [leadsRef, leadsInView] = useInView({ threshold: 0.2, triggerOnce: true });
     const [fullTeamRef, fullTeamInView] = useInView({ threshold: 0.2, triggerOnce: true });
+    const [isLoading, setIsLoading] = useState(true);
 
     const carouselImages = [
         { src: LandingCar.src, alt: "AME24 Racing Car Front View" },
@@ -42,6 +44,16 @@ export default function Page() {
         { src: LandingCar4.src, alt: "AME24 Racing Car Competition" },
         { src: LandingCar5.src, alt: "AME24 Racing Car Competition" },
         { src: LandingCar6.src, alt: "AME24 Racing Car Competition" }
+    ];
+
+    const allImages = [
+        LandingCar.src,
+        LandingCar2.src,
+        LandingCar3.src,
+        LandingCar4.src,
+        LandingCar5.src,
+        LandingCar6.src,
+        Team.src
     ];
 
     const carStats = [
@@ -81,7 +93,7 @@ export default function Page() {
         const timer = setTimeout(() => {
             toast({
                 title: "See AME24 in action!",
-                duration: 5000,
+                duration: 6000,
                 action: (
                     <a 
                         href="https://www.youtube.com/watch?v=JnUFHU_EKHA" 
@@ -100,14 +112,22 @@ export default function Page() {
                     </a>
                 ),
             });
-        }, 5000);
+        }, 10000);
     
         return () => clearTimeout(timer);
     }, [toast]);
-      
 
     return (
-        <main className={styles.main}>
+        <>
+        <PreLoader 
+            images={allImages}
+            onLoadComplete={() => setIsLoading(false)}
+        />
+        
+        <motion.main className={styles.main}
+        initial={{ opacity: 0 }}
+        animate={{ opacity: isLoading ? 0 : 1 }}
+        transition={{ duration: 0.5 }}>
             <Header noTransparent={false}/>
             <div className={styles.carouselSection}>
                 <Carousel 
@@ -299,6 +319,7 @@ export default function Page() {
             <div className={styles.contentSection}></div>
             <Footer/>
             <Toaster />
-        </main>
+        </motion.main>
+        </>
     );
 }
