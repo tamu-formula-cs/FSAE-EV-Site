@@ -1,5 +1,5 @@
 "use client";
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef, useCallback } from 'react';
 import Image from 'next/image';
 import { motion, AnimatePresence } from 'framer-motion';
 import styles from './carousel.module.css';
@@ -28,8 +28,27 @@ interface CarouselProps {
 
 const Carousel: React.FC<CarouselProps> = ({ images, stats, textContents = [], car, onReady }) => {
   const [currentSlide, setCurrentSlide] = useState<number>(0);
-  const timerRef = useRef<NodeJS.Timeout | null>(null);
   const [imagesLoaded, setImagesLoaded] = useState<boolean>(false);
+  const timerRef = useRef<NodeJS.Timeout | null>(null);
+  const touchStartX = useRef<number>(0);
+  const touchEndX = useRef<number>(0);
+
+  // Validation first
+  if (images.length < 2) {
+    throw new Error('At least two images are required');
+  }
+  if (!textContents.some(content => content.imageIndex === 1)) {
+    throw new Error('At least one text content for the second image is required');
+  }
+
+  const startTimer = useCallback(() => {
+    if (timerRef.current) {
+      clearInterval(timerRef.current);
+    }
+    timerRef.current = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % images.length);
+    }, 10000);
+  }, [images.length]);
 
   useEffect(() => {
     const loadImages = async () => {
@@ -37,7 +56,7 @@ const Carousel: React.FC<CarouselProps> = ({ images, stats, textContents = [], c
         await Promise.all(
           images.map(
             img => new Promise((resolve, reject) => {
-              const image = new window.Image(); // Use window.Image constructor instead
+              const image = new window.Image();
               image.src = img.src;
               image.onload = resolve;
               image.onerror = reject;
@@ -54,40 +73,19 @@ const Carousel: React.FC<CarouselProps> = ({ images, stats, textContents = [], c
     loadImages();
   }, [images, onReady]);
 
-  if (!imagesLoaded) return null;
-
-  // Validation
-  if (images.length < 2) {
-    throw new Error('At least two images are required');
-  }
-  if (!textContents.some(content => content.imageIndex === 1)) {
-    throw new Error('At least one text content for the second image is required');
-  }
-
-  const startTimer = () => {
-    if (timerRef.current) {
-      clearInterval(timerRef.current);
-    }
-    timerRef.current = setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % images.length);
-    }, 10000);
-  };
-
   useEffect(() => {
-    startTimer();
-    return () => {
-      if (timerRef.current) clearInterval(timerRef.current);
-    };
-  }, [images.length]);
+    if (imagesLoaded) {
+      startTimer();
+      return () => {
+        if (timerRef.current) clearInterval(timerRef.current);
+      };
+    }
+  }, [imagesLoaded, startTimer]);
 
   const handleDotClick = (index: number): void => {
     setCurrentSlide(index);
-    startTimer(); // Reset timer on click
+    startTimer();
   };
-
-  // Touch handling
-  const touchStartX = useRef<number>(0);
-  const touchEndX = useRef<number>(0);
 
   const handleTouchStart = (e: React.TouchEvent): void => {
     touchStartX.current = e.touches[0].clientX;
@@ -103,10 +101,8 @@ const Carousel: React.FC<CarouselProps> = ({ images, stats, textContents = [], c
 
     if (Math.abs(diff) > threshold) {
       if (diff > 0) {
-        // Swipe left
         setCurrentSlide((prev) => (prev + 1) % images.length);
       } else {
-        // Swipe right
         setCurrentSlide((prev) => (prev - 1 + images.length) % images.length);
       }
       startTimer();
@@ -139,6 +135,8 @@ const Carousel: React.FC<CarouselProps> = ({ images, stats, textContents = [], c
 
     const textContent = textContents.find(content => content.imageIndex === currentSlide);
     if (!textContent) return null;
+
+    if (!imagesLoaded) return null;
 
     return (
       <motion.div
