@@ -146,4 +146,7 @@
     .lead{
         width: 100%;
     }
+    .hideMobile {
+        display: none;
+      }
 }

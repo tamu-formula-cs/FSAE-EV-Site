@@ -89,6 +89,11 @@ export default function MeetTheTeam(){
                 </div>
 
                 <div className={styles.lead}>
+                    <h1>Electrical Integration Officer</h1>
+                    <h2>Purav Datta</h2>
+                </div>
+
+                <div className={styles.lead}>
                     <h1>Electronics Lead</h1>
                     <h2>Joshua Wu</h2>
                 </div>
@@ -98,13 +103,15 @@ export default function MeetTheTeam(){
                     <h2>Aidan Arnett</h2>
                 </div>
 
+                
+            </motion.div>
+
+            <motion.div className={styles.leadSection} variants={fadeInUpVariants}>
                 <div className={styles.lead}>
                     <h1>Marketing Lead</h1>
                     <h2>Ana Krayer</h2>
                 </div>
-            </motion.div>
 
-            <motion.div className={styles.leadSection} variants={fadeInUpVariants}>
                 <div className={styles.lead}>
                     <h1>Operations Lead</h1>
                     <h2>Sophie Foster</h2>
@@ -120,16 +127,27 @@ export default function MeetTheTeam(){
                     <h2>Holden Sparr</h2>
                 </div>
 
-                <div className={styles.lead}>
-                    <h1>Software Lead</h1>
-                    <h2>Athul Suresh</h2>
-                </div>
+                
             </motion.div>
 
             <motion.div className={styles.leadSection} variants={fadeInUpVariants}>
                 <div className={styles.lead}>
+                    <h1>Software Lead</h1>
+                    <h2>Athul Suresh</h2>
+                </div>
+
+                <div className={styles.lead}>
                     <h1>Suspension Lead</h1>
                     <h2>Mark Cheek</h2>
+                </div>
+
+                <div className={`${styles.lead} ${styles.hideMobile}`} style={{visibility: "hidden"}}>
+                    <h1>Placeholder</h1>
+                    <h2>Placeholder</h2>
+                </div>
+                <div className={`${styles.lead} ${styles.hideMobile}`} style={{visibility: "hidden"}}>
+                    <h1>Placeholder</h1>
+                    <h2>Placeholder</h2>
                 </div>
             </motion.div>
         </motion.div>
