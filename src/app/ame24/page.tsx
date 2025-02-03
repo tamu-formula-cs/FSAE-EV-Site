@@ -55,7 +55,7 @@ export default function Page() {
         {
           imageIndex: 1,
           title: "RELIABILITY",
-          content: "AME24's design prioritizes simplicity and serviceability, with rapid " +
+          content: "AME24&apos;s design prioritizes simplicity and serviceability, with rapid " +
             "battery maintenance capabilities and over 200km of testing. This focus ensures " +
             "competition readiness and consistent performance."
         },
@@ -139,7 +139,7 @@ export default function Page() {
                 variants={fadeInUpVariants}
             >
                 <h1>Meet the team.</h1>
-                <h2>AME24's success came from the collective efforts of specialized subteams working in harmony. From aerodynamics to marketing, each team's expertise and dedication 
+                <h2>AME24&apos;s success came from the collective efforts of specialized subteams working in harmony. From aerodynamics to marketing, each team&apos;s expertise and dedication 
                     helped create a competitive electric racing vehicle. 
                     Their collaborative spirit and technical excellence set new standards for TAMU Formula Electric.</h2>
             </motion.div>

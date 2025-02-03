@@ -48,8 +48,8 @@ export default function Page() {
         {
           imageIndex: 1,
           title: "FOUNDATION",
-          content: "Established in 2021, this was the first year of Texas A&M's Formula Electric team. " +
-            "Building on TAMU's legacy of 8 FSAE championships, 40 members across six engineering " +
+          content: "Established in 2021, this was the first year of Texas A&M&apos;s Formula Electric team. " +
+            "Building on TAMU&apos;s legacy of 8 FSAE championships, 40 members across six engineering " +
             "disciplines laid the groundwork for electric racing excellence."
         },
         {
@@ -103,8 +103,8 @@ export default function Page() {
             >
                 <h1>Meet the team.</h1>
                 <h2>In 2022, Texas A&M Formula Electric was established by 40 pioneering students across six engineering disciplines. 
-    From mechanical engineering to electronics, these founding members laid the groundwork for TAMU's electric racing future. 
-    Their efforts established the foundation for what would become a new chapter in Texas A&M's racing legacy.</h2>
+    From mechanical engineering to electronics, these founding members laid the groundwork for TAMU&apos;s electric racing future. 
+    Their efforts established the foundation for what would become a new chapter in Texas A&M&apos;s racing legacy.</h2>
             </motion.div>
 
             <motion.div 
