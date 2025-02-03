@@ -48,8 +48,8 @@ export default function Page() {
         {
           imageIndex: 1,
           title: "FOUNDATION",
-          content: "Established in 2021, this was the first year of Texas A&M&apos;s Formula Electric team. " +
-            "Building on TAMU&apos;s legacy of 8 FSAE championships, 40 members across six engineering " +
+          content: "Established in 2021, this was the first year of Texas A&M\'s Formula Electric team. " +
+            "Building on TAMU\'s legacy of 8 FSAE championships, 40 members across six engineering " +
             "disciplines laid the groundwork for electric racing excellence."
         },
         {
