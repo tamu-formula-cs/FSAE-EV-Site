@@ -55,7 +55,7 @@ export default function Page() {
         {
           imageIndex: 1,
           title: "RELIABILITY",
-          content: "AME24&apos;s design prioritizes simplicity and serviceability, with rapid " +
+          content: "AME24\'s design prioritizes simplicity and serviceability, with rapid " +
             "battery maintenance capabilities and over 200km of testing. This focus ensures " +
             "competition readiness and consistent performance."
         },
