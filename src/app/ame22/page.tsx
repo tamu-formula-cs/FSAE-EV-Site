@@ -12,6 +12,8 @@ import LandingCar2 from "../../../public/assets/images/showcase/22-shop.jpg";
 import LandingCar3 from "../../../public/assets/images/showcase/22-kids.jpg";
 import LandingCar4 from "../../../public/assets/images/showcase/22-helmet.png";
 import Team from "../../../public/assets/images/showcase/22-team.jpg";
+import PreLoader from "../components/preloader/Preloader";
+import { useState } from "react";
 import Image from "next/image";
 import styles from "./ame22.module.css";
 
@@ -28,12 +30,21 @@ export default function Page() {
     const [teamContentRef, teamContentInView] = useInView({ threshold: 0.2, triggerOnce: true });
     const [leadsRef, leadsInView] = useInView({ threshold: 0.2, triggerOnce: true });
     const [fullTeamRef, fullTeamInView] = useInView({ threshold: 0.2, triggerOnce: true });
+    const [isLoading, setIsLoading] = useState(true);
 
     const carouselImages = [
         { src: LandingCar.src, alt: "AME24 Racing Car Front View" },
         { src: LandingCar2.src, alt: "AME22 Racing Car Side View" },
         { src: LandingCar3.src, alt: "AME22 Racing Car Testing" },
         { src: LandingCar4.src, alt: "AME22 Racing Car Competition" },
+    ];
+
+    const allImages = [
+        LandingCar.src,
+        LandingCar2.src,
+        LandingCar3.src,
+        LandingCar4.src,
+        Team.src
     ];
 
     const carStats = [
@@ -70,7 +81,16 @@ export default function Page() {
       
 
     return (
-        <main className={styles.main}>
+        <>
+        <PreLoader 
+            images={allImages}
+            onLoadComplete={() => setIsLoading(false)}
+        />
+        
+        <motion.main className={styles.main}
+        initial={{ opacity: 0 }}
+        animate={{ opacity: isLoading ? 0 : 1 }}
+        transition={{ duration: 0.5 }}>
             <Header noTransparent={false}/>
             <div className={styles.carouselSection}>
                 <Carousel 
@@ -229,6 +249,7 @@ export default function Page() {
             <Cta text="Ready to make an impact?" buttonOneText="Join Us" buttonTwoText="Sponsors" buttonOneLink="/coming-soon" buttonOneTarget="" buttonTwoLink="/get-involved" buttonTwoTarget=""/>
             <div className={styles.contentSection}></div>
             <Footer/>
-        </main>
+        </motion.main>
+        </>
     );
 }

@@ -5,6 +5,7 @@ import Carousel from "../components/carousel/Carousel";
 import ScrollDownArrow from "../components/scroll-down-arrow/ScrollDownArrow";
 import ScrollToTopButton from "../components/scroll-button/ScrollToTopButton";
 import Cta from "../components/cta/cta";
+import { useState } from "react";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import LandingCar from "../../../public/assets/images/showcase/23-blurry.png";
@@ -16,6 +17,7 @@ import LandingCar6 from "../../../public/assets/images/showcase/23-rollout-close
 import Team from "../../../public/assets/images/showcase/23-team.jpg";
 import Image from "next/image";
 import styles from "./ame23.module.css";
+import PreLoader from "../components/preloader/Preloader";
 
 const fadeInUpVariants = {
     hidden: { opacity: 0, y: 20 },
@@ -30,6 +32,7 @@ export default function Page() {
     const [teamContentRef, teamContentInView] = useInView({ threshold: 0.2, triggerOnce: true });
     const [leadsRef, leadsInView] = useInView({ threshold: 0.2, triggerOnce: true });
     const [fullTeamRef, fullTeamInView] = useInView({ threshold: 0.2, triggerOnce: true });
+    const [isLoading, setIsLoading] = useState(true);
 
     const carouselImages = [
         { src: LandingCar.src, alt: "AME24 Racing Car Front View" },
@@ -38,6 +41,16 @@ export default function Page() {
         { src: LandingCar4.src, alt: "AME24 Racing Car Competition" },
         { src: LandingCar5.src, alt: "AME24 Racing Car Competition" },
         { src: LandingCar6.src, alt: "AME24 Racing Car Competition" }
+    ];
+
+    const allImages = [
+        LandingCar.src,
+        LandingCar2.src,
+        LandingCar3.src,
+        LandingCar4.src,
+        LandingCar5.src,
+        LandingCar6.src,
+        Team.src
     ];
 
     const carStats = [
@@ -73,7 +86,16 @@ export default function Page() {
       
 
     return (
-        <main className={styles.main}>
+        <>
+        <PreLoader 
+            images={allImages}
+            onLoadComplete={() => setIsLoading(false)}
+        />
+        
+        <motion.main className={styles.main}
+        initial={{ opacity: 0 }}
+        animate={{ opacity: isLoading ? 0 : 1 }}
+        transition={{ duration: 0.5 }}>
             <Header noTransparent={false}/>
             <div className={styles.carouselSection}>
                 <Carousel 
@@ -264,6 +286,7 @@ export default function Page() {
             <Cta text="Ready to make an impact?" buttonOneText="Join Us" buttonTwoText="Sponsors" buttonOneLink="/coming-soon" buttonOneTarget="" buttonTwoLink="/get-involved" buttonTwoTarget=""/>
             <div className={styles.contentSection}></div>
             <Footer/>
-        </main>
+        </motion.main>
+        </>
     );
 }
