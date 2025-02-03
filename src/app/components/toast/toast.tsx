@@ -1,7 +1,6 @@
 import * as React from "react"
 import * as ToastPrimitives from "@radix-ui/react-toast"
 import styles from "./toast.module.css"
-import { X } from "lucide-react"
 
 const ToastProvider = ToastPrimitives.Provider
 

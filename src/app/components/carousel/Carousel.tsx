@@ -27,7 +27,6 @@ interface CarouselProps {
 
 const Carousel: React.FC<CarouselProps> = ({ images, stats, textContents = [], car }) => {
   const [currentSlide, setCurrentSlide] = useState<number>(0);
-  const [isLoaded, setIsLoaded] = useState<boolean>(false);
   const timerRef = useRef<NodeJS.Timeout | null>(null);
 
   // Validation
@@ -48,7 +47,6 @@ const Carousel: React.FC<CarouselProps> = ({ images, stats, textContents = [], c
   };
 
   useEffect(() => {
-    setIsLoaded(true);
     startTimer();
     return () => {
       if (timerRef.current) clearInterval(timerRef.current);
