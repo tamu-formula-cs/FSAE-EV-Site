@@ -19,8 +19,18 @@ const nextConfig: NextConfig = {
     dangerouslyAllowSVG: true,
     contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
   },
+  // Experimental features
   experimental: {
     optimizeCss: true,
+    turbo: {
+      rules: {
+        "*.mp4": ["media-loader"],
+        "*.webm": ["media-loader"],
+        "*.ogg": ["media-loader"],
+        "*.swf": ["media-loader"],
+        "*.ogv": ["media-loader"]
+      }
+    }
   }
 };
 
