@@ -28,8 +28,6 @@ interface CarouselProps {
 
 const Carousel: React.FC<CarouselProps> = ({ images, stats, textContents = [], car, onReady }) => {
   const [currentSlide, setCurrentSlide] = useState<number>(0);
-  const [initialLoading, setInitialLoading] = useState(true);
-  const [loadedImages, setLoadedImages] = useState<Set<string>>(new Set());
   const timerRef = useRef<NodeJS.Timeout | null>(null);
   const touchStartX = useRef<number>(0);
   const touchEndX = useRef<number>(0);
@@ -42,34 +40,10 @@ const Carousel: React.FC<CarouselProps> = ({ images, stats, textContents = [], c
     throw new Error('At least one text content for the second image is required');
   }
 
-  // Preload all images
+  // Notify parent component that carousel is ready
   useEffect(() => {
-    const preloadImages = async () => {
-      try {
-        await Promise.all(
-          images.map(
-            (img) =>
-              new Promise<void>((resolve) => {
-                const imageElement = new window.Image();
-                imageElement.src = img.src;
-                imageElement.onload = () => {
-                  setLoadedImages((prev) => new Set([...prev, img.src]));
-                  resolve();
-                };
-                imageElement.onerror = () => resolve(); // Still resolve on error to prevent blocking
-              })
-          )
-        );
-        setInitialLoading(false);
-        onReady?.();
-      } catch (error) {
-        console.error('Error preloading images:', error);
-        setInitialLoading(false); // Still set loading to false to prevent blocking
-      }
-    };
-
-    preloadImages();
-  }, [images, onReady]);
+    onReady?.();
+  }, [onReady]);
 
   // Timer management
   const startTimer = useCallback(() => {
@@ -83,13 +57,11 @@ const Carousel: React.FC<CarouselProps> = ({ images, stats, textContents = [], c
 
   // Initialize carousel
   useEffect(() => {
-    if (!initialLoading) {
-      startTimer();
-    }
+    startTimer();
     return () => {
       if (timerRef.current) clearInterval(timerRef.current);
     };
-  }, [startTimer, initialLoading]);
+  }, [startTimer]);
 
   // Touch handlers
   const handleDotClick = (index: number): void => {
@@ -169,62 +141,50 @@ const Carousel: React.FC<CarouselProps> = ({ images, stats, textContents = [], c
       onTouchMove={handleTouchMove}
       onTouchEnd={handleTouchEnd}
     >
-      {initialLoading && (
-        <div className={styles.loadingContainer}>
-          <div className={styles.spinner} />
-        </div>
-      )}
-      
-      {!initialLoading && (
-        <>
-          <AnimatePresence mode="wait">
-            <motion.div 
-              key={currentSlide}
-              className={styles.imageContainer}
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              transition={{ duration: 0.5 }}
-            >
-              <Image
-                src={images[currentSlide].src}
-                alt={images[currentSlide].alt}
-                fill
-                style={{ objectFit: "cover" }}
-                priority
-                quality={95}
-                sizes="100vw"
-                loading="eager"
-                fetchPriority="high"
-              />
-            </motion.div>
-          </AnimatePresence>
+      <AnimatePresence mode="wait">
+        <motion.div 
+          key={currentSlide}
+          className={styles.imageContainer}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          transition={{ duration: 0.5 }}
+        >
+          <Image
+            src={images[currentSlide].src}
+            alt={images[currentSlide].alt}
+            fill
+            style={{ objectFit: "cover" }}
+            priority
+            quality={95}
+            sizes="100vw"
+          />
+        </motion.div>
+      </AnimatePresence>
 
-          <motion.div 
-            className={styles.title}
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 1 }}
-          >
-            <h1>{car}</h1>
-          </motion.div>
+      <motion.div 
+        className={styles.title}
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 1 }}
+      >
+        <h1>{car}</h1>
+      </motion.div>
 
-          <AnimatePresence mode="wait">
-            {renderContent()}
-          </AnimatePresence>
+      <AnimatePresence mode="wait">
+        {renderContent()}
+      </AnimatePresence>
 
-          <div className={styles.navigation}>
-            {images.map((_, index) => (
-              <button
-                key={index}
-                onClick={() => handleDotClick(index)}
-                className={`${styles.dot} ${currentSlide === index ? styles.activeDot : ''}`}
-                aria-label={`Go to slide ${index + 1}`}
-              />
-            ))}
-          </div>
-        </>
-      )}
+      <div className={styles.navigation}>
+        {images.map((_, index) => (
+          <button
+            key={index}
+            onClick={() => handleDotClick(index)}
+            className={`${styles.dot} ${currentSlide === index ? styles.activeDot : ''}`}
+            aria-label={`Go to slide ${index + 1}`}
+          />
+        ))}
+      </div>
     </div>
   );
 };
