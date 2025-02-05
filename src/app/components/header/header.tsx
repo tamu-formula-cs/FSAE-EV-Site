@@ -31,17 +31,21 @@ interface HeaderProps {
   noTransparent?: boolean;
 }
 
-const PlusIcon = () => (
-  <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
-    <line x1="12" y1="5" x2="12" y2="19" />
-    <line x1="5" y1="12" x2="19" y2="12" />
-  </svg>
-);
-
-const MinusIcon = () => (
-  <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
-    <line x1="5" y1="12" x2="19" y2="12" />
-  </svg>
+const ArrowIcon = ({ isExpanded }: { isExpanded: boolean }) => (
+  <motion.svg
+    width="12"
+    height="12"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    animate={{ rotate: isExpanded ? -180 : 0 }}
+    transition={{ duration: 0.3, ease: "easeInOut" }}
+  >
+    <path d="M6 9l6 6 6-6" />
+  </motion.svg>
 );
 
 const HamburgerIcon = () => (
@@ -71,7 +75,7 @@ const menuItems: MenuItem[] = [
   {
     name: "Cars",
     links: [
-      { text: "AME25", href: "/coming-soon" },
+      { text: "AME25", href: "/ame25" },
       { text: "AME24", href: "/ame24" },
       { text: "AME23", href: "/ame23" },
       { text: "AME22", href: "/ame22" },
@@ -223,17 +227,15 @@ const Header: React.FC<HeaderProps> = ({ noTransparent = false }) => {
     };
   }, [isMobileMenuOpen]);
 
-
-const currentVariant = isMobileMenuOpen
-  ? "hovered"
-  : hoveredMenu
-  ? "hovered"
-  : noTransparent
-  ? "scrolled"
-  : scrolled
-  ? "scrolled"
-  : "initial";
-
+  const currentVariant = isMobileMenuOpen
+    ? "hovered"
+    : hoveredMenu
+    ? "hovered"
+    : noTransparent
+    ? "scrolled"
+    : scrolled
+    ? "scrolled"
+    : "initial";
 
   const handleMouseLeave = () => {
     setHoveredMenu(null);
@@ -293,31 +295,7 @@ const currentVariant = isMobileMenuOpen
                       {item.name}
                     </AnimatedLink>
                     <div className={styles.iconContainer}>
-                      <AnimatePresence mode="popLayout">
-                        {isHovered ? (
-                          <motion.div
-                            key="minus"
-                            initial={{ opacity: 0, y: 5 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            exit={{ opacity: 0, y: -5 }}
-                            transition={{ duration: 0.2 }}
-                            className={styles.iconWrapper}
-                          >
-                            <MinusIcon />
-                          </motion.div>
-                        ) : (
-                          <motion.div
-                            key="plus"
-                            initial={{ opacity: 0, y: 5 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            exit={{ opacity: 0, y: -5 }}
-                            transition={{ duration: 0.2 }}
-                            className={styles.iconWrapper}
-                          >
-                            <PlusIcon />
-                          </motion.div>
-                        )}
-                      </AnimatePresence>
+                      <ArrowIcon isExpanded={isHovered} />
                     </div>
                   </div>
 
@@ -401,7 +379,7 @@ const currentVariant = isMobileMenuOpen
                   >
                     {item.name}
                     <span className={styles.mobileMenuIcon}>
-                      {expandedItem === item.name ? <MinusIcon /> : <PlusIcon />}
+                      <ArrowIcon isExpanded={expandedItem === item.name} />
                     </span>
                   </button>
                   <AnimatePresence>
