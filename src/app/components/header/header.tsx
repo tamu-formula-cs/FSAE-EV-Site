@@ -274,8 +274,8 @@ const Header: React.FC<HeaderProps> = ({ noTransparent = false }) => {
                 : WhiteLogo.src
             }
             alt="logo"
-            width={108}
-            height={35}
+            width={95}
+            height={30.7870370371}
           />
         </div>
 

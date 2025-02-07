@@ -16,7 +16,7 @@ const AME25 = () => {
   });
 
   // Set the target date in CST/CDT
-  const ROLLOUT_DATE = new Date('2025-03-24T14:00:00-05:00'); // 2 PM CST on March 24th
+  const ROLLOUT_DATE = new Date('2025-04-13T14:00:00-05:00'); // 2 PM CST on March 24th
 
   useEffect(() => {
     const calculateTimeLeft = () => {
