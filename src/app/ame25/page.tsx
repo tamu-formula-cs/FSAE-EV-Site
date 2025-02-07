@@ -1,5 +1,5 @@
 "use client"
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useMemo } from 'react';
 import { motion } from 'framer-motion';
 import { Instagram } from 'lucide-react';
 import Header from '../components/header/header';
@@ -16,7 +16,7 @@ const AME25 = () => {
   });
 
   // Set the target date in CST/CDT
-  const ROLLOUT_DATE = new Date('2025-04-13T14:00:00-05:00'); // 2 PM CST on March 24th
+  const ROLLOUT_DATE = useMemo(() => new Date('2025-04-13T14:00:00-05:00'), []);
 
   useEffect(() => {
     const calculateTimeLeft = () => {
