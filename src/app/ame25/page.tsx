@@ -39,7 +39,7 @@ const AME25 = () => {
     const timer = setInterval(calculateTimeLeft, 1000);
 
     return () => clearInterval(timer);
-  }, []);
+  }, [ROLLOUT_DATE]);
 
   return (
     <motion.div
