@@ -54,7 +54,7 @@ export default function Contact() {
                     animate={headerInView ? "visible" : "hidden"}
                     variants={fadeInUpVariants}
                 >
-                    Got questions? We've got answers.
+                    Got questions? We&apos;ve got answers.
                 </motion.h1>
                 <motion.h1
                     className={styles.title}
@@ -73,7 +73,7 @@ export default function Contact() {
                     animate={headerInView ? "visible" : "hidden"}
                     variants={fadeInUpVariants}
                 >
-                    Tell us a bit about yourself and what you've got in mind.
+                    Tell us a bit about yourself and what you&apos;ve got in mind.
                 </motion.p>
 
                 <motion.form
@@ -131,7 +131,7 @@ export default function Contact() {
                             animate={thankYouInView ? "visible" : "hidden"}
                             variants={fadeInUpVariants}
                         >
-                            Thanks for contacting us! We'll reach out soon.
+                            Thanks for contacting us! We&apos;ll reach out soon.
                         </motion.div>
                     )}
                 </motion.form>
