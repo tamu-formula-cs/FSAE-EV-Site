@@ -266,8 +266,20 @@ export default function Page() {
 
                 <motion.div className={styles.leadSection} variants={fadeInUpVariants}>
                     <div className={styles.lead}>
+                        <h1>Operations Lead</h1>
+                        <h2>Sophie Foster</h2>
+                    </div>
+                    <div className={styles.lead}>
                         <h1>Sales Lead</h1>
                         <h2>Holden Sparr</h2>
+                    </div>
+                    <div className={styles.lead}>
+                        <h1>Sales Lead</h1>
+                        <h2>Mason Cuff</h2>
+                    </div>
+                    <div className={styles.lead}>
+                        <h1>Sales Lead</h1>
+                        <h2>Ian Schandlbauer</h2>
                     </div>
                 </motion.div>
             </motion.div>
@@ -296,7 +308,7 @@ export default function Page() {
 
                 <motion.div className={styles.team} variants={fadeInUpVariants}>
                     <h1>Battery</h1>
-                    <h2>Draude Jenna, Hinton Jeremy, Lafferty Andrew, Patel Raaj, Ramos Jesus, Yan Alan</h2>
+                    <h2>Draude Jenna, Hinton Jeremy, Lafferty Andrew, Patel Raaj, Ramos Jesus, Yan Alan, Julian Tan</h2>
                 </motion.div>
 
                 <motion.div className={styles.team} variants={fadeInUpVariants}>
@@ -306,7 +318,7 @@ export default function Page() {
 
                 <motion.div className={styles.team} variants={fadeInUpVariants}>
                     <h1>Electronics</h1>
-                    <h2>Boddu Praneeth, Hernandez Giosef, Kruse Blake, Mathew Erica, Moreland Thomas, Rodriguez Jacinto, Rojas Adrian, Wu Joshua</h2>
+                    <h2>Boddu Praneeth, Hernandez Giosef, Kruse Blake, Moreland Thomas, Rodriguez Jacinto, Rojas Adrian, Wu Joshua</h2>
                 </motion.div>
 
                 <motion.div className={styles.team} variants={fadeInUpVariants}>
@@ -320,13 +332,13 @@ export default function Page() {
                 </motion.div>
 
                 <motion.div className={styles.team} variants={fadeInUpVariants}>
-                    <h1>Marketing</h1>
-                    <h2>Gonzalez Marcela, Hernandez Gerardo</h2>
+                    <h1>Finance</h1>
+                    <h2>Aiden Arnett, Dario Emad, Hasian Rizvi, James Dorsey, Jeremy Macias</h2>
                 </motion.div>
 
                 <motion.div className={styles.team} variants={fadeInUpVariants}>
-                    <h1>Business</h1>
-                    <h2>Lucas Ryan, Sparr Holden</h2>
+                    <h1>Marketing</h1>
+                    <h2>Gonzalez Marcela, Hernandez Gerardo</h2>
                 </motion.div>
             </motion.div>
 

@@ -143,9 +143,9 @@ export default function Page() {
                 variants={fadeInUpVariants}
             >
                 <h1>Meet the team.</h1>
-                <h2>AME24&apos;s success came from the collective efforts of specialized subteams working in harmony. From aerodynamics to marketing, each team&apos;s expertise and dedication 
-                    helped create a competitive electric racing vehicle. 
-                    Their collaborative spirit and technical excellence set new standards for TAMU Formula Electric.</h2>
+                <h2>Building on AME22&apos;s foundation, our second-year team focused on refining our manufacturing processes and 
+        engineering capabilities. Through dedicated development and testing, AME23 achieved major improvements in 
+        vehicle performance and reliability.</h2>
             </motion.div>
 
             <motion.div 
@@ -172,69 +172,40 @@ export default function Page() {
                     </div>
 
                     <div className={styles.lead}>
-                        <h1>Electrical Chief</h1>
-                        <h2>Jeff Cunningham</h2>
-                    </div>
-
-                    <div className={styles.lead}>
-                        <h1>Mechanical Chief</h1>
-                        <h2>Ethan Reich</h2>
-                    </div>
-
-                    <div className={styles.lead}>
-                        <h1>Business Chief</h1>
-                        <h2>Ryan Lucas</h2>
-                    </div>
-                </motion.div>
-
-                <motion.div className={styles.leadSection} variants={fadeInUpVariants}>
-                    <div className={styles.lead}>
-                        <h1>Aerodynamics Lead</h1>
-                        <h2>Phillip Bertschy</h2>
-                    </div>
-
-                    <div className={styles.lead}>
-                        <h1>Battery Lead</h1>
-                        <h2>Alan Yan</h2>
-                    </div>
-
-                    <div className={styles.lead}>
                         <h1>Chassis Lead</h1>
-                        <h2>Caleb Miller</h2>
+                        <h2>Ani Tummalapalli</h2>
+                    </div>
+
+                    <div className={styles.lead}>
+                        <h1>Suspension Lead</h1>
+                        <h2>Christopher Lopez</h2>
                     </div>
 
                     <div className={styles.lead}>
                         <h1>Electronics Lead</h1>
-                        <h2>Jacinto Rodriguez Shahin</h2>
+                        <h2>Jack Walker</h2>
                     </div>
                 </motion.div>
 
                 <motion.div className={styles.leadSection} variants={fadeInUpVariants}>
                     <div className={styles.lead}>
                         <h1>Powertrain Lead</h1>
-                        <h2>Adan Corral</h2>
+                        <h2>Christopher Enuke</h2>
                     </div>
 
                     <div className={styles.lead}>
-                        <h1>Suspension Lead</h1>
-                        <h2>Joseph Weaver</h2>
+                        <h1>Battery Lead</h1>
+                        <h2>Noah Ratcliffe</h2>
                     </div>
 
                     <div className={styles.lead}>
-                        <h1>Finance Lead</h1>
-                        <h2>Aidan Arnett</h2>
+                        <h1>Aerodynamics Lead</h1>
+                        <h2>Nicholas Trammel</h2>
                     </div>
 
-                    <div className={styles.lead}>
-                        <h1>Marketing Lead</h1>
-                        <h2>Marcela Gonzalez</h2>
-                    </div>
-                </motion.div>
-
-                <motion.div className={styles.leadSection} variants={fadeInUpVariants}>
-                    <div className={styles.lead}>
-                        <h1>Sales Lead</h1>
-                        <h2>Holden Sparr</h2>
+                    <div className={`${styles.lead} ${styles.hideMobile}`} style={{visibility: "hidden"}}>
+                        <h1>Placeholder</h1>
+                        <h2>Placeholder</h2>
                     </div>
                 </motion.div>
             </motion.div>
@@ -257,43 +228,33 @@ export default function Page() {
                 <motion.h1 variants={fadeInUpVariants}>The full team.</motion.h1>
 
                 <motion.div className={styles.team} variants={fadeInUpVariants}>
-                    <h1>Aerodynamics</h1>
-                    <h2>Bertschy Phillip, Hesseltine Brody, Smith Luke, Tan Dennis, Tummalapalli Anirudh</h2>
-                </motion.div>
-
-                <motion.div className={styles.team} variants={fadeInUpVariants}>
-                    <h1>Battery</h1>
-                    <h2>Draude Jenna, Hinton Jeremy, Lafferty Andrew, Patel Raaj, Ramos Jesus, Yan Alan</h2>
-                </motion.div>
-
-                <motion.div className={styles.team} variants={fadeInUpVariants}>
                     <h1>Chassis</h1>
-                    <h2>Cruz Jose, Kraly Joshua, Lagman Jireh, Lozano Jonathan, Miller Caleb G.</h2>
-                </motion.div>
-
-                <motion.div className={styles.team} variants={fadeInUpVariants}>
-                    <h1>Electronics</h1>
-                    <h2>Boddu Praneeth, Hernandez Giosef, Kruse Blake, Mathew Erica, Moreland Thomas, Rodriguez Jacinto, Rojas Adrian, Wu Joshua</h2>
-                </motion.div>
-
-                <motion.div className={styles.team} variants={fadeInUpVariants}>
-                    <h1>Powertrain</h1>
-                    <h2>Corral Adan, Datta Purav, Diaz-Santini Luis, Haefner Robert, Martin Nick</h2>
+                    <h2>Joshua Bennett, Ruicong Xie, William Brumley</h2>
                 </motion.div>
 
                 <motion.div className={styles.team} variants={fadeInUpVariants}>
                     <h1>Suspension</h1>
-                    <h2>Cain Matthew, Castro David, Cheek Mark, Weaver Joseph, Wyatt Brendan</h2>
+                    <h2>Elizabeth Tiedt, Emir Velic, Vanessa Trevino, Charles Beare</h2>
                 </motion.div>
 
                 <motion.div className={styles.team} variants={fadeInUpVariants}>
-                    <h1>Marketing</h1>
-                    <h2>Gonzalez Marcela, Hernandez Gerardo</h2>
+                    <h1>Electronics</h1>
+                    <h2>Jacinto Rodriguez Shahin, Shahir Quereshi, Hamzah Issa, Jeff Cunningham</h2>
                 </motion.div>
 
                 <motion.div className={styles.team} variants={fadeInUpVariants}>
-                    <h1>Business</h1>
-                    <h2>Lucas Ryan, Sparr Holden</h2>
+                    <h1>Powertrain</h1>
+                    <h2>Alexander McQueen, Tristan Massa, Abhirath Bhuvanesh, Andy Kim, Pranav Veerubhotla</h2>
+                </motion.div>
+
+                <motion.div className={styles.team} variants={fadeInUpVariants}>
+                    <h1>Battery</h1>
+                    <h2>Trevor Hoffman, Theodore Mai, Aaron Ehmry, Ryan Cummings, Hamzah Issa, Mark Cheek</h2>
+                </motion.div>
+
+                <motion.div className={styles.team} variants={fadeInUpVariants}>
+                    <h1>Aerodynamics</h1>
+                    <h2>Zane Shuman, Sean Kennedy, Chris Coon, John Depadova</h2>
                 </motion.div>
             </motion.div>
 
