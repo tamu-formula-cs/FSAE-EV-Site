@@ -339,11 +339,10 @@ const Header: React.FC<HeaderProps> = ({ noTransparent = false }) => {
         {!isMobile && (
           <div className={styles.contact}>
             <AnimatedLink
-              href="mailto:tamuformulaelectric@gmail.com"
+              href="/contact"
               className={styles.contactLink}
               onHoverStart={() => setHoveredMenu("contact")}
               onHoverEnd={() => setHoveredMenu(null)}
-              target="_blank"
             >
               Contact Us
             </AnimatedLink>
