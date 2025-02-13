@@ -111,7 +111,7 @@ export default function Contact() {
                     <motion.textarea
                         className={styles.textarea}
                         name="message"
-                        placeholder="Tell us what you have in mind..."
+                        placeholder="Share your thoughts with us..."
                         required
                         variants={fadeInUpVariants}
                     />

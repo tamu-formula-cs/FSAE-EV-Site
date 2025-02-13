@@ -44,14 +44,15 @@
     outline: none;
 }
 
-input::placeholder,
-textarea::placeholder {
+.input::placeholder,
+.textarea::placeholder {
     font-family: 'Inter', sans-serif;
     font-size: 1rem;
     color: #888;
 }
 
 .textarea {
+    font-family: 'Inter', sans-serif;
     height: 100px;
     resize: none;
 }
