@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
-import UpArrow from "../../../../public/assets/icons/up_arrow.svg"
+import UpArrow from "../../../../public/assets/icons/up_arrow.svg";
 import styles from "./scrollToTopButton.module.css";
 
 interface ScrollToTopButtonProps {
