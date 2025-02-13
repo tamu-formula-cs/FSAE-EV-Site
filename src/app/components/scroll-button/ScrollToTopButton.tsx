@@ -2,7 +2,6 @@
 import React, { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
-import UpArrow from "../../../../public/assets/icons/up_arrow.svg";
 import styles from "./scrollToTopButton.module.css";
 
 interface ScrollToTopButtonProps {
@@ -50,7 +49,7 @@ const ScrollToTopButton: React.FC<ScrollToTopButtonProps> = ({ offset }) => {
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
             >
-            <Image src={UpArrow.src} alt="Scroll to Top" width={12} height={12} />
+            <Image src='/up_arrow.svg' alt="Scroll to Top" width={12} height={12} />
             </motion.div>
         )}
         </AnimatePresence>
