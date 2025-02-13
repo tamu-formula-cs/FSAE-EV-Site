@@ -77,7 +77,7 @@ export default function MeetTheTeam(){
                 </div>
 
                 <div className={styles.lead}>
-                    <h1>Business Lead</h1>
+                    <h1>Business Manager</h1>
                     <h2>Ryan Lucas</h2>
                 </div>
             </motion.div>
@@ -86,6 +86,11 @@ export default function MeetTheTeam(){
                 <div className={styles.lead}>
                     <h1>Chassis Lead</h1>
                     <h2>Joshua Kraly</h2>
+                </div>
+
+                <div className={styles.lead}>
+                    <h1>DBMS Lead</h1>
+                    <h2>Jeff Cunningham</h2>
                 </div>
 
                 <div className={styles.lead}>
@@ -98,15 +103,15 @@ export default function MeetTheTeam(){
                     <h2>Joshua Wu</h2>
                 </div>
 
+                
+            </motion.div>
+
+            <motion.div className={styles.leadSection} variants={fadeInUpVariants}>
                 <div className={styles.lead}>
                     <h1>Finance Lead</h1>
                     <h2>Aidan Arnett</h2>
                 </div>
 
-                
-            </motion.div>
-
-            <motion.div className={styles.leadSection} variants={fadeInUpVariants}>
                 <div className={styles.lead}>
                     <h1>Marketing Lead</h1>
                     <h2>Ana Krayer</h2>
@@ -122,15 +127,15 @@ export default function MeetTheTeam(){
                     <h2>Ethan Reich</h2>
                 </div>
 
-                <div className={styles.lead}>
-                    <h1>Sales Lead</h1>
-                    <h2>Holden Sparr</h2>
-                </div>
-
                 
             </motion.div>
 
             <motion.div className={styles.leadSection} variants={fadeInUpVariants}>
+                <div className={styles.lead}>
+                    <h1>Sponsor Relations Lead</h1>
+                    <h2>Holden Sparr</h2>
+                </div>
+
                 <div className={styles.lead}>
                     <h1>Software Lead</h1>
                     <h2>Athul Suresh</h2>
@@ -139,11 +144,6 @@ export default function MeetTheTeam(){
                 <div className={styles.lead}>
                     <h1>Suspension Lead</h1>
                     <h2>Mark Cheek</h2>
-                </div>
-
-                <div className={`${styles.lead} ${styles.hideMobile}`} style={{visibility: "hidden"}}>
-                    <h1>Placeholder</h1>
-                    <h2>Placeholder</h2>
                 </div>
                 <div className={`${styles.lead} ${styles.hideMobile}`} style={{visibility: "hidden"}}>
                     <h1>Placeholder</h1>
@@ -180,13 +180,18 @@ export default function MeetTheTeam(){
             </motion.div>
 
             <motion.div className={styles.team} variants={fadeInUpVariants}>
+                <h1>Distributed Battery Management System</h1>
+                <h2>Jeff Cunningham, Justus Languell, Ryan Cummings, Thomas Raguso</h2>
+            </motion.div>
+
+            <motion.div className={styles.team} variants={fadeInUpVariants}>
                 <h1>Chassis</h1>
-                <h2>Joshua Kraly, Alex Scott, Reagan Hoffmann</h2>
+                <h2>Joshua Kraly, Alex Scott, Reagan Hoffmann, Konstantin Nelson</h2>
             </motion.div>
 
             <motion.div className={styles.team} variants={fadeInUpVariants}>
                 <h1>Electronics</h1>
-                <h2>Sean Wall, Jaxon Grove, Qidao Lian, Gio Hernandez, Ryan Mackereth</h2>
+                <h2>Joshua Wu, Sean Wall, Jaxon Grove, Qidao Lian, Gio Hernandez, Ryan Mackereth</h2>
             </motion.div>
 
             <motion.div className={styles.team} variants={fadeInUpVariants}>
@@ -206,7 +211,7 @@ export default function MeetTheTeam(){
 
             <motion.div className={styles.team} variants={fadeInUpVariants}>
                 <h1>Finance</h1>
-                <h2>Aidan Arnett, Jeremy Macias</h2>
+                <h2>Aidan Arnett, Jeremy Macias, James Dorsey, Hasnain Rizvi</h2>
             </motion.div>
 
             <motion.div className={styles.team} variants={fadeInUpVariants}>
