@@ -77,7 +77,54 @@
 
 .thankYouMessage {
     margin-top: 1.5rem;
-    color: #800000;
+    color: #000000;
     font-size: 1.5rem;
     font-weight: bold;
+}
+
+@media screen and (max-width: 768px) {
+    .title,
+    .subtitle,
+    .form {
+        width: 90%;  /* Wider on mobile */
+    }
+
+    .title {
+        font-size: 1.75rem;  /* Slightly smaller on mobile */
+    }
+
+    .subtitle {
+        font-size: 1.1rem;
+        margin-bottom: 2rem;
+    }
+
+    .container {
+        padding: 1rem;
+        margin-bottom: 4rem;  /* Reduced margin on mobile */
+    }
+}
+
+/* For very small screens */
+@media screen and (max-width: 480px) {
+    .title {
+        font-size: 1.5rem;
+    }
+
+    .subtitle {
+        font-size: 1rem;
+    }
+
+    .input,
+    .textarea {
+        font-size: 16px;  /* Prevents iOS zoom on input focus */
+    }
+
+    .button {
+        padding: 12px;
+        font-size: 0.95rem;
+    }
+
+    .thankYouMessage {
+        font-size: 1.25rem;
+    }
 }

@@ -25,16 +25,17 @@ export default function Contact() {
 
     const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault();
-
+        const form = event.currentTarget as HTMLFormElement;
+    
         const service_id = process.env.NEXT_PUBLIC_EMAIL_SERVICE_ID ?? (() => { throw new Error('NEXT_PUBLIC_EMAIL_SERVICE_ID is not defined') })();
         const template_id = process.env.NEXT_PUBLIC_EMAIL_TEMPLATE_ID ?? (() => { throw new Error('NEXT_PUBLIC_EMAIL_TEMPLATE_ID is not defined') })();
         const api_key = process.env.NEXT_PUBLIC_EMAIL_API_KEY ?? (() => { throw new Error('NEXT_PUBLIC_EMAIL_API_KEY is not defined') })();
-
+    
         try {
-            await emailjs.sendForm(service_id, template_id, event.currentTarget, api_key);
-            event.currentTarget.reset();
+            await emailjs.sendForm(service_id, template_id, form, api_key);
+            form.reset(); // Use the form reference directly
             setThankYouMessageVisible(true);
-
+    
             setTimeout(() => {
                 setThankYouMessageVisible(false);
             }, 4000);
