@@ -26,11 +26,11 @@ export const metadata: Metadata = {
     siteName: 'Texas A&M Formula Electric',
     images: [
       {
-        url: `${BASE_URL}/images/showcase/24-blurry.jpg`,
+        url: `${BASE_URL}/assets/images/showcase/24-blurry.jpg`,
         width: 1200,
         height: 630,
         alt: 'Texas A&M Formula Electric',
-        type: 'image/png'
+        type: 'image/jpeg'
       }
     ],
     locale: 'en_US',
@@ -50,7 +50,7 @@ export const metadata: Metadata = {
   twitter: {
     title: 'Texas A&M Formula Electric',
     card: 'summary_large_image',
-    images: [`${BASE_URL}/images/showcase/24-blurry.jpg`],
+    images: [`${BASE_URL}/assets/images/showcase/24-blurry.jpg`],
     description: 'The official website for Texas A&M Formula Electric.',
   },
   icons: {
